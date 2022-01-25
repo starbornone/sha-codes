@@ -1,0 +1,285 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply bg-grey-600;
+  @apply text-greyish-300;
+}
+
+p {
+  @apply my-4;
+}
+
+strong {
+  @apply font-semibold;
+  @apply text-greyish-200;
+}
+
+a {
+  @apply text-buttercream-400;
+}
+
+a:focus,
+a:hover {
+  @apply cursor-pointer;
+  @apply text-buttercream-600;
+}
+
+/*** Headings ***/
+
+h1 {
+  @apply tracking-tight;
+  @apply text-4xl;
+  @apply text-white;
+}
+
+h2 {
+  @apply text-4xl;
+  @apply tracking-tight;
+  @apply text-greyish-200;
+}
+
+h2 .highlight {
+  @apply text-oasis-500;
+}
+
+h3 {
+  @apply tracking-tight;
+  @apply text-xl;
+  @apply text-greyish-100;
+}
+
+/*** Forms ***/
+
+.label {
+  @apply block;
+  @apply text-sm;
+  @apply font-medium;
+  @apply text-greyish-300;
+}
+
+.input {
+  @apply shadow-sm;
+  @apply bg-grey-900;
+  @apply block;
+  @apply text-sm;
+  @apply w-full;
+  @apply border-2;
+  @apply border-greyish-700;
+  @apply rounded-md;
+  @apply text-greyish-100;
+  @apply opacity-75;
+}
+
+.input:focus {
+  @apply ring-buttercream-500;
+  @apply border-buttercream-500;
+}
+
+.button {
+  @apply mx-auto;
+  @apply py-2;
+  @apply px-4;
+  @apply rounded-md;
+  @apply shadow-sm;
+  @apply text-sm;
+  @apply font-medium;
+  @apply text-white;
+  @apply bg-buttercream-600;
+}
+
+.button:focus {
+  @apply ring-2;
+  @apply ring-offset-2;
+  @apply ring-buttercream-500;
+}
+
+.button:focus,
+.button:hover {
+  @apply bg-buttercream-700;
+  @apply outline-none;
+}
+
+/*** Nav ***/
+
+nav a {
+  @apply text-base;
+  @apply font-medium;
+  @apply text-white;
+}
+
+nav a:focus,
+nav a:hover {
+  @apply cursor-pointer;
+  @apply text-buttercream-600;
+}
+
+/*** Section ***/
+
+.section {
+  @apply relative;
+  @apply py-16;
+  @apply overflow-hidden;
+}
+
+.section > div {
+  @apply max-w-7xl;
+}
+
+@screen lg {
+  .section > div {
+    @apply px-8;
+  }
+}
+
+/*** Container ***/
+
+.container {
+  @apply mx-auto;
+  @apply max-w-md;
+  @apply px-4;
+}
+
+@screen sm {
+  .container {
+    @apply max-w-2xl;
+  }
+}
+
+@screen lg {
+  .container {
+    @apply flex;
+  }
+  .container > div {
+    @apply py-24;
+  }
+}
+
+/*** Card ***/
+
+.card {
+  @apply mb-24;
+}
+
+.card > div {
+  @apply px-0;
+  @apply mx-auto;
+  @apply max-w-md;
+}
+
+@screen sm {
+  .card > div {
+    @apply max-w-none;
+  }
+}
+
+@screen md {
+  .card > div {
+    @apply max-w-2xl;
+  }
+}
+
+@screen lg {
+  .card > div {
+    @apply grid;
+    @apply grid-cols-2;
+    @apply grid-flow-col-dense;
+    @apply gap-16;
+  }
+}
+
+@screen xl {
+  .card > div {
+    @apply gap-36;
+    @apply max-w-7xl;
+  }
+}
+
+.card .content {
+  @apply mx-auto;
+  @apply px-4;
+}
+
+@screen lg {
+  .card .content {
+    @apply py-32;
+    @apply mx-4;
+    @apply px-0;
+  }
+}
+
+@screen xl {
+  .card .content {
+    @apply py-36;
+    @apply -mx-6;
+  }
+}
+
+.card h2 {
+  @apply text-oasis-500;
+}
+
+.card .meta {
+  @apply font-mono;
+  @apply flex;
+  @apply flex-wrap;
+  @apply text-greyish-400;
+  @apply text-sm;
+}
+
+.card .meta .separator {
+  @apply inline-block;
+  @apply mx-2;
+}
+
+.card .meta .decorator {
+  @apply text-greyish-600;
+}
+
+.card .heading {
+  @apply flex;
+  @apply items-center;
+}
+
+.card .heading > div {
+  @apply ml-4 flex;
+  @apply gap-4;
+}
+
+.card .heading a {
+  @apply text-greyish-400;
+}
+
+.card .heading a:focus,
+.card .heading a:hover {
+  @apply text-buttercream-600;
+}
+
+@screen lg {
+  .card .img_section {
+    @apply px-0;
+    @apply m-0;
+    @apply relative;
+    @apply h-full;
+  }
+}
+
+.card .img_section img {
+  @apply w-full;
+  @apply rounded-xl;
+  @apply ring-8;
+  @apply ring-grey-900;
+  @apply ring-opacity-80;
+}
+
+@screen lg {
+  .card .img_section img {
+    @apply absolute;
+    @apply h-full;
+    @apply w-auto;
+    @apply max-w-none;
+  }
+}
+
+/*** Contact ***/

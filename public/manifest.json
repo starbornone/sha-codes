@@ -1,0 +1,20 @@
+{
+  "short_name": "sha.codes",
+  "name": "sha.codes",
+  "icons": [
+    {
+      "src": "favicons/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "favicons/favicon-196x196.png",
+      "type": "image/png",
+      "sizes": "196x196"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#16191d",
+  "background_color": "#16191d"
+}
