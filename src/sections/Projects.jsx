@@ -9,7 +9,7 @@ import {
 
 import { PROJECTS } from '../data/projects'
 
-import Card from '../components/Card/Card'
+import ProjectCard from '../components/ProjectCard/ProjectCard'
 
 function Projects() {
   const websites = PROJECTS.filter(
@@ -37,7 +37,7 @@ function Projects() {
       <div className="mt-12 lg:mt-0 xl:mx-auto 3xl:mx-80">
         {websites.map((website, index) =>
           index < displayAmount ? (
-            <Card
+            <ProjectCard
               card={{
                 details: {
                   ...website,

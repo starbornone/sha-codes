@@ -7,7 +7,7 @@ import { useInView } from 'react-intersection-observer'
 
 import { transition } from '../../animations'
 
-function Card({ card: { details, index } }) {
+function ProjectCard({ card: { details, index } }) {
   const controls = useAnimation()
   const { ref, inView } = useInView()
 
@@ -112,4 +112,4 @@ function Card({ card: { details, index } }) {
   )
 }
 
-export default Card
+export default ProjectCard
