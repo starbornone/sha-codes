@@ -1,11 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGitlab, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faCode } from '@fortawesome/pro-light-svg-icons'
+import { useState } from 'react'
 
 import { EXPERIENCE } from '../data/experience'
 
+import ExperienceCard from '../components/ExperienceCard/ExperienceCard'
+
 export default function Experience() {
-  const currentExperience = 0
+  const [currentExperience, setCurrentExperience] = useState(0)
 
   return (
     <div className="section bg-grey-900" name="experience">
@@ -22,34 +24,7 @@ export default function Experience() {
               on JavaScript, React, Node, and Unity, and made my way through
               various books on design and creating user experiences.
             </p>
-            <div className="mt-12 lg:mt-16">
-              <h3>
-                <span className="font-normal font-mono">
-                  {EXPERIENCE[currentExperience].role}
-                </span>{' '}
-                <span className="text-oasis-500">
-                  @ {EXPERIENCE[currentExperience].name}
-                </span>
-              </h3>
-              <div className="font-mono text-greyish-600">
-                {EXPERIENCE[currentExperience].duration}
-              </div>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: EXPERIENCE[currentExperience].description,
-                }}
-              ></p>
-              <ul className="mt-2 ml-6 space-y-2 fa-ul">
-                {EXPERIENCE[currentExperience].list.map((item, index) => (
-                  <li key={index}>
-                    <span className="fa-li text-oasis-600">
-                      <FontAwesomeIcon icon={faCode} />
-                    </span>
-                    <span dangerouslySetInnerHTML={{ __html: item }}></span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <ExperienceCard experience={EXPERIENCE[currentExperience]} />
             <p className="mt-12 lg:mt-16">
               More of my history is available on{' '}
               <a
