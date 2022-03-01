@@ -32,7 +32,7 @@ export default function Experience() {
             </h2>
             <p>
               Formally, I've studied a Diploma System Analysis and Design,
-              Bachelor of International Business (International Business), and
+              Bachelor of International Studies (International Business), and
               worked towards an MBA. Otherwise, I've completed numerous courses
               on JavaScript, React, Node, and Unity, and made my way through
               various books on design and creating user experiences.
