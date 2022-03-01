@@ -1,5 +1,5 @@
 import { faGitlab, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { faAngleLeft, faAngleRight } from '@fortawesome/pro-light-svg-icons'
+import { faAngleRight } from '@fortawesome/pro-light-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
 
