@@ -1,5 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGitlab, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faAngleLeft, faAngleRight } from '@fortawesome/pro-light-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
 
 import { EXPERIENCE } from '../data/experience'
@@ -8,6 +9,18 @@ import ExperienceCard from '../components/ExperienceCard/ExperienceCard'
 
 export default function Experience() {
   const [currentExperience, setCurrentExperience] = useState(0)
+  const experienceLength = EXPERIENCE.length
+
+  function handleCEChange(value) {
+    const next = currentExperience + value
+    setCurrentExperience(
+      next >= experienceLength
+        ? 0
+        : next < 0
+        ? experienceLength - 1
+        : currentExperience + value
+    )
+  }
 
   return (
     <div className="section bg-grey-900" name="experience">
@@ -24,7 +37,21 @@ export default function Experience() {
               on JavaScript, React, Node, and Unity, and made my way through
               various books on design and creating user experiences.
             </p>
-            <ExperienceCard experience={EXPERIENCE[currentExperience]} />
+            <div className="flex gap-x-8">
+              <div>
+                <ExperienceCard experience={EXPERIENCE[currentExperience]} />
+              </div>
+              {experienceLength > 1 && (
+                <div>
+                  <button
+                    className="mt-14 lg:mt-20 text-3xl text-oasis-500"
+                    onClick={() => handleCEChange(1)}
+                  >
+                    <FontAwesomeIcon icon={faAngleRight} />
+                  </button>
+                </div>
+              )}
+            </div>
             <p className="mt-12 lg:mt-16">
               More of my history is available on{' '}
               <a
