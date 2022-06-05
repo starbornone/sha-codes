@@ -5,11 +5,11 @@ export const EXPERIENCE = [
     link: 'https://cmgroup.com/',
     duration: 'March 2022 - Present',
     description:
-      'At <a href="https://cmgroup.com/" rel="noreferrer" target="_blank">CM Group</a>, my responsibilites include:',
+      'At <a href="https://cmgroup.com/" rel="noreferrer" target="_blank">CM Group</a>, my responsibilities include:',
     list: [
       'Developing and contributing to design system tools that help teams build UIs quickly and efficiently.',
       'Working on tools to optimise feedback loops between product, design, and engineering teams.',
-      'Collaborating with designers at various stages of the design and development process to build and improve on UI/X in the product.',
+      'Collaborating with designers at various stages of the design and development process to build and improve UI/X.',
       'Working closely with other engineers to develop solutions and help educate peers on best practices for UI development.',
       'Ensuring UIs are built in the most accessible way, and drive the direction of accessibility with design and engineering teams.',
       'Creating and regularly updating documentation for UI patterns and components so that product, design, and engineering teams can benefit from a centralised source of information.',
