@@ -258,27 +258,28 @@ nav a:hover {
 
 @screen lg {
   .card .img_section {
-    @apply px-0;
-    @apply m-0;
-    @apply relative;
     @apply h-full;
+    @apply m-0;
+    @apply px-0;
+    @apply relative;
   }
 }
 
 .card .img_section img {
-  @apply w-full;
-  @apply rounded-xl;
+  @apply h-60;
+  @apply w-60;
   @apply ring-8;
   @apply ring-grey-900;
   @apply ring-opacity-80;
+  @apply rounded-xl;
 }
 
 @screen lg {
   .card .img_section img {
     @apply absolute;
     @apply h-full;
-    @apply w-auto;
     @apply max-w-none;
+    @apply w-auto;
   }
 }
 
