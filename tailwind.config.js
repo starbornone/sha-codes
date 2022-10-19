@@ -72,6 +72,9 @@ module.exports = {
         xl: '1300px',
         '3xl': '1984px',
       },
+      spacing: {
+        '120': '30rem',
+      }
     },
   },
   plugins: [require('@tailwindcss/forms')],
