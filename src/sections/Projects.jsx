@@ -34,7 +34,7 @@ function Projects() {
           </div>
         </div>
       </div>
-      <div className="mt-12 lg:mt-0 xl:mx-auto 3xl:mx-80">
+      <div className="mt-12 lg:mt-0 xl:mx-auto">
         {websites.map((website, index) =>
           index < displayAmount ? (
             <ProjectCard
@@ -73,7 +73,7 @@ function Projects() {
             </div>
           </div>
         ) : (
-          <div>
+          <div className="my-16">
             <div className="font-mono text-center">
               And more...{' '}
               <a
@@ -84,7 +84,7 @@ function Projects() {
                 <FontAwesomeIcon icon={faGitlab} />
               </a>
             </div>
-            <div
+            {/* <div
               className="grid grid-cols-5 my-16 gap-x-6 -ml-16 xl:gap-x-16 xl:-ml-96"
               style={{ width: '120vw' }}
             >
@@ -108,7 +108,7 @@ function Projects() {
                 alt="Dark Merchants"
                 src="https://res.cloudinary.com/shianra/image/upload/v1639498095/sha/projects/dark-merchants-01-min_xxpdpn.jpg"
               />
-            </div>
+            </div> */}
           </div>
         )}
       </div>
