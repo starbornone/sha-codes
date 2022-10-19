@@ -6,6 +6,7 @@ import { AnimatePresence, motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
 import { transition } from '../../animations'
+import { classNames } from '../../utilities'
 
 function ProjectCard({ card: { details, index } }) {
   const controls = useAnimation()
@@ -90,16 +91,42 @@ function ProjectCard({ card: { details, index } }) {
                 </div>
               </div>
             </div>
-            <div className={index % 2 === 0 ? 'lg:col-start-1' : ''}>
+            <div
+              className={classNames(index % 2 === 0 ? 'lg:col-start-1' : '')}
+            >
               <div
-                className={`${
-                  index % 2 === 0
-                    ? 'pr-4 -ml-24 sm:pr-6 md:-ml-10 xl:-ml-36'
-                    : 'pl-4 -mr-24 sm:pl-6 md:-mr-10 xl:-mr-36'
-                } img_section`}
+                className={classNames(
+                  `${
+                    index % 2 === 0
+                      ? 'pr-4 -ml-72 sm:pr-6 md:-ml-10 xl:-ml-36'
+                      : 'pl-4 -mr-72 sm:pl-6 md:-mr-10 xl:-mr-36'
+                  }`,
+                  'img_section flex items-center'
+                )}
               >
+                {details.images[2] && (
+                  <img
+                    className={classNames(
+                      index % 2 === 0 ? 'lg:right-120' : 'lg:left-120'
+                    )}
+                    src={details.images[2]}
+                    alt={details.name}
+                  />
+                )}
+                {details.images[1] && (
+                  <img
+                    className={classNames(
+                      index % 2 === 0 ? 'lg:right-60' : 'lg:left-60'
+                    )}
+                    src={details.images[1]}
+                    alt={details.name}
+                  />
+                )}
                 <img
-                  className={index % 2 === 0 ? 'lg:right-0' : 'lg:left-0'}
+                  className={classNames(
+                    index % 2 === 0 ? 'lg:right-0' : 'lg:left-0',
+                    'z-100'
+                  )}
                   src={details.images[0]}
                   alt={details.name}
                 />
