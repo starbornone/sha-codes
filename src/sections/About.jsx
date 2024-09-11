@@ -38,15 +38,7 @@ export default function About() {
                   computer I've built or the tabletop my cat loves to nap on. I
                   also enjoy reading books and watching videos on all sorts of
                   topics, having found that knowledge in one area is often
-                  transferrable to others. And I{' '}
-                  <a
-                    href="https://aidreams.world"
-                    rel="noreferrer"
-                    target="_blank"
-                  >
-                    write about things
-                  </a>{' '}
-                  that interest or are important to me.
+                  transferrable to others.
                 </p>
               </div>
             </div>
