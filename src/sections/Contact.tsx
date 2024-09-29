@@ -1,14 +1,15 @@
-import ContactForm from '../forms/ContactForm'
+import ContactForm from "@/forms/ContactForm";
+import React from "react";
+
+const backgroundImage =
+  "url(https://res.cloudinary.com/shianra/image/upload/v1639497866/sha/9900K-min_a2uusi.jpg)";
 
 function Contact() {
   return (
     <div
       className="section bg-grey-900 bg-cover bg-center"
-      name="contact"
-      style={{
-        backgroundImage:
-          'url(https://res.cloudinary.com/shianra/image/upload/v1639497865/sha/2080Ti-min_ebqfcw.jpg)',
-      }}
+      id="contact"
+      style={{ backgroundImage }}
     >
       <div>
         <div className="container">
@@ -21,7 +22,7 @@ function Contact() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Contact
+export default Contact;

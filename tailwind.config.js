@@ -1,8 +1,8 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: 'class', // or 'media' or 'class'
+  content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  darkMode: 'class',
   theme: {
     colors: {
       white: '#fff',
@@ -73,9 +73,9 @@ module.exports = {
         '3xl': '1984px',
       },
       spacing: {
-        '120': '30rem',
-      }
+        120: '30rem',
+      },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
-}
+  plugins: [require('@tailwindcss/aspect-ratio'), require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+};
