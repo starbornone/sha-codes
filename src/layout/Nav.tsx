@@ -1,12 +1,17 @@
-import React, { Fragment, useMemo } from 'react';
-import { Popover, Transition } from '@headlessui/react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-scroll';
+import React, { Fragment, useMemo } from "react";
+import {
+  Popover,
+  PopoverButton,
+  PopoverPanel,
+  Transition,
+} from "@headlessui/react";
+import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 
 const NAVIGATION_ITEMS = [
-  { name: 'About', href: 'about' },
-  { name: 'Experience', href: 'experience' },
-  { name: 'Projects', href: 'projects' },
+  { name: "About", href: "about" },
+  { name: "Experience", href: "experience" },
+  { name: "Projects", href: "projects" },
 ];
 
 const variants = {
@@ -22,7 +27,7 @@ const variants = {
 };
 
 const Logo = () => (
-  <div className="text-lg text-oasis-500 flex gap-2 items-center">
+  <div className="flex items-center gap-2 text-lg text-oasis-500">
     <div className="sr-only">Sha Codes</div>
     <div className="text-oasis-500">
       <svg
@@ -36,7 +41,7 @@ const Logo = () => (
       </svg>
     </div>
     <div>
-    sha<span className="text-grey-100">.codes</span>
+      sha<span className="text-grey-100">.codes</span>
     </div>
   </div>
 );
@@ -55,7 +60,7 @@ const NavigationLinks = () => (
       >
         <span className="font-mono text-xs font-normal text-oasis-500">
           0{index + 1}.
-        </span>{' '}
+        </span>{" "}
         {item.name}
       </Link>
     ))}
@@ -67,31 +72,27 @@ const Nav = () => {
 
   return (
     <Popover as="header" className="sticky top-0 z-10">
-      <div className="px-2 py-6 bg-grey-900 md:px-6 3xl:px-12">
+      <div className="p-6 bg-grey-900 md:px-6 3xl:px-12">
         <nav className="relative flex items-center justify-between">
-          <div className="flex items-center flex-1">
-            <Logo />
-            <div className="flex items-center -mr-2 md:hidden">
-              <Popover.Button
-                className="inline-flex items-center justify-center p-2 rounded-md bg-grey-900 text-greyish-400 hover:bg-grey-800 focus:outline-none"
-                aria-label="Open main menu"
+          <Logo />
+          <div className="flex items-center -mr-2 md:hidden">
+            <PopoverButton
+              className="inline-flex items-center justify-center p-2 rounded-md bg-grey-900 text-greyish-400 hover:bg-grey-800 focus:outline-none"
+              aria-label="Open main menu"
+            >
+              <svg
+                aria-hidden="true"
+                className="w-5 h-5"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"
               >
-                <svg
-                  aria-hidden="true"
-                  className="w-5 h-5"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 448 512"
-                >
-                  <path d="M0 80c0-8.8 7.2-16 16-16h416c8.8 0 16 7.2 16 16s-7.2 16-16 16H16C7.2 96 0 88.8 0 80zM0 240c0-8.8 7.2-16 16-16h416c8.8 0 16 7.2 16 16s-7.2 16-16 16H16c-8.8 0-16-7.2-16-16zM448 400c0 8.8-7.2 16-16 16H16c-8.8 0-16-7.2-16-16s7.2-16 16-16h416c8.8 0 16 7.2 16 16z" />
-                </svg>
-              </Popover.Button>
-            </div>
+                <path d="M0 80c0-8.8 7.2-16 16-16h416c8.8 0 16 7.2 16 16s-7.2 16-16 16H16C7.2 96 0 88.8 0 80zM0 240c0-8.8 7.2-16 16-16h416c8.8 0 16 7.2 16 16s-7.2 16-16 16H16c-8.8 0-16-7.2-16-16zM448 400c0 8.8-7.2 16-16 16H16c-8.8 0-16-7.2-16-16s7.2-16 16-16h416c8.8 0 16 7.2 16 16z" />
+              </svg>
+            </PopoverButton>
           </div>
           <div className="hidden md:flex md:items-center md:space-x-6">
-            <div className="hidden space-x-8 md:flex md:ml-10">
-              {navItems}
-            </div>
+            <div className="hidden space-x-8 md:flex md:ml-10">{navItems}</div>
           </div>
         </nav>
       </div>
@@ -105,14 +106,14 @@ const Nav = () => {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-        <Popover.Panel
+        <PopoverPanel
           focus
           className="absolute inset-x-0 top-0 z-10 p-2 transition origin-top transform md:hidden"
         >
           <div className="overflow-hidden rounded-lg shadow-md bg-gradient-to-r from-oasis-800 to-grey-500">
             <div className="flex items-center justify-between px-5 pt-4">
               <Logo />
-              <Popover.Button
+              <PopoverButton
                 className="inline-flex items-center justify-center p-2 rounded-md text-oasis-800 focus:outline-none"
                 aria-label="Close menu"
               >
@@ -125,17 +126,18 @@ const Nav = () => {
                 >
                   <path d="M256 32a224 224 0 1 1 0 448 224 224 0 1 1 0-448zm0 480A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM180.7 180.7c-6.2 6.2-6.2 16.4 0 22.6L233.4 256l-52.7 52.7c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L256 278.6l52.7 52.7c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L278.6 256l52.7-52.7c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L256 233.4l-52.7-52.7c-6.2-6.2-16.4-6.2-22.6 0z" />
                 </svg>
-              </Popover.Button>
+              </PopoverButton>
             </div>
             <div className="pt-5 pb-6">
-              <div className="px-2 space-y-1">
-                <motion.ul variants={variants}>
-                  {navItems}
-                </motion.ul>
-              </div>
+              <motion.ul
+                className="flex justify-between gap-6 px-6"
+                variants={variants}
+              >
+                {navItems}
+              </motion.ul>
             </div>
           </div>
-        </Popover.Panel>
+        </PopoverPanel>
       </Transition>
     </Popover>
   );
