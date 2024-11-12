@@ -16,16 +16,29 @@ function Projects() {
               <span className="highlight">my</span>.projects
             </h2>
             <p>
-              Whether I'm coding to bring someone’s vision to life, tackling an
-              intriguing challenge, or turning my own ideas into reality, here
-              are a few projects I'm excited to share. I also have some of my
-              repos public on{" "}
+              When I&apos;m not crafting solutions during office hours,
+              you&apos;ll find me diving into passion projects that push my
+              technical boundaries. From turning creative visions into
+              pixel-perfect reality to solving complex coding puzzles, these
+              projects showcase both my technical chops and my love for clean,
+              efficient code.
+            </p>
+            <p>
+              If you&apos;re after more code, check out my public repos on{" "}
               <a
                 href="https://github.com/starbornone"
                 rel="noreferrer"
                 target="_blank"
               >
                 GitHub
+              </a>{" "}
+              or explore my experiments on{" "}
+              <a
+                href="https://codepen.io/starborn"
+                rel="noreferrer"
+                target="_blank"
+              >
+                CodePen
               </a>
               .
             </p>

@@ -9,34 +9,49 @@ export type ExperienceData = {
 
 export const EXPERIENCE: ExperienceData[] = [
   {
-    role: 'Front-End Engineer',
-    name: 'Marigold/Campaign Monitor',
-    link: 'https://meetmarigold.com/',
-    duration: 'March 2022 - Present',
+    role: "Senior Software Engineer",
+    name: "Campaign Monitor",
+    link: "https://meetmarigold.com/",
+    duration: "March 2022 - Present",
     description:
-      'At Marigold/Campaign Monitor, I focus on enhancing the efficiency and collaboration between product, design, and engineering teams by developing robust front-end solutions. My key responsibilities include:',
+      "At Campaign Monitor, I specialise in front-end development using React.js, Next.js, TypeScript, and modern styling solutions including SASS and Styled Components. Working closely with design teams through Figma, I focus on creating robust, accessible UI components and design systems.",
     list: [
-      'Design System Development: Contribute to and build design system tools that streamline UI creation, enabling teams to develop interfaces quickly and consistently.',
-      'Optimising Feedback Loops: Work on improving communication and feedback processes between product, design, and engineering teams, ensuring seamless collaboration across departments.',
-      'UI/UX Collaboration: Partner with designers at every stage of the design and development process to create, refine, and improve user interfaces and user experiences.',
-      'Engineering Collaboration & Mentorship: Collaborate closely with fellow engineers to develop innovative solutions while mentoring peers on front-end best practices.',
-      'Driving Accessibility: Champion accessibility initiatives, ensuring that UIs are built with inclusivity in mind, while shaping accessibility standards with the design and engineering teams.',
-      'Documentation & Knowledge Sharing: Create and maintain comprehensive documentation for UI patterns and components, providing a centralised, up-to-date resource for the entire product, design, and engineering teams.',
-      'Improving Front-End Infrastructure: Lead efforts to refine front-end engineering best practices and extend core infrastructure and libraries to support long-term scalability.'
+      "Architected and maintained design system tools using React.js, TypeScript, and Styled Components, enabling rapid UI development across multiple product teams.",
+
+      "Implemented HeadlessUI components and established documentation systems using Markdown, creating a centralised knowledge base for product, design, and engineering teams.",
+
+      "Developed feedback optimisation tools using Next.js and TypeScript to streamline collaboration between product, design, and engineering departments.",
+
+      "Established and documented front-end engineering best practices, focusing on accessibility standards and component reusability.",
+
+      "Created comprehensive UI pattern libraries and component documentation, improving team efficiency and maintaining consistency across products.",
+
+      "Led initiatives in accessible UI development, implementing WCAG guidelines and educating team members on accessibility best practices.",
+
+      "Built and extended front-end infrastructure using Node.js, improving development workflows and component library management.",
     ],
   },
   {
-    role: 'Full Stack Developer',
-    name: 'Livn',
-    link: 'https://livn.world/',
-    duration: 'January 2017 - February 2022',
+    role: "Software Engineer",
+    name: "Livn",
+    link: "https://livn.world/",
+    duration: "January 2017 - February 2022",
     description:
-      'At Livn, I played a key role in designing, developing, and maintaining multiple web applications as part of a small JavaScript team. This position offered significant creative freedom and responsibility, allowing me to lead projects from inception to deployment. Along the way, I honed my skills in project management and developer collaboration. Some of the key projects I delivered include:',
+      "Led development initiatives using a diverse tech stack including React.js, Node.js, PostgreSQL, TypeScript, and multiple UI frameworks (Material UI, ChakraUI, HeadlessUI). Managed both modern front-end applications and legacy systems built with Symfony, WordPress, and jQuery.",
     list: [
-      'Store Management & Sales Platform: Developed a platform to streamline client operations and sales management.',
-      'API Implementation & Documentation: Created a fully documented example implementation of Livn\'s API to facilitate client integrations.',
-      "Backend Dashboard: Built a comprehensive dashboard for managing all of Livn's data, clients, and administrative tasks.",
-      "Mock API Web App: Designed a mock implementation of Livn's API, enabling backend developers to efficiently test and validate their work.",
+      "Led development team in building and maintaining full-stack applications using React.js, Node.js, and PostgreSQL, while managing MongoDB databases for specific use cases.",
+
+      "Implemented new design processes using Material UI and ChakraUI, ensuring consistent user experience across multiple platforms.",
+
+      "Developed and maintained both legacy systems (Symfony, WordPress) and modern applications (React.js, TypeScript) within the same ecosystem.",
+
+      "Created and maintained comprehensive documentation for both internal teams and external users, improving project visibility and resource utilisation.",
+
+      "Established coding standards and design guidelines across multiple frameworks (Material UI, ChakraUI, HeadlessUI), ensuring consistency in development practices.",
+
+      "Managed deployment processes and infrastructure maintenance, ensuring smooth transitions from development to production.",
+
+      "Interfaced with stakeholders across product management, engineering, and marketing teams to align development goals with business objectives.",
     ],
   },
 ];

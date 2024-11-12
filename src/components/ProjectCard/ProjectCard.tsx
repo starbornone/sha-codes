@@ -1,8 +1,8 @@
-import clsx from 'clsx';
-import { AnimatePresence, motion, useAnimation } from 'framer-motion';
-import React, { useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
-import { transition } from '@/animations';
+import clsx from "clsx";
+import { AnimatePresence, motion, useAnimation } from "framer-motion";
+import React, { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { transition } from "@/animations";
 
 interface ProjectCardProps {
   card: {
@@ -20,7 +20,7 @@ interface ProjectCardProps {
         prefix: React.ReactNode;
         suffix: React.ReactNode;
       };
-      images: string[];
+      images?: string[];
     };
     index: number;
   };
@@ -32,7 +32,7 @@ function ProjectCard({ card: { details, index } }: ProjectCardProps) {
 
   useEffect(() => {
     if (inView) {
-      controls.start('visible');
+      controls.start("visible");
     }
   }, [controls, inView]);
 
@@ -44,12 +44,12 @@ function ProjectCard({ card: { details, index } }: ProjectCardProps) {
         ref={ref}
         variants={{
           hidden: {
-            x: index % 2 === 0 ? '50%' : '-50%',
+            x: index % 2 === 0 ? "50%" : "-50%",
             opacity: 0,
             transition,
           },
           visible: {
-            x: '0%',
+            x: "0%",
             opacity: 1,
             transition,
           },
@@ -57,7 +57,9 @@ function ProjectCard({ card: { details, index } }: ProjectCardProps) {
       >
         <div className="card">
           <div>
-            <div className={`content ${index % 2 === 0 ? 'lg:col-start-2' : ''}`}>
+            <div
+              className={`content ${index % 2 === 0 ? "lg:col-start-2" : ""}`}
+            >
               <div>
                 <div className="meta">
                   {details.highlights.list.map((highlight, index) => (
@@ -82,7 +84,7 @@ function ProjectCard({ card: { details, index } }: ProjectCardProps) {
                         <a href={details.url} rel="noreferrer" target="_blank">
                           <svg
                             aria-hidden="true"
-                            className="h-5 w-5"
+                            className="w-5 h-5"
                             fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 576 512"
@@ -95,7 +97,7 @@ function ProjectCard({ card: { details, index } }: ProjectCardProps) {
                         <a href={details.repo} rel="noreferrer" target="_blank">
                           <svg
                             aria-hidden="true"
-                            className="h-5 w-5"
+                            className="w-5 h-5"
                             fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 448 512"
@@ -108,48 +110,61 @@ function ProjectCard({ card: { details, index } }: ProjectCardProps) {
                   </div>
                   <p>{details.description}</p>
                 </div>
-                <div className="meta my-6">
+                <div className="my-6 meta">
                   {details.inclusions.list.map((inclusion, index) => (
-                    <div className='flex gap-2' key={index}>
-                      <span className="decorator">{details.inclusions.prefix}</span>
+                    <div className="flex gap-2" key={index}>
+                      <span className="decorator">
+                        {details.inclusions.prefix}
+                      </span>
                       {inclusion}
-                      <span className="decorator">{details.inclusions.suffix}</span>
+                      <span className="decorator">
+                        {details.inclusions.suffix}
+                      </span>
                     </div>
                   ))}
                 </div>
               </div>
             </div>
-            <div className={clsx(index % 2 === 0 ? 'lg:col-start-1' : '')}>
-              <div
-                className={clsx(
-                  `${
-                    index % 2 === 0
-                      ? '-ml-72 pr-4 sm:pr-6 md:-ml-10 xl:-ml-36'
-                      : '-mr-72 pl-4 sm:pl-6 md:-mr-10 xl:-mr-36'
-                  }`,
-                  'img_section flex items-center'
-                )}
-              >
-                {details.images[2] && (
+            <div className={clsx(index % 2 === 0 ? "lg:col-start-1" : "")}>
+              {details.images && (
+                <div
+                  className={clsx(
+                    `${
+                      index % 2 === 0
+                        ? "-ml-72 pr-4 sm:pr-6 md:-ml-10 xl:-ml-36"
+                        : "-mr-72 pl-4 sm:pl-6 md:-mr-10 xl:-mr-36"
+                    }`,
+                    "img_section flex items-center"
+                  )}
+                >
+                  {details.images[2] && (
+                    <img
+                      className={clsx(
+                        index % 2 === 0 ? "lg:right-120" : "lg:left-120"
+                      )}
+                      src={details.images[2]}
+                      alt={details.name}
+                    />
+                  )}
+                  {details.images[1] && (
+                    <img
+                      className={clsx(
+                        index % 2 === 0 ? "lg:right-60" : "lg:left-60"
+                      )}
+                      src={details.images[1]}
+                      alt={details.name}
+                    />
+                  )}
                   <img
-                    className={clsx(index % 2 === 0 ? 'lg:right-120' : 'lg:left-120')}
-                    src={details.images[2]}
+                    className={clsx(
+                      index % 2 === 0 ? "lg:right-0" : "lg:left-0",
+                      "z-100"
+                    )}
+                    src={details.images[0]}
                     alt={details.name}
                   />
-                )}
-                {details.images[1] && (
-                  <img
-                    className={clsx(index % 2 === 0 ? 'lg:right-60' : 'lg:left-60')}
-                    src={details.images[1]}
-                    alt={details.name}
-                  />
-                )}
-                <img
-                  className={clsx(index % 2 === 0 ? 'lg:right-0' : 'lg:left-0', 'z-100')}
-                  src={details.images[0]}
-                  alt={details.name}
-                />
-              </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
