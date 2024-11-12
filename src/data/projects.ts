@@ -10,6 +10,20 @@ export type ProjectData = {
 
 export const PROJECTS: ProjectData[] = [
   {
+    id: "marketopia",
+    name: "Marketopia Adventures",
+    url: "https://marketopia.sha.codes/",
+    description:
+      "An interactive visual-novel style web app designed to introduce and explore fundamental concepts in game theory. Developed to accompany an introductory talk, it allows viewers to experience game theory principles firsthand through a series of dynamic scenarios and decision-making pathways. The app combines narrative elements with educational gameplay, providing an engaging learning environment that demystifies complex topics.",
+    roles: ["UI Design", "Development"],
+    tech: ["React", "Next.js", "SASS", "Framer Motion"],
+    images: [
+      "https://res.cloudinary.com/starborn/image/upload/v1731435710/sha-codes/projects/marketopia-02_t3f8tc.png",
+      "https://res.cloudinary.com/starborn/image/upload/v1731435710/sha-codes/projects/marketopia-04_zsfzsy.png",
+      "https://res.cloudinary.com/starborn/image/upload/v1731435710/sha-codes/projects/marketopia-03_ih8uyj.png",
+    ],
+  },
+  {
     id: "aid",
     name: "AI Dreams",
     url: "https://aidreams.world/",
@@ -18,9 +32,9 @@ export const PROJECTS: ProjectData[] = [
     roles: ["UI Design", "Development"],
     tech: ["React", "Next.js", "GraphQL", "TailwindCSS", "Hygraph"],
     images: [
-      "https://res.cloudinary.com/starborn/image/upload/v1666166845/sha-codes/projects/ai-dreams-01_xirymy.jpg",
-      "https://res.cloudinary.com/starborn/image/upload/v1666166846/sha-codes/projects/ai-dreams-02_ftyi7u.jpg",
-      "https://res.cloudinary.com/starborn/image/upload/v1666166847/sha-codes/projects/ai-dreams-03_gyr1wt.jpg",
+      "https://res.cloudinary.com/starborn/image/upload/v1731431776/sha-codes/projects/ai-dreams-01_gpyudo.png",
+      "https://res.cloudinary.com/starborn/image/upload/v1731431776/sha-codes/projects/ai-dreams-02_i9nch0.png",
+      "https://res.cloudinary.com/starborn/image/upload/v1731431774/sha-codes/projects/ai-dreams-03_odpqdh.jpg",
     ],
   },
   {
@@ -31,6 +45,10 @@ export const PROJECTS: ProjectData[] = [
       "An intuitive D&D 5e character creation tool featuring a sophisticated point-buy system with real-time calculations and validation. Supports all official races and subraces, including custom content, with automatic modifier calculations and stat maximums. Includes detailed tooltips, mobile responsiveness, and shareable character builds via URL parameters.",
     roles: ["Full-Stack Developer", "UI/UX Designer"],
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+    images: [
+      "https://res.cloudinary.com/starborn/image/upload/v1731431439/sha-codes/projects/dnd-point-buy-calc-01_irqiwm.png",
+      "https://res.cloudinary.com/starborn/image/upload/v1731431622/sha-codes/projects/dnd-point-buy-calc-02_ineke8.png",
+    ],
   },
   {
     id: "og",
