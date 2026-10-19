@@ -4,7 +4,6 @@ const Intro = lazy(() => import('./sections/Intro'));
 const About = lazy(() => import('./sections/About'));
 const Experience = lazy(() => import('./sections/Experience'));
 const Projects = lazy(() => import('./sections/Projects'));
-const Contact = lazy(() => import('./sections/Contact'));
 
 export default function App(): JSX.Element {
   return (
@@ -32,7 +31,7 @@ export default function App(): JSX.Element {
       <About />
       <Experience />
       <Projects />
-      <Contact />
+      {/* Contact is hidden until an email sending service is set up. */}
     </Suspense>
   );
 }
