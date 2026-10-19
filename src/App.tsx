@@ -1,37 +1,20 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
+import About from './sections/About';
+import Experience from './sections/Experience';
+import Intro from './sections/Intro';
+import Projects from './sections/Projects';
 
-const Intro = lazy(() => import('./sections/Intro'));
-const About = lazy(() => import('./sections/About'));
-const Experience = lazy(() => import('./sections/Experience'));
-const Projects = lazy(() => import('./sections/Projects'));
-
+// Sections are imported eagerly: they all render on first paint, so splitting
+// them only added round trips. The loading screen lives in public/index.html
+// and shows until this bundle boots.
 export default function App(): JSX.Element {
   return (
-    <Suspense
-      fallback={
-        <div className="flex items-center justify-center h-screen bg-grey-900 relative overflow-hidden">
-          <div className="glitch-container">
-            <div className="glitch-text" data-text="LOADING...">
-              LOADING...
-            </div>
-            <div className="glitch-text-shadow"></div>
-          </div>
-          
-          <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-            <div className="h-full w-full flex justify-around items-center">
-              <div className="glow-line line-vertical"></div>
-              <div className="glow-line line-horizontal"></div>
-              <div className="glow-line line-vertical"></div>
-            </div>
-          </div>
-        </div>
-      }
-    >
+    <>
       <Intro />
       <About />
       <Experience />
       <Projects />
       {/* Contact is hidden until an email sending service is set up. */}
-    </Suspense>
+    </>
   );
 }
