@@ -1,11 +1,10 @@
-import React, { Fragment, useMemo } from "react";
+import React, { Fragment } from "react";
 import {
   Popover,
   PopoverButton,
   PopoverPanel,
   Transition,
 } from "@headlessui/react";
-import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 
 const NAVIGATION_ITEMS = [
@@ -13,18 +12,6 @@ const NAVIGATION_ITEMS = [
   { name: "Experience", href: "experience" },
   { name: "Projects", href: "projects" },
 ];
-
-const variants = {
-  open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
-  },
-  closed: {
-    transition: {
-      staggerChildren: 0.05,
-      staggerDirection: -1,
-    },
-  },
-};
 
 const Logo = () => (
   <div className="flex items-center gap-2 text-lg text-oasis-500">
@@ -46,30 +33,35 @@ const Logo = () => (
   </div>
 );
 
-const NavigationLinks = () => (
-  <>
-    {NAVIGATION_ITEMS.map((item, index) => (
-      <Link
-        key={item.name}
-        to={item.href}
-        smooth
-        spy
-        duration={500}
-        offset={-80}
-        activeClass="active"
-      >
-        <span className="font-mono text-xs font-normal text-oasis-500">
-          0{index + 1}.
-        </span>{" "}
-        {item.name}
-      </Link>
-    ))}
-  </>
+const NavigationLink = ({
+  item,
+  index,
+  onClick,
+}: {
+  item: (typeof NAVIGATION_ITEMS)[number];
+  index: number;
+  onClick?: () => void;
+}) => (
+  // react-scroll's Link renders an <a> without an href, which keyboard users
+  // can't focus. It prevents the default jump, so the href only adds focus.
+  <Link
+    to={item.href}
+    href={`#${item.href}`}
+    onClick={onClick}
+    smooth
+    spy
+    duration={500}
+    offset={-80}
+    activeClass="active"
+  >
+    <span className="font-mono text-xs font-normal text-oasis-500">
+      0{index + 1}.
+    </span>{" "}
+    {item.name}
+  </Link>
 );
 
 const Nav = () => {
-  const navItems = useMemo(() => <NavigationLinks />, []);
-
   return (
     <Popover as="header" className="sticky top-0 z-10">
       <div className="p-6 bg-grey-900 md:px-6 3xl:px-12">
@@ -77,7 +69,7 @@ const Nav = () => {
           <Logo />
           <div className="flex items-center -mr-2 md:hidden">
             <PopoverButton
-              className="inline-flex items-center justify-center p-2 rounded-md bg-grey-900 text-greyish-400 hover:bg-grey-800 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md bg-grey-900 text-greyish-400 hover:bg-grey-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-buttercream-500"
               aria-label="Open main menu"
             >
               <svg
@@ -92,7 +84,11 @@ const Nav = () => {
             </PopoverButton>
           </div>
           <div className="hidden md:flex md:items-center md:space-x-6">
-            <div className="hidden space-x-8 md:flex md:ml-10">{navItems}</div>
+            <div className="hidden space-x-8 md:flex md:ml-10">
+              {NAVIGATION_ITEMS.map((item, index) => (
+                <NavigationLink key={item.name} item={item} index={index} />
+              ))}
+            </div>
           </div>
         </nav>
       </div>
@@ -110,33 +106,36 @@ const Nav = () => {
           focus
           className="absolute inset-x-0 top-0 z-10 p-2 transition origin-top transform md:hidden"
         >
-          <div className="overflow-hidden rounded-lg shadow-md bg-gradient-to-r from-oasis-800 to-grey-500">
-            <div className="flex items-center justify-between px-5 pt-4">
-              <Logo />
-              <PopoverButton
-                className="inline-flex items-center justify-center p-2 rounded-md text-oasis-800 focus:outline-none"
-                aria-label="Close menu"
-              >
-                <svg
-                  aria-hidden="true"
-                  className="w-5 h-5"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 512 512"
+          {({ close }) => (
+            <div className="overflow-hidden rounded-lg shadow-md bg-gradient-to-r from-oasis-800 to-grey-500">
+              <div className="flex items-center justify-between px-5 pt-4">
+                <Logo />
+                <PopoverButton
+                  className="inline-flex items-center justify-center p-2 rounded-md text-greyish-200 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-buttercream-500"
+                  aria-label="Close menu"
                 >
-                  <path d="M256 32a224 224 0 1 1 0 448 224 224 0 1 1 0-448zm0 480A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM180.7 180.7c-6.2 6.2-6.2 16.4 0 22.6L233.4 256l-52.7 52.7c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L256 278.6l52.7 52.7c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L278.6 256l52.7-52.7c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L256 233.4l-52.7-52.7c-6.2-6.2-16.4-6.2-22.6 0z" />
-                </svg>
-              </PopoverButton>
+                  <svg
+                    aria-hidden="true"
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 512 512"
+                  >
+                    <path d="M256 32a224 224 0 1 1 0 448 224 224 0 1 1 0-448zm0 480A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM180.7 180.7c-6.2 6.2-6.2 16.4 0 22.6L233.4 256l-52.7 52.7c-6.2 6.2-6.2 16.4 0 22.6s16.4 6.2 22.6 0L256 278.6l52.7 52.7c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L278.6 256l52.7-52.7c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0L256 233.4l-52.7-52.7c-6.2-6.2-16.4-6.2-22.6 0z" />
+                  </svg>
+                </PopoverButton>
+              </div>
+              <div className="pt-5 pb-6">
+                <ul className="flex justify-between gap-6 px-6">
+                  {NAVIGATION_ITEMS.map((item, index) => (
+                    <li key={item.name}>
+                      <NavigationLink item={item} index={index} onClick={close} />
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div className="pt-5 pb-6">
-              <motion.ul
-                className="flex justify-between gap-6 px-6"
-                variants={variants}
-              >
-                {navItems}
-              </motion.ul>
-            </div>
-          </div>
+          )}
         </PopoverPanel>
       </Transition>
     </Popover>
