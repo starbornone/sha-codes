@@ -20,8 +20,8 @@ It is removed from the page in `src/App.tsx` (look for the "Contact is hidden" c
 ## 2. Update the code
 
 - [ ] Replace the deprecated `emailjs-com` package with `@emailjs/browser` and update the import/API in `ContactForm.tsx`.
-- [ ] Replace the hardcoded service ID, template ID and key (`ContactForm.tsx`, `sendForm(...)` call) with env vars. Under CRA these are `REACT_APP_*`; after the Vite migration in `modernization-plan.md` they become `VITE_*`. Add a `.env.example` and gitignore `.env`.
-- [ ] Add `<Contact />` (and its `lazy` import) back to `src/App.tsx`.
+- [ ] Replace the hardcoded service ID, template ID and key (`ContactForm.tsx`, `sendForm(...)` call) with env vars. Use the `VITE_` prefix (e.g. `VITE_EMAILJS_SERVICE_ID`) and read them with `import.meta.env`. Add a `.env.example` (`.env` is already gitignored).
+- [ ] Add `<Contact />` and its import back to `src/App.tsx`.
 
 ## 3. Fix the known form bugs before shipping
 
