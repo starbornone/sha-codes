@@ -76,7 +76,7 @@ export default function Footer() {
               </SocialIcon>
             </div>
             <div className="mt-4 text-center">
-              <p className="text-sm text-grey-400">{randomQuote}</p>
+              <p className="text-sm text-greyish-400">{randomQuote}</p>
             </div>
           </div>
         </div>

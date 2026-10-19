@@ -78,10 +78,15 @@ function ProjectCard({ card: { details, index } }: ProjectCardProps) {
                 </div>
                 <div>
                   <div className="heading">
-                    <h2>{details.name}</h2>
+                    <h3>{details.name}</h3>
                     <div>
                       {details.url && (
-                        <a href={details.url} rel="noreferrer" target="_blank">
+                        <a
+                          href={details.url}
+                          rel="noreferrer"
+                          target="_blank"
+                          aria-label={`Visit ${details.name}`}
+                        >
                           <svg
                             aria-hidden="true"
                             className="w-5 h-5"
@@ -94,7 +99,12 @@ function ProjectCard({ card: { details, index } }: ProjectCardProps) {
                         </a>
                       )}
                       {details.repo && (
-                        <a href={details.repo} rel="noreferrer" target="_blank">
+                        <a
+                          href={details.repo}
+                          rel="noreferrer"
+                          target="_blank"
+                          aria-label={`${details.name} source code`}
+                        >
                           <svg
                             aria-hidden="true"
                             className="w-5 h-5"

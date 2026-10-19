@@ -20,6 +20,11 @@ a {
   @apply text-buttercream-400;
 }
 
+p a {
+  @apply underline;
+  @apply underline-offset-2;
+}
+
 a:focus,
 a:hover {
   @apply cursor-pointer;
@@ -40,6 +45,7 @@ h2 {
   @apply text-greyish-200;
 }
 
+h1 .highlight,
 h2 .highlight {
   @apply text-oasis-500;
 }
@@ -113,6 +119,10 @@ nav a:focus,
 nav a:hover {
   @apply cursor-pointer;
   @apply text-buttercream-600;
+}
+
+nav a.active {
+  @apply text-buttercream-400;
 }
 
 /*** Section ***/
@@ -206,7 +216,8 @@ nav a:hover {
   }
 }
 
-.card h2 {
+.card h3 {
+  @apply text-4xl;
   @apply text-oasis-500;
 }
 
@@ -214,7 +225,7 @@ nav a:hover {
   @apply font-mono;
   @apply flex;
   @apply flex-wrap;
-  @apply text-greyish-400;
+  @apply text-greyish-300;
   @apply text-sm;
 }
 
@@ -359,6 +370,15 @@ nav a:hover {
   }
   100% {
     transform: translateX(-50px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glitch-text,
+  .glitch-text::before,
+  .glitch-text::after,
+  .glow-line {
+    animation: none;
   }
 }
 

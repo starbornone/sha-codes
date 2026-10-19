@@ -27,9 +27,9 @@ export default function Intro(): JSX.Element {
         >
           <div className="max-w-2xl px-4 py-12 mx-auto lg:py-24">
             <header className="mb-8">
-              <h2 className="text-4xl font-bold">
+              <h1 className="font-bold text-greyish-200">
                 <span className="highlight">sha</span>.codes
-              </h2>
+              </h1>
             </header>
             <article className="space-y-6 text-lg leading-relaxed">
               <p>
