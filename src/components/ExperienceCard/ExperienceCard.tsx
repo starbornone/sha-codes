@@ -12,7 +12,7 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
         <span className="font-mono font-normal">{experience.role}</span>{' '}
         <span className="text-oasis-500">@ {experience.name}</span>
       </h3>
-      <div className="font-mono text-greyish-600">{experience.duration}</div>
+      <div className="font-mono text-greyish-400">{experience.duration}</div>
       {experience.description && (
         <p
           dangerouslySetInnerHTML={{

@@ -10,7 +10,7 @@ function Layout({ children }: LayoutProps) {
   return (
     <div>
       <Nav />
-      <div>{children}</div>
+      <main>{children}</main>
       <Footer />
     </div>
   );
