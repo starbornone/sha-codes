@@ -2,6 +2,7 @@ export type ProjectData = {
   id: string;
   name: string;
   url?: string;
+  repo?: string;
   description: string;
   images?: string[];
   roles: string[];
