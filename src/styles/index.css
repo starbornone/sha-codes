@@ -373,6 +373,15 @@ nav a.active {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .glitch-text,
+  .glitch-text::before,
+  .glitch-text::after,
+  .glow-line {
+    animation: none;
+  }
+}
+
 /* Keyframes for Glitch Effect */
 @keyframes glitch {
   0% {
