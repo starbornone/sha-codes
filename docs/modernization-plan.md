@@ -7,6 +7,19 @@
 
 ---
 
+## Status (2026-10-19)
+
+| Phase | State |
+|-------|-------|
+| A — Inventory | Done (code review, `/mnt/project-files/reviews/`) |
+| B — Vite | Done (PR #3) |
+| C — EmailJS | Deferred: the contact form is hidden until an email service exists. See `docs/contact-form.md` |
+| D — Hygiene | Done (this PR), except the EmailJS package (phase C) |
+| E — Tooling | Done (PR #4): ESLint, Vitest, GitHub Actions. Prettier skipped; `eslint-plugin-tailwindcss` doesn't support ESLint 10 yet |
+| F — Tailwind 4 / React 19 | Not started |
+
+---
+
 ## 0. How to use this document
 
 1. Execute phases **in order** unless a phase is marked optional.
