@@ -18,7 +18,7 @@ npm run preview    # serve the production build locally
 
 ## Checks
 
-GitHub Actions (`.github/workflows/ci.yml`) runs lint, type-check, tests and build on every pull request and on pushes to `main`.
+GitHub Actions (`.github/workflows/ci.yml`) runs lint, type-check and tests on pull requests and pushes to `main`, skipping docs-only changes. Netlify does the production build. Keep it lean: the account has 2,000 Actions minutes a month.
 
 ## Deployment
 

@@ -1,21 +1,29 @@
 name: CI
 
+# Kept lean: the account has 2,000 Actions minutes a month. Netlify already
+# builds every PR, so this job skips the production build.
 on:
   pull_request:
+    paths-ignore: ['**.md', 'docs/**']
   push:
     branches: [main]
+    paths-ignore: ['**.md', 'docs/**']
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-      - run: npm ci
+      - run: npm ci --no-audit --no-fund
       - run: npm run lint
       - run: npm run typecheck
       - run: npm test
-      - run: npm run build

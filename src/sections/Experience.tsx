@@ -41,12 +41,33 @@ export default function Experience() {
         </header>
 
         <div className="flex mt-8 gap-x-8">
-          <ExperienceCard experience={EXPERIENCE[currentExperience]} />
+          {/* Announce the new role when the buttons change it. */}
+          <div aria-live="polite">
+            <ExperienceCard experience={EXPERIENCE[currentExperience]} />
+          </div>
 
           {experienceLength > 1 && (
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col items-center justify-center gap-4 mt-14 lg:mt-20">
               <button
-                className="text-3xl mt-14 lg:mt-20 text-oasis-500"
+                className="text-oasis-500"
+                onClick={() => handleCEChange(-1)}
+                aria-label="Previous Experience"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 320 512"
+                >
+                  <path d="M52.7 244.7c-6.2 6.2-6.2 16.4 0 22.6l160 160c6.2 6.2 16.4 6.2 22.6 0s6.2-16.4 0-22.6L86.6 256 235.3 107.3c6.2-6.2 6.2-16.4 0-22.6s-16.4-6.2-22.6 0l-160 160z" />
+                </svg>
+              </button>
+              <div className="font-mono text-sm text-greyish-400">
+                {currentExperience + 1}/{experienceLength}
+              </div>
+              <button
+                className="text-oasis-500"
                 onClick={() => handleCEChange(1)}
                 aria-label="Next Experience"
               >
