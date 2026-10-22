@@ -15,4 +15,13 @@ describe('Experience', () => {
       expect(screen.getByRole('heading', { level: 3 })).toHaveTextContent(role.name);
     }
   });
+
+  it('steps backwards from the first role to the last', async () => {
+    const user = userEvent.setup();
+    render(<Experience />);
+
+    await user.click(screen.getByRole('button', { name: 'Previous Experience' }));
+    expect(screen.getByRole('heading', { level: 3 })).toHaveTextContent(EXPERIENCE[EXPERIENCE.length - 1].name);
+    expect(screen.getByText(`${EXPERIENCE.length}/${EXPERIENCE.length}`)).toBeInTheDocument();
+  });
 });
