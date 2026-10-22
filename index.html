@@ -49,11 +49,14 @@
     -->
     <link rel="manifest" href="/manifest.json" />
     <title>sha.codes</title>
+    <!-- Sections fade in once the app runs. Without JavaScript, show them as is. -->
+    <noscript><style>[style*="opacity:0"] { opacity: 1 !important; transform: none !important; }</style></noscript>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- The loading screen shows on the dev server. Production builds replace
+         everything between the app markers with prerendered HTML. -->
     <div id="root">
-      <!-- Loading screen, replaced when the app renders. -->
+      <!--app-->
       <div class="relative flex items-center justify-center h-screen overflow-hidden bg-grey-900">
         <div class="glitch-container">
           <div class="glitch-text" data-text="LOADING...">LOADING...</div>
@@ -67,6 +70,7 @@
           </div>
         </div>
       </div>
+      <!--/app-->
     </div>
     <script type="module" src="/src/index.tsx"></script>
   </body>
