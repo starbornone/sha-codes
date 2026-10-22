@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useState } from "react";
 import { QUOTES } from "../data/quotes";
 
 const getRandomQuote = () => QUOTES[Math.floor(Math.random() * QUOTES.length)];
@@ -24,7 +24,13 @@ const SocialIcon = ({
 );
 
 export default function Footer() {
-  const randomQuote = useMemo(() => getRandomQuote(), []);
+  // Start on the first quote so the prerendered HTML matches the first client
+  // render, then pick a random one once the page is live.
+  const [randomQuote, setRandomQuote] = useState(QUOTES[0]);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setRandomQuote(getRandomQuote());
+  }, []);
 
   return (
     <footer className="py-24 overflow-hidden bg-grey-900">
