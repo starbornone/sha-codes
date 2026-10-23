@@ -3,9 +3,7 @@ import { PROJECTS } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
 
 function Projects() {
-  const websites = PROJECTS.filter(
-    (website) => website.images && website.description
-  );
+  const websites = PROJECTS.filter((website) => website.description);
 
   return (
     <div className="section bg-grey-600" id="projects">
