@@ -191,8 +191,5 @@ export const PROJECTS: ProjectData[] = [
       "A modern dental practice website featuring an intuitive appointment booking system, service information, and patient resources. Implements responsive design principles for optimal viewing across devices, includes interactive service galleries, and features automated contact forms with validation. Optimised for local SEO with structured data markup.",
     roles: ["UI Design", "Development"],
     tech: ["React", "TailwindCSS", "React Router"],
-    images: [
-      "https://res.cloudinary.com/shianra/image/upload/v1639498096/sha/projects/dr-olga-01-min_yew5uu.jpg",
-    ],
   },
 ];
