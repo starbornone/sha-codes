@@ -17,6 +17,7 @@
 | D — Hygiene | Done (this PR), except the EmailJS package (phase C) |
 | E — Tooling | Done (PR #4): ESLint, Vitest, GitHub Actions. Prettier skipped; `eslint-plugin-tailwindcss` doesn't support ESLint 10 yet |
 | F — Tailwind 4 / React 19 | Not started |
+| G — Talks section | Not started (roadmap only) |
 
 ---
 
@@ -258,6 +259,18 @@ Do **not** combine with Phase B.
 
 - [ ] Tailwind v4 migration (`@tailwindcss/vite` or PostCSS path) with visual regression check
 - [ ] React 19 only after ecosystem check (Headless UI, Framer Motion)
+
+---
+
+### Phase G — Talks section (content, later)
+
+Owner-requested content addition; an exception to the "no new content" non-goal in §2.3. Not yet designed.
+
+- [ ] Add a Talks section listing past talks: title, year, venue, link to transcript
+- [ ] Data in `src/data/talks.ts`, following the pattern of the other `src/data/*` files
+- [ ] Initial entries, both internal Campaign Monitor talks given at the company's Dev Camp trips:
+  - **Does AI Dream of Original Ideas** (2025), the company's first AI talk. Transcript (mostly): https://www.aidreams.world/posts/androids-dream-original-ideas
+  - **The Modern Development Burnout Machine** (2026). Transcript (mostly): https://www.aidreams.world/posts/modern-development-burnout-machine
 
 ---
 
