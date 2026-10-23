@@ -5,12 +5,14 @@ import {
   PopoverPanel,
   Transition,
 } from "@headlessui/react";
-import { Link } from "react-scroll";
+import { Link as RouterLink, useLocation } from "react-router";
+import { Link as ScrollLink } from "react-scroll";
 
 const NAVIGATION_ITEMS = [
   { name: "About", href: "about" },
   { name: "Experience", href: "experience" },
   { name: "Projects", href: "projects" },
+  { name: "Talks", href: "talks" },
 ];
 
 const CONTACT_EMAIL = "hello@sha.codes";
@@ -24,9 +26,13 @@ const ContactLink = () => (
   </a>
 );
 
-const Logo = () => (
-  <div className="flex items-center gap-2 text-lg text-oasis-500">
-    <div className="sr-only">Sha Codes</div>
+const Logo = ({ onClick }: { onClick?: () => void }) => (
+  <RouterLink
+    to="/"
+    onClick={onClick}
+    aria-label="sha.codes home"
+    className="flex items-center gap-2 text-lg text-oasis-500"
+  >
     <div className="text-oasis-500">
       <svg
         aria-hidden="true"
@@ -41,7 +47,7 @@ const Logo = () => (
     <div>
       sha<span className="text-grey-100">.codes</span>
     </div>
-  </div>
+  </RouterLink>
 );
 
 const NavigationLink = ({
@@ -52,25 +58,44 @@ const NavigationLink = ({
   item: (typeof NAVIGATION_ITEMS)[number];
   index: number;
   onClick?: () => void;
-}) => (
+}) => {
+  const { pathname } = useLocation();
+  const label = (
+    <>
+      <span className="font-mono text-xs font-normal text-oasis-500">
+        0{index + 1}.
+      </span>{" "}
+      {item.name}
+    </>
+  );
+
+  // The sections only exist on the home page. Elsewhere, link back to it and
+  // let ScrollManager find the section once it renders.
+  if (pathname !== "/") {
+    return (
+      <RouterLink to={`/#${item.href}`} onClick={onClick}>
+        {label}
+      </RouterLink>
+    );
+  }
+
   // react-scroll's Link renders an <a> without an href, which keyboard users
   // can't focus. It prevents the default jump, so the href only adds focus.
-  <Link
-    to={item.href}
-    href={`#${item.href}`}
-    onClick={onClick}
-    smooth
-    spy
-    duration={500}
-    offset={-80}
-    activeClass="active"
-  >
-    <span className="font-mono text-xs font-normal text-oasis-500">
-      0{index + 1}.
-    </span>{" "}
-    {item.name}
-  </Link>
-);
+  return (
+    <ScrollLink
+      to={item.href}
+      href={`#${item.href}`}
+      onClick={onClick}
+      smooth
+      spy
+      duration={500}
+      offset={-80}
+      activeClass="active"
+    >
+      {label}
+    </ScrollLink>
+  );
+};
 
 const Nav = () => {
   return (
@@ -121,7 +146,7 @@ const Nav = () => {
           {({ close }) => (
             <div className="overflow-hidden rounded-lg shadow-md bg-gradient-to-r from-oasis-800 to-grey-500">
               <div className="flex items-center justify-between px-5 pt-4">
-                <Logo />
+                <Logo onClick={close} />
                 <PopoverButton
                   className="inline-flex items-center justify-center p-2 rounded-md text-greyish-200 hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-buttercream-500"
                   aria-label="Close menu"

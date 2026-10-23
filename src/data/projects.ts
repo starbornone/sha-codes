@@ -1,4 +1,5 @@
 export type ProjectData = {
+  // Also the URL slug: the project's page lives at /projects/<id>.
   id: string;
   name: string;
   url?: string;
@@ -97,7 +98,7 @@ export const PROJECTS: ProjectData[] = [
     ],
   },
   {
-    id: "vcfoa",
+    id: "vcfo-accountants",
     name: "VCFO Accountants",
     url: "https://vcfoaccountants.com.au/",
     description:
@@ -111,7 +112,7 @@ export const PROJECTS: ProjectData[] = [
     ],
   },
   {
-    id: "og",
+    id: "outrun-games",
     name: "Outrun Games",
     url: "https://outrun.games/",
     description:
@@ -134,7 +135,7 @@ export const PROJECTS: ProjectData[] = [
     tech: ["React", "TypeScript", "Vite"],
   },
   {
-    id: "aid",
+    id: "ai-dreams",
     name: "AI Dreams",
     url: "https://aidreams.world/",
     description:
@@ -148,7 +149,7 @@ export const PROJECTS: ProjectData[] = [
     ],
   },
   {
-    id: "dop",
+    id: "dr-olga-palma",
     name: "Dr Olga Palma",
     url: "https://drolgap.com.au/",
     description:
@@ -170,7 +171,7 @@ export const PROJECTS: ProjectData[] = [
     ],
   },
   {
-    id: "mm",
+    id: "my-money",
     name: "my.money",
     description:
       "A streamlined mobile finance tracking application built with React Native, focusing on manual entry for greater user control and privacy. Features offline capability, custom categories, and detailed spending analytics. Implements secure authentication and real-time data synchronisation with the backend server.",
@@ -185,7 +186,7 @@ export const PROJECTS: ProjectData[] = [
     ],
   },
   {
-    id: "gr",
+    id: "genshin-recipes",
     name: "Genshin Recipes",
     url: "https://genshin.recipes/",
     description:

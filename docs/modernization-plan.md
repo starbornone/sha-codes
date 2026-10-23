@@ -264,11 +264,11 @@ Do **not** combine with Phase B.
 
 ### Phase G — Talks section (content, later)
 
-Owner-requested content addition; an exception to the "no new content" non-goal in §2.3. Not yet designed.
+Owner-requested content addition; an exception to the "no new content" non-goal in §2.3. Done: a Talks section on the home page, plus a page per talk at `/talks/<slug>` (and per project at `/projects/<slug>`), each prerendered with its own head tags and share image.
 
-- [ ] Add a Talks section listing past talks: title, year, venue, link to transcript
-- [ ] Data in `src/data/talks.ts`, following the pattern of the other `src/data/*` files
-- [ ] Initial entries, both internal Campaign Monitor talks given at the company's Dev Camp trips:
+- [x] Add a Talks section listing past talks: title, year, venue, link to transcript
+- [x] Data in `src/data/talks.ts`, following the pattern of the other `src/data/*` files
+- [x] Initial entries, both internal Campaign Monitor talks given at the company's Dev Camp trips:
   - **Does AI Dream of Original Ideas** (2025), the company's first AI talk. Transcript (mostly): https://www.aidreams.world/posts/androids-dream-original-ideas
   - **The Modern Development Burnout Machine** (2026). Transcript (mostly): https://www.aidreams.world/posts/modern-development-burnout-machine
 
