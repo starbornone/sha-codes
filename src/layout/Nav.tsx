@@ -13,6 +13,17 @@ const NAVIGATION_ITEMS = [
   { name: "Projects", href: "projects" },
 ];
 
+const CONTACT_EMAIL = "hello@sha.codes";
+
+const ContactLink = () => (
+  <a
+    href={`mailto:${CONTACT_EMAIL}`}
+    className="px-3 py-1.5 rounded-md border border-oasis-500 text-oasis-500 hover:bg-oasis-500 hover:text-grey-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-buttercream-500"
+  >
+    Get in touch
+  </a>
+);
+
 const Logo = () => (
   <div className="flex items-center gap-2 text-lg text-oasis-500">
     <div className="sr-only">Sha Codes</div>
@@ -89,6 +100,7 @@ const Nav = () => {
                 <NavigationLink key={item.name} item={item} index={index} />
               ))}
             </div>
+            <ContactLink />
           </div>
         </nav>
       </div>
@@ -133,6 +145,9 @@ const Nav = () => {
                     </li>
                   ))}
                 </ul>
+                <div className="px-6 mt-6">
+                  <ContactLink />
+                </div>
               </div>
             </div>
           )}
