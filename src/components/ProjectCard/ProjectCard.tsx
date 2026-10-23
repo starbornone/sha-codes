@@ -46,7 +46,8 @@ function ProjectCard({ project, reversed }: ProjectCardProps) {
       viewport={{ once: true }}
       transition={transition}
     >
-      <div className="card">
+      {/* Projects without screenshots get a single centred column. */}
+      <div className={mainImage ? "card" : "card card-text-only"}>
         <div>
           <div className={`content ${reversed ? "lg:col-start-2" : ""}`}>
             <div>
@@ -121,8 +122,8 @@ function ProjectCard({ project, reversed }: ProjectCardProps) {
               </div>
             </div>
           </div>
-          <div className={reversed ? "lg:col-start-1" : ""}>
-            {mainImage && (
+          {mainImage && (
+            <div className={reversed ? "lg:col-start-1" : ""}>
               <div
                 className={`img_section flex items-center ${
                   reversed
@@ -160,8 +161,8 @@ function ProjectCard({ project, reversed }: ProjectCardProps) {
                   decoding="async"
                 />
               </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       </div>
     </motion.div>

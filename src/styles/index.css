@@ -216,6 +216,18 @@ nav a.active {
   }
 }
 
+@screen lg {
+  .card.card-text-only > div {
+    @apply block;
+    @apply max-w-3xl;
+  }
+
+  .card.card-text-only .content {
+    @apply py-0;
+    @apply mx-auto;
+  }
+}
+
 .card h3 {
   @apply text-4xl;
   @apply text-oasis-500;
