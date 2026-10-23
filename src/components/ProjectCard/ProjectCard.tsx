@@ -126,15 +126,17 @@ function ProjectCard({ project, reversed }: ProjectCardProps) {
               <div
                 className={`img_section flex items-center ${
                   reversed
-                    ? "-ml-72 pr-4 sm:pr-6 md:-ml-10 xl:-ml-36"
+                    ? "-ml-72 pr-4 sm:pr-6 md:-ml-10 xl:-ml-36 justify-end"
                     : "-mr-72 pl-4 sm:pl-6 md:-mr-10 xl:-mr-36"
                 }`}
               >
                 {/* Extra screenshots sit behind the main one and add nothing
-                    for screen readers, so they get empty alt text. */}
+                    for screen readers, so they get empty alt text. Below lg
+                    the row overflows away from the content, so the main
+                    screenshot goes first on that side to stay fully visible. */}
                 {thirdImage && (
                   <img
-                    className={reversed ? "lg:right-120" : "lg:left-120"}
+                    className={reversed ? "lg:right-120" : "order-3 lg:left-120"}
                     src={cloudinaryImage(thirdImage, IMAGE_WIDTH)}
                     alt=""
                     loading="lazy"
@@ -143,7 +145,7 @@ function ProjectCard({ project, reversed }: ProjectCardProps) {
                 )}
                 {secondImage && (
                   <img
-                    className={reversed ? "lg:right-60" : "lg:left-60"}
+                    className={reversed ? "lg:right-60" : "order-2 lg:left-60"}
                     src={cloudinaryImage(secondImage, IMAGE_WIDTH)}
                     alt=""
                     loading="lazy"
@@ -151,7 +153,7 @@ function ProjectCard({ project, reversed }: ProjectCardProps) {
                   />
                 )}
                 <img
-                  className={reversed ? "lg:right-0" : "lg:left-0"}
+                  className={reversed ? "lg:right-0" : "order-1 lg:left-0"}
                   src={cloudinaryImage(mainImage, IMAGE_WIDTH)}
                   alt={`Screenshot of ${project.name}`}
                   loading="lazy"
