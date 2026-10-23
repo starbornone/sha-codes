@@ -9,24 +9,24 @@ export type ExperienceData = {
 export const EXPERIENCE: ExperienceData[] = [
   {
     role: "Senior Software Engineer",
-    name: "Campaign Monitor",
+    name: "Marigold (Campaign Monitor)",
     duration: "March 2022 - Present",
     description:
-      "At Campaign Monitor, I specialise in front-end development using React.js, Next.js, TypeScript, and modern styling solutions including SASS and Styled Components. Working closely with design teams through Figma, I focus on creating robust, accessible UI components and design systems.",
+      "I'm an AI Enablement Engineer on Team Lovelace, which builds the AI platform Marigold's engineers use, including a code knowledge graph and an automated pull request reviewer. My job is making that platform land: what the agents know, how engineers adopt them, and how feedback gets back into the tooling. Before Lovelace, I was lead front-end owner of AI Campaign Agent on Team Zuse.",
     list: [
-      "Architected and maintained design system tools using React.js, TypeScript, and Styled Components, enabling rapid UI development across multiple product teams.",
+      "Look after what the AI agents know: skills, domain context and evaluation sets, and I'm adding a CI check that every skill ships with evals.",
 
-      "Implemented HeadlessUI components and established documentation systems using Markdown, creating a centralised knowledge base for product, design, and engineering teams.",
+      "Lead adoption across engineering through crews, onboarding and office hours, and run skill audits with the JVM, C#, DevOps and Messaging crews.",
 
-      "Developed feedback optimisation tools using Next.js and TypeScript to streamline collaboration between product, design, and engineering departments.",
+      "Setting up a feedback loop for the AI pull request reviewer, so engineers' reports become eval cases that improve it.",
 
-      "Established and documented front-end engineering best practices, focusing on accessibility standards and component reusability.",
+      "Use AI tooling to migrate legacy WebForms and Razor pages off .NET Framework, and improve the performance of code knowledge graph tool calls.",
 
-      "Created comprehensive UI pattern libraries and component documentation, improving team efficiency and maintaining consistency across products.",
+      "Was lead front-end owner of AI Campaign Agent, an AI assistant for building email campaigns.",
 
-      "Led initiatives in accessible UI development, implementing WCAG guidelines and educating team members on accessibility best practices.",
+      "Architected and maintained design system tools using React.js, TypeScript and Styled Components, and led accessible UI work to WCAG guidelines.",
 
-      "Built and extended front-end infrastructure using Node.js, improving development workflows and component library management.",
+      "Captain the HTML/CSS and JavaScript crews, organise the AI Guild, and help run the company's internal talk series.",
     ],
   },
   {
