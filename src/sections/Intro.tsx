@@ -35,9 +35,8 @@ export default function Intro(): JSX.Element {
           </header>
           <article className="space-y-6 text-lg leading-relaxed">
             <p>
-              I&apos;m a senior software engineer at Marigold, the company
-              behind Campaign Monitor, based in Sydney. I work in AI
-              enablement: I help engineers adopt the AI platform we build, from
+              I&apos;m a senior software engineer at Campaign Monitor in
+              Sydney. I work in AI enablement: I help engineers adopt the AI platform we build, from
               agent skills and evals to onboarding and feedback.
             </p>
             <p>
