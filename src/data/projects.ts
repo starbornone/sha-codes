@@ -47,6 +47,15 @@ export const PROJECTS: ProjectData[] = [
     tech: ["Next.js", "TypeScript", "TailwindCSS", "Prisma", "Supabase"],
   },
   {
+    id: "arcana-tools",
+    name: "Arcana Tools",
+    url: "https://www.arcana.tools/",
+    description:
+      "A personal organisation dashboard for people with AuDHD that brings tasks, projects, calendars, shopping lists, mood logging and budgeting into one place. Includes quick capture with inbox triage, recurring life-admin obligations that turn into tasks before they're due, and a calendar with reminders, sunrise and moon data, and read-only Google Calendar sync. Mood check-ins come with insights and exports, and budgeting in AUD covers accounts, bills and alerts.",
+    roles: ["UI Design", "Database Design", "Development"],
+    tech: ["Next.js", "TypeScript", "TailwindCSS", "shadcn/ui", "Supabase"],
+  },
+  {
     id: "talesmith",
     name: "Talesmith",
     url: "https://www.talesmith.com.au/",
