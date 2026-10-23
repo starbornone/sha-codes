@@ -35,14 +35,17 @@ export default function Intro(): JSX.Element {
           </header>
           <article className="space-y-6 text-lg leading-relaxed">
             <p>
-              I&apos;ve spent over a decade building for the web. At Campaign
-              Monitor I build design systems and accessible UI components with
-              React, TypeScript and Next.js. Before that, I led full-stack work
-              at Livn for five years with React, Node and PostgreSQL.
+              I&apos;m a senior software engineer at Marigold, the company
+              behind Campaign Monitor, based in Sydney. I work in AI
+              enablement: I help engineers adopt the AI platform we build, from
+              agent skills and evals to onboarding and feedback.
             </p>
             <p>
-              Outside work I design games and build tools for tabletop and
-              strategy players.
+              I&apos;ve been in the industry for over a decade, from
+              self-taught web development through enterprise full-stack work
+              with React, Node and PostgreSQL to AI and LLM tooling. Outside
+              work I design games and build tools for tabletop and strategy
+              players.
             </p>
           </article>
           <a
