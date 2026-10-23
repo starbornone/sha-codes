@@ -9,12 +9,12 @@ export type ExperienceData = {
 export const EXPERIENCE: ExperienceData[] = [
   {
     role: "Senior Software Engineer",
-    name: "Marigold (Campaign Monitor)",
+    name: "Campaign Monitor",
     duration: "March 2022 - Present",
     description:
-      "I'm an AI Enablement Engineer on Team Lovelace, which builds the AI platform Marigold's engineers use, including a code knowledge graph and an automated pull request reviewer. My job is making that platform land: what the agents know, how engineers adopt them, and how feedback gets back into the tooling. Before Lovelace, I was lead front-end owner of AI Campaign Agent on Team Zuse.",
+      "I'm an AI Enablement Engineer on Team Lovelace, which builds the AI platform Campaign Monitor's engineers use, including a code knowledge graph and an automated pull request reviewer. My job is making that platform land: what the agents know, how engineers adopt them, and how feedback gets back into the tooling. Before that, I worked on the front end with React, Next.js and TypeScript, leading design system and accessibility efforts and becoming lead front-end owner of AI Campaign Agent on Team Zuse.",
     list: [
-      "Look after what the AI agents know: skills, domain context and evaluation sets, and I'm adding a CI check that every skill ships with evals.",
+      "Look after what the AI agents know: skills, domain context and evaluation sets. I'm adding a CI check that every skill ships with evals.",
 
       "Lead adoption across engineering through crews, onboarding and office hours, and run skill audits with the JVM, C#, DevOps and Messaging crews.",
 
@@ -24,7 +24,15 @@ export const EXPERIENCE: ExperienceData[] = [
 
       "Was lead front-end owner of AI Campaign Agent, an AI assistant for building email campaigns.",
 
-      "Architected and maintained design system tools using React.js, TypeScript and Styled Components, and led accessible UI work to WCAG guidelines.",
+      "Built and maintained design system tooling in React, TypeScript and Styled Components that several product teams used to ship consistent UI faster.",
+
+      "Wrote UI pattern libraries and component documentation, built on Headless UI and Markdown, that became a shared reference for product, design and engineering.",
+
+      "Led accessibility work across the front end: applying WCAG guidelines, reviewing components and teaching other engineers accessible patterns.",
+
+      "Set front-end engineering standards for accessibility and component reuse, and documented them for the wider team.",
+
+      "Built Next.js and TypeScript tools that made design feedback faster to give and act on, and extended Node.js tooling for component library workflows.",
 
       "Captain the HTML/CSS and JavaScript crews, organise the AI Guild, and help run the company's internal talk series.",
     ],
