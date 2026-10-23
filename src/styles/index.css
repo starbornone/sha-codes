@@ -266,9 +266,14 @@ nav a.active {
   }
 }
 
+/* Below lg the screenshots sit in a row that runs off the edge of the
+   section. Size them by width with auto height, and don't let flex shrink
+   them, so they keep their aspect ratio instead of being squashed to fit. */
 .card .img_section img {
-  @apply h-60;
-  @apply w-60;
+  @apply h-auto;
+  @apply max-w-none;
+  @apply shrink-0;
+  width: min(85vw, 28rem);
   @apply ring-8;
   @apply ring-grey-900;
   @apply ring-opacity-80;
@@ -279,7 +284,6 @@ nav a.active {
   .card .img_section img {
     @apply absolute;
     @apply h-full;
-    @apply max-w-none;
     @apply w-auto;
   }
 }
