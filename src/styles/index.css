@@ -493,3 +493,19 @@ nav a.active {
   @apply bg-oasis-500;
   @apply text-grey-900;
 }
+
+.detail section {
+  @apply mt-12;
+}
+
+.detail h2 {
+  @apply text-2xl;
+  @apply font-medium;
+}
+
+.detail ul {
+  @apply mt-4 space-y-3;
+  @apply list-disc pl-5;
+  @apply marker:text-oasis-500;
+  @apply leading-relaxed;
+}
