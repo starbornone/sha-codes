@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router";
 import DetailLayout from "@/components/DetailLayout";
 import TechList from "@/components/TechList";
+import { PROJECT_DETAILS } from "@/data/projectDetails";
 import { PROJECTS, ProjectData } from "@/data/projects";
 import { projectMeta, projectPath } from "@/meta";
 import { cloudinaryImage } from "@/utils/cloudinary";
@@ -12,6 +13,7 @@ const IMAGE_WIDTH = 1600;
 
 function ProjectDetail({ index }: { index: number }) {
   const project = PROJECTS[index];
+  const details = PROJECT_DETAILS[project.id];
   usePageMeta(projectMeta(project));
 
   const link = (neighbour?: ProjectData) =>
@@ -40,6 +42,30 @@ function ProjectDetail({ index }: { index: number }) {
             </a>
           )}
         </div>
+      )}
+      {details && (
+        <>
+          <section>
+            <h2>Why it exists</h2>
+            <p>{details.why}</p>
+          </section>
+          <section>
+            <h2>What it does</h2>
+            <ul>
+              {details.features.map((feature) => (
+                <li key={feature}>{feature}</li>
+              ))}
+            </ul>
+          </section>
+          <section>
+            <h2>How it&apos;s built</h2>
+            <ul>
+              {details.engineering.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </ul>
+          </section>
+        </>
       )}
       {project.images && project.images.length > 0 && (
         <div className="mt-12 space-y-8">

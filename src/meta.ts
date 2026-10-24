@@ -23,10 +23,12 @@ const HOME_DESCRIPTION =
 export const projectPath = (project: ProjectData) => `/projects/${project.id}`;
 export const talkPath = (talk: TalkData) => `/talks/${talk.id}`;
 
+export const firstSentence = (text: string) => text.match(/^.+?[.!?](?=\s|$)/)?.[0] ?? text;
+
 // Search results show about 160 characters, so use the first sentence and
 // cut it at a word boundary if it runs long.
 export function summarise(text: string, max = 160): string {
-  const sentence = text.match(/^.+?[.!?](?=\s|$)/)?.[0] ?? text;
+  const sentence = firstSentence(text);
   if (sentence.length <= max) return sentence;
   return `${sentence.slice(0, max - 1).replace(/[\s,;:]+\S*$/, '')}…`;
 }

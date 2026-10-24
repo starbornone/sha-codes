@@ -58,6 +58,15 @@ describe('App', () => {
     expect(screen.getByRole('link', { name: /Next/ })).toHaveAttribute('href', '/projects/kritik-systems');
   });
 
+  it('keeps the full write-up for the project page', () => {
+    renderAt('/');
+    expect(screen.queryByText(/Every calculator shows its step-by-step derivation/)).not.toBeInTheDocument();
+
+    renderAt('/projects/kritik-systems');
+    expect(screen.getByText(/Every calculator shows its step-by-step derivation/)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 2, name: "How it's built" })).toBeInTheDocument();
+  });
+
   it('renders a talk page that links to the transcript', () => {
     renderAt('/talks/modern-development-burnout-machine');
 

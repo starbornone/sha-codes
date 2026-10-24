@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { PROJECT_DETAILS } from '@/data/projectDetails';
 import { PROJECTS } from '@/data/projects';
 import { TALKS } from '@/data/talks';
 import { allPages, summarise } from '@/meta';
@@ -23,6 +24,13 @@ describe('meta', () => {
   it('keeps slugs URL-safe', () => {
     for (const { id } of [...PROJECTS, ...TALKS]) {
       expect(id).toMatch(/^[a-z0-9]+(-[a-z0-9]+)*$/);
+    }
+  });
+
+  it('only has project details for projects that exist', () => {
+    const ids = new Set(PROJECTS.map((project) => project.id));
+    for (const id of Object.keys(PROJECT_DETAILS)) {
+      expect(ids).toContain(id);
     }
   });
 });

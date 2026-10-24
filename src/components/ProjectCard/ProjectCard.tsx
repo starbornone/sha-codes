@@ -4,7 +4,7 @@ import { Link } from "react-router";
 import { transition } from "@/animations";
 import TechList from "@/components/TechList";
 import { ProjectData } from "@/data/projects";
-import { projectPath } from "@/meta";
+import { firstSentence, projectPath } from "@/meta";
 import { cloudinaryImage } from "@/utils/cloudinary";
 
 const IMAGE_WIDTH = 1200;
@@ -84,7 +84,8 @@ function ProjectCard({ project, reversed }: ProjectCardProps) {
                     )}
                   </div>
                 </div>
-                <p>{project.description}</p>
+                {/* The card gives the pitch; the project page has the rest. */}
+                <p>{firstSentence(project.description)}</p>
                 <Link className="font-mono text-sm" to={projectPath(project)}>
                   Read more
                   <span className="sr-only"> about {project.name}</span>
