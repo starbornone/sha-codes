@@ -3,6 +3,14 @@ export type ExperienceGroup = {
   items: string[];
 };
 
+export type Testimonial = {
+  // Quoted verbatim from a LinkedIn recommendation; "…" marks skipped text.
+  quote: string;
+  name: string;
+  title: string;
+  relationship: string;
+};
+
 export type ExperienceData = {
   role: string;
   name: string;
@@ -11,7 +19,11 @@ export type ExperienceData = {
   // Long roles group their highlights by theme instead of one flat list.
   groups?: ExperienceGroup[];
   list?: string[];
+  testimonials?: Testimonial[];
 };
+
+export const RECOMMENDATIONS_URL =
+  "https://www.linkedin.com/in/sha-kong-brooks/details/recommendations/";
 
 export const EXPERIENCE: ExperienceData[] = [
   {
@@ -97,6 +109,29 @@ export const EXPERIENCE: ExperienceData[] = [
       "Managed deployment processes and infrastructure maintenance, ensuring smooth transitions from development to production.",
 
       "Interfaced with stakeholders across product management, engineering, and marketing teams to align development goals with business objectives.",
+    ],
+    testimonials: [
+      {
+        quote:
+          "Sha took the lead role of the UI team and was also responsible for training and assisting other team members, bringing them up to speed, and delivering useful features to the end-users. Sha has great skills in designing software applications and she is always concerned about the user experience in the usage of the applications she has worked on.",
+        name: "Eduardo Mateus Alberton",
+        title: "Product Manager",
+        relationship: "Worked with Sha on the same team at Livn",
+      },
+      {
+        quote:
+          "Sha's dedication and technical aptitude were already highly pronounced when she joined our team, and it was encouraging to watch her expand her abilities over the years and rapidly grow into a highly competent full stack developer. … Sha is an absolute asset to any team and I would not hesitate to endorse her wholeheartedly.",
+        name: "Andreas Klein",
+        title: "Senior Software Engineer, Encompass Corporation",
+        relationship: "Worked with Sha on the same team at Livn",
+      },
+      {
+        quote:
+          "Sha is one of the most approachable & kind people I've had the pleasure of working with. A true professional in every way. Dedicated, hardworking & knowledgeable.",
+        name: "Matthew Barnes",
+        title: "Global Supplier Relations, Product and Procurement Manager",
+        relationship: "Worked with Sha on a different team at Livn",
+      },
     ],
   },
 ];

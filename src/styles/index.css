@@ -554,6 +554,22 @@ nav a.active {
   @apply rounded-sm;
 }
 
+.testimonial {
+  @apply border-l-2;
+  @apply border-oasis-600;
+  @apply pl-4;
+}
+
+.testimonial blockquote {
+  @apply italic;
+  @apply text-greyish-200;
+}
+
+.testimonial figcaption {
+  @apply mt-2;
+  @apply text-greyish-400;
+}
+
 .detail blockquote {
   @apply pl-6;
   @apply border-l-4 border-oasis-500;
