@@ -4,6 +4,8 @@ export type ExperienceData = {
   duration: string;
   description: string;
   list: string[];
+  // Internal write-ups, shown as titles only because the pages aren't public.
+  writing?: { heading: string; titles: string[] }[];
 };
 
 export const EXPERIENCE: ExperienceData[] = [
@@ -35,6 +37,57 @@ export const EXPERIENCE: ExperienceData[] = [
       "Built Next.js and TypeScript tools that made design feedback faster to give and act on, and extended Node.js tooling for component library workflows.",
 
       "Captain the HTML/CSS and JavaScript crews, organise the AI Guild, and help run the company's internal talk series.",
+    ],
+    writing: [
+      {
+        heading: "AI and LLMs",
+        titles: [
+          "How LLMs Lose Track of Their Instructions",
+          "Vibe Coding: Where It Helps and Where It Falls Short",
+          "Claude Code: A Practical Guide for Campaign Monitor Engineers",
+          "Claude Code, Codex and Cursor: A Comparison",
+          "When Is AI the Right Tool?",
+          "AI Glossary",
+          "What the AI Guild Told Us: March 2026 Feedback Analysis",
+          "What Changed After the AI Guild's March Feedback",
+          "Lovelace Listening Tour",
+          "AI Code Review Decision Log and Guidelines",
+        ],
+      },
+      {
+        heading: "Projects",
+        titles: [
+          "AI Guide: Short, Hands-On Claude Code Activities",
+          "Retrovich: Real-Time Retros for Software Teams",
+        ],
+      },
+      {
+        heading: "Engineering practice",
+        titles: [
+          "The Purpose and Sizing of PRs",
+          "Why We Extend Our Design System and Write Native CSS",
+          "Design System Strategy Decision",
+          "Preline and Design System Coexistence Notes",
+        ],
+      },
+      {
+        heading: "Crews",
+        titles: [
+          "Overview of Crews",
+          "HTML/CSS Crew: Review Guidelines",
+          "Review Comments",
+          "HTML/CSS Tooling",
+          "JS Crew: Review Guidelines",
+          "JS Tooling",
+          "How the Front End Is Built and Shipped",
+        ],
+      },
+      {
+        heading: "Product",
+        titles: [
+          "Third-Party Services Worth Watching: Customer Data & Marketing",
+        ],
+      },
     ],
   },
   {
