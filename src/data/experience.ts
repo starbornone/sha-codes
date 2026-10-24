@@ -22,6 +22,16 @@ export const EXPERIENCE: ExperienceData[] = [
 
       "Use AI tooling to migrate legacy WebForms and Razor pages off .NET Framework, and improve the performance of code knowledge graph tool calls.",
 
+      "Write practical guidance on working with AI for engineers across the company, covering where vibe coding helps and falls short, how LLMs lose track of instructions, when AI is the right tool, and how Claude Code, Codex and Cursor compare.",
+
+      "Turn engineers' feedback into written analysis and follow-through, including the AI Guild's feedback review, a report on what changed as a result, and a listening tour across engineering teams.",
+
+      "Write decision records that explain the reasoning behind engineering choices, from AI code review guidelines to design system strategy and why we extend it with native CSS.",
+
+      "Write review guidelines, tooling guides and an explainer of how the front end is built and shipped for the HTML/CSS and JavaScript crews, plus guidance on the purpose and sizing of pull requests.",
+
+      "Built hands-on Claude Code learning activities for engineers, and Retrovich, a real-time retro tool for software teams.",
+
       "Was lead front-end owner of AI Campaign Agent, an AI assistant for building email campaigns.",
 
       "Built and maintained design system tooling in React, TypeScript and Styled Components that several product teams used to ship consistent UI faster.",
