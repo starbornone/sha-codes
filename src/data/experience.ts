@@ -134,4 +134,36 @@ export const EXPERIENCE: ExperienceData[] = [
       },
     ],
   },
+  {
+    role: "Web Developer and Content Manager, Alumni Relations",
+    name: "UNSW",
+    duration: "April 2012 - April 2013",
+    description:
+      "Ran the UNSW Alumni Relations website on Blackbaud's content management system, from day-to-day content and design to new pages and layouts.",
+    list: [
+      "Managed the Alumni Relations website's content, designing web banners in Adobe Photoshop and Illustrator and formatting articles in HTML.",
+
+      "Edited templates and code to build new pages and adapt layouts to fit their content.",
+
+      "Worked with Blackbaud's team to adapt their content management system to the Alumni Relations office's needs.",
+
+      "Built a subsection of the site on Blackbaud for the Faculty of Arts and Social Sciences (FASS).",
+    ],
+  },
+  {
+    role: "Web Developer and Content Manager",
+    name: "Dragon Image",
+    duration: "February 2011 - May 2012",
+    description:
+      "Designed, built and looked after Dragon Image's websites, and handled their SEO and marketing material.",
+    list: [
+      "Designed and built a new ecommerce website on X-Cart, making it easier for staff to manage and for customers to find what they needed.",
+
+      "Managed content across the main, corporate and studio websites.",
+
+      "Led on-page and off-page SEO, working with other staff on link building and reviewing web analytics.",
+
+      "Created advertising and marketing material in Adobe Photoshop.",
+    ],
+  },
 ];
