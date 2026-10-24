@@ -22,10 +22,26 @@ function TalkDetail({ index }: { index: number }) {
       next={link(TALKS[index + 1])}
     >
       <p className="text-lg leading-relaxed">{talk.description}</p>
-      {talk.note && <p className="text-greyish-400">{talk.note}</p>}
-      <a className="inline-block mt-4 detail-button" href={talk.transcriptUrl} rel="noreferrer" target="_blank">
-        Read the transcript on AI Dreams
-      </a>
+      {talk.sections.map((section) => (
+        <section key={section.heading}>
+          <h2>{section.heading}</h2>
+          <p>{section.body}</p>
+          {section.points && (
+            <ul>
+              {section.points.map((point) => (
+                <li key={point}>{point}</li>
+              ))}
+            </ul>
+          )}
+        </section>
+      ))}
+      {talk.quote && <blockquote className="mt-12">{talk.quote}</blockquote>}
+      <div className="mt-12">
+        {talk.note && <p className="text-greyish-400">{talk.note}</p>}
+        <a className="inline-block mt-2 detail-button" href={talk.transcriptUrl} rel="noreferrer" target="_blank">
+          Read the full transcript on AI Dreams
+        </a>
+      </div>
     </DetailLayout>
   );
 }
