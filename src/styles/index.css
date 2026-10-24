@@ -509,3 +509,47 @@ nav a.active {
   @apply marker:text-oasis-500;
   @apply leading-relaxed;
 }
+
+/*** Experience ***/
+
+.experience-group {
+  @apply border-l-2;
+  @apply border-greyish-700;
+  @apply pl-4;
+}
+
+.experience-group[open] {
+  @apply border-oasis-600;
+}
+
+.experience-group summary {
+  @apply flex;
+  @apply items-center;
+  @apply gap-3;
+  @apply cursor-pointer;
+  @apply font-medium;
+  @apply text-greyish-100;
+  @apply list-none;
+}
+
+.experience-group summary::-webkit-details-marker {
+  display: none;
+}
+
+.experience-group summary::before {
+  content: "+";
+  @apply font-mono;
+  @apply text-oasis-500;
+  @apply w-3;
+}
+
+.experience-group[open] summary::before {
+  content: "-";
+}
+
+.experience-group summary:focus-visible {
+  @apply outline-none;
+  @apply ring-2;
+  @apply ring-buttercream-500;
+  @apply rounded-sm;
+}
