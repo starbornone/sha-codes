@@ -38,6 +38,23 @@ describe('Experience', () => {
     }
   });
 
+  it('shows colleague testimonials under the Livn role', async () => {
+    const user = userEvent.setup();
+    render(<Experience />);
+    const livn = EXPERIENCE.findIndex((role) => role.name === 'Livn');
+    for (let i = 0; i < livn; i++) {
+      await user.click(screen.getByRole('button', { name: 'Next Experience' }));
+    }
+
+    for (const testimonial of EXPERIENCE[livn].testimonials ?? []) {
+      expect(screen.getByText(testimonial.name)).toBeInTheDocument();
+    }
+    expect(screen.getByRole('link', { name: /full recommendations/ })).toHaveAttribute(
+      'href',
+      expect.stringContaining('/details/recommendations/'),
+    );
+  });
+
   it('keeps internal team names off the site', () => {
     const text = JSON.stringify(EXPERIENCE);
     for (const team of ['Lovelace', 'Zuse', 'Shared Services', 'Liveclicker']) {

@@ -1,5 +1,5 @@
 import React from "react";
-import { ExperienceData } from "@/data/experience";
+import { ExperienceData, RECOMMENDATIONS_URL } from "@/data/experience";
 
 interface ExperienceCardProps {
   experience: ExperienceData;
@@ -52,6 +52,31 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
         </div>
       )}
       {experience.list && <ItemList items={experience.list} />}
+      {experience.testimonials && (
+        <div className="mt-8">
+          <h4 className="font-mono text-sm text-greyish-400">
+            What colleagues said
+          </h4>
+          <div className="mt-4 space-y-6">
+            {experience.testimonials.map((testimonial) => (
+              <figure className="testimonial" key={testimonial.name}>
+                <blockquote>&ldquo;{testimonial.quote}&rdquo;</blockquote>
+                <figcaption>
+                  <span className="text-greyish-100">{testimonial.name}</span>
+                  {", "}
+                  {testimonial.title}
+                  <span className="block text-sm">{testimonial.relationship}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          <p className="mt-4 text-sm">
+            <a href={RECOMMENDATIONS_URL} rel="noreferrer" target="_blank">
+              Read the full recommendations on LinkedIn
+            </a>
+          </p>
+        </div>
+      )}
     </div>
   )
 }
