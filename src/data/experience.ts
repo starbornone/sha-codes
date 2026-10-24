@@ -32,7 +32,7 @@ export const EXPERIENCE: ExperienceData[] = [
 
       "Built hands-on Claude Code learning activities for engineers, and Retrovich, a real-time retro tool for software teams.",
 
-      "Was lead front-end owner of AI Campaign Agent, an AI assistant for building email campaigns.",
+      "Was lead front-end owner of AI Campaign Agent, an AI assistant that helps customers build email campaigns, delivered as part of new product features aimed at reducing churn and growing paid subscriptions.",
 
       "Built and maintained design system tooling in React, TypeScript and Styled Components that several product teams used to ship consistent UI faster.",
 

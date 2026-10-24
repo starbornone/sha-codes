@@ -14,12 +14,10 @@ function Projects() {
               <span className="highlight">my</span>.projects
             </h2>
             <p>
-              When I&apos;m not crafting solutions during office hours,
-              you&apos;ll find me diving into passion projects that push my
-              technical boundaries. From turning creative visions into
-              pixel-perfect reality to solving complex coding puzzles, these
-              projects showcase both my technical chops and my love for clean,
-              efficient code.
+              These are my own projects, built outside work. I build each one
+              solo, from the idea and UI design through the database, code and
+              deployment, which is why they cover everything from compliance
+              tools to games.
             </p>
             <p>
               If you&apos;re after more code, check out my public repos on{" "}
