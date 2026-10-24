@@ -553,3 +553,10 @@ nav a.active {
   @apply ring-buttercream-500;
   @apply rounded-sm;
 }
+
+.detail blockquote {
+  @apply pl-6;
+  @apply border-l-4 border-oasis-500;
+  @apply text-2xl leading-snug;
+  @apply text-greyish-100;
+}

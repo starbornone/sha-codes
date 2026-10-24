@@ -73,7 +73,8 @@ describe('App', () => {
     expect(
       screen.getByRole('heading', { level: 1, name: 'The Modern Development Burnout Machine' }),
     ).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /transcript/i })).toHaveAttribute(
+    expect(screen.getByRole('heading', { level: 2, name: 'What teams can do' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: /full transcript/i })).toHaveAttribute(
       'href',
       'https://www.aidreams.world/posts/modern-development-burnout-machine',
     );
