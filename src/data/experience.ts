@@ -4,8 +4,6 @@ export type ExperienceData = {
   duration: string;
   description: string;
   list: string[];
-  // Internal write-ups, shown as titles only because the pages aren't public.
-  writing?: { heading: string; titles: string[] }[];
 };
 
 export const EXPERIENCE: ExperienceData[] = [
@@ -24,6 +22,16 @@ export const EXPERIENCE: ExperienceData[] = [
 
       "Use AI tooling to migrate legacy WebForms and Razor pages off .NET Framework, and improve the performance of code knowledge graph tool calls.",
 
+      "Write practical guidance on working with AI for engineers across the company, covering where vibe coding helps and falls short, how LLMs lose track of instructions, when AI is the right tool, and how Claude Code, Codex and Cursor compare.",
+
+      "Turn engineers' feedback into written analysis and follow-through, including the AI Guild's feedback review, a report on what changed as a result, and a listening tour across engineering teams.",
+
+      "Write decision records that explain the reasoning behind engineering choices, from AI code review guidelines to design system strategy and why we extend it with native CSS.",
+
+      "Write review guidelines, tooling guides and an explainer of how the front end is built and shipped for the HTML/CSS and JavaScript crews, plus guidance on the purpose and sizing of pull requests.",
+
+      "Built hands-on Claude Code learning activities for engineers, and Retrovich, a real-time retro tool for software teams.",
+
       "Was lead front-end owner of AI Campaign Agent, an AI assistant for building email campaigns.",
 
       "Built and maintained design system tooling in React, TypeScript and Styled Components that several product teams used to ship consistent UI faster.",
@@ -37,57 +45,6 @@ export const EXPERIENCE: ExperienceData[] = [
       "Built Next.js and TypeScript tools that made design feedback faster to give and act on, and extended Node.js tooling for component library workflows.",
 
       "Captain the HTML/CSS and JavaScript crews, organise the AI Guild, and help run the company's internal talk series.",
-    ],
-    writing: [
-      {
-        heading: "AI and LLMs",
-        titles: [
-          "How LLMs Lose Track of Their Instructions",
-          "Vibe Coding: Where It Helps and Where It Falls Short",
-          "Claude Code: A Practical Guide for Campaign Monitor Engineers",
-          "Claude Code, Codex and Cursor: A Comparison",
-          "When Is AI the Right Tool?",
-          "AI Glossary",
-          "What the AI Guild Told Us: March 2026 Feedback Analysis",
-          "What Changed After the AI Guild's March Feedback",
-          "Lovelace Listening Tour",
-          "AI Code Review Decision Log and Guidelines",
-        ],
-      },
-      {
-        heading: "Projects",
-        titles: [
-          "AI Guide: Short, Hands-On Claude Code Activities",
-          "Retrovich: Real-Time Retros for Software Teams",
-        ],
-      },
-      {
-        heading: "Engineering practice",
-        titles: [
-          "The Purpose and Sizing of PRs",
-          "Why We Extend Our Design System and Write Native CSS",
-          "Design System Strategy Decision",
-          "Preline and Design System Coexistence Notes",
-        ],
-      },
-      {
-        heading: "Crews",
-        titles: [
-          "Overview of Crews",
-          "HTML/CSS Crew: Review Guidelines",
-          "Review Comments",
-          "HTML/CSS Tooling",
-          "JS Crew: Review Guidelines",
-          "JS Tooling",
-          "How the Front End Is Built and Shipped",
-        ],
-      },
-      {
-        heading: "Product",
-        titles: [
-          "Third-Party Services Worth Watching: Customer Data & Marketing",
-        ],
-      },
     ],
   },
   {

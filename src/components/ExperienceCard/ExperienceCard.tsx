@@ -28,24 +28,6 @@ export default function ExperienceCard({ experience }: ExperienceCardProps) {
           ))}
         </ul>
       )}
-      {experience.writing && (
-        <div className="mt-8">
-          <h4 className="text-lg tracking-tight text-greyish-100">Internal writing</h4>
-          <p className="text-greyish-400">
-            Guides, decision records and analysis I&apos;ve written for {experience.name}&apos;s engineers. These live on the internal wiki, so only the titles are listed here.
-          </p>
-          {experience.writing.map((group) => (
-            <div className="mt-4" key={group.heading}>
-              <h5 className="font-mono text-oasis-500">{group.heading}</h5>
-              <ul className="mt-1 ml-6 list-disc space-y-1">
-                {group.titles.map((title) => (
-                  <li key={title}>{title}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </div>
-      )}
     </div>
   )
 }
