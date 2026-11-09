@@ -1,12 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeInVariants } from "@/animations";
-import { cloudinaryImage } from "@/utils/cloudinary";
 
-const backgroundImage = `url(${cloudinaryImage(
-  "https://res.cloudinary.com/shianra/image/upload/v1639497866/sha/9900K-min_a2uusi.jpg",
-  1920
-)})`;
+const backgroundImage = "url(/about-bg.jpg)";
 
 export default function About(): JSX.Element {
   return (

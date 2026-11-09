@@ -5,11 +5,8 @@ import TechList from "@/components/TechList";
 import { PROJECT_DETAILS } from "@/data/projectDetails";
 import { PROJECTS, ProjectData } from "@/data/projects";
 import { projectMeta, projectPath } from "@/meta";
-import { cloudinaryImage } from "@/utils/cloudinary";
 import { usePageMeta } from "@/utils/usePageMeta";
 import NotFound from "./NotFound";
-
-const IMAGE_WIDTH = 1600;
 
 function ProjectDetail({ index }: { index: number }) {
   const project = PROJECTS[index];
@@ -73,7 +70,7 @@ function ProjectDetail({ index }: { index: number }) {
             <img
               key={image}
               className="w-full h-auto rounded-xl ring-8 ring-grey-600"
-              src={cloudinaryImage(image, IMAGE_WIDTH)}
+              src={image}
               alt={`Screenshot ${imageIndex + 1} of ${project.name}`}
               loading={imageIndex === 0 ? "eager" : "lazy"}
               decoding="async"

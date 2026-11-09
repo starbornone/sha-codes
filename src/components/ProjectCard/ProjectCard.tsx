@@ -5,9 +5,6 @@ import { transition } from "@/animations";
 import TechList from "@/components/TechList";
 import { ProjectData } from "@/data/projects";
 import { firstSentence, projectPath } from "@/meta";
-import { cloudinaryImage } from "@/utils/cloudinary";
-
-const IMAGE_WIDTH = 1200;
 
 interface ProjectCardProps {
   project: ProjectData;
@@ -111,7 +108,7 @@ function ProjectCard({ project, reversed }: ProjectCardProps) {
                 {thirdImage && (
                   <img
                     className={reversed ? "lg:right-120" : "order-3 lg:left-120"}
-                    src={cloudinaryImage(thirdImage, IMAGE_WIDTH)}
+                    src={thirdImage}
                     alt=""
                     loading="lazy"
                     decoding="async"
@@ -120,7 +117,7 @@ function ProjectCard({ project, reversed }: ProjectCardProps) {
                 {secondImage && (
                   <img
                     className={reversed ? "lg:right-60" : "order-2 lg:left-60"}
-                    src={cloudinaryImage(secondImage, IMAGE_WIDTH)}
+                    src={secondImage}
                     alt=""
                     loading="lazy"
                     decoding="async"
@@ -128,7 +125,7 @@ function ProjectCard({ project, reversed }: ProjectCardProps) {
                 )}
                 <img
                   className={reversed ? "lg:right-0" : "order-1 lg:left-0"}
-                  src={cloudinaryImage(mainImage, IMAGE_WIDTH)}
+                  src={mainImage}
                   alt={`Screenshot of ${project.name}`}
                   loading="lazy"
                   decoding="async"

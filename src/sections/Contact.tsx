@@ -1,8 +1,7 @@
 import ContactForm from "@/forms/ContactForm";
 import React from "react";
 
-const backgroundImage =
-  "url(https://res.cloudinary.com/shianra/image/upload/v1639497866/sha/9900K-min_a2uusi.jpg)";
+const backgroundImage = "url(/about-bg.jpg)";
 
 function Contact() {
   return (
