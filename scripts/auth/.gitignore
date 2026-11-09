@@ -1,0 +1,3 @@
+# Playwright storageState files hold session cookies. Never commit them.
+*
+!.gitignore
