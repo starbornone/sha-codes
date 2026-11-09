@@ -1,0 +1,14 @@
+---
+description: Always sync with latest main before starting work
+alwaysApply: true
+---
+
+# Pull main first
+
+Before any code changes, exploration that assumes current files, or follow-up edits in this repo:
+
+1. Check `git status` and the current branch.
+2. Fast-forward to the latest `origin/main` (`git fetch origin` then `git pull --ff-only origin main` when on `main`, or rebase/merge onto updated `main` when on a feature branch).
+3. Only then start the requested work.
+
+Do not edit, refactor, or “fix forward” on a stale checkout. If local changes would block the pull, stop and ask how to proceed rather than overwriting them.

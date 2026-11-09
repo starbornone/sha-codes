@@ -159,6 +159,23 @@ export const PROJECT_DETAILS: Record<string, ProjectDetails> = {
       "Reusable components for payoff matrices, charts, tooltips and navigation, and a shared context that switches between shorter and more detailed explanations.",
     ],
   },
+  "harptos-calendar-tracker": {
+    why: "Running a Forgotten Realms session means tracking Harptos dates, festival days, local light and weather by hand. The tracker keeps one campaign clock on a single screen so a DM can advance time, switch Sword Coast locations and copy a ready line into their notes.",
+    features: [
+      "Set or advance the Harptos clock by hour, day or tenday, including festival days, Shieldmeet and year titles.",
+      "Switch among Neverwinter, Phandalin, Baldur’s Gate and Waterdeep while keeping the campaign date and time.",
+      "Location-aware daylight phases and Faerûnian clock markers derived from the current date.",
+      "Seeded hourly weather that stays the same when you skip ahead, revisit an hour or reload.",
+      "A one-line campaign summary with copy-to-clipboard, plus share links that open as a read-only preview and can be adopted into the browser’s saved campaign.",
+      "English by default, with an existing Simplified Chinese preference applied to the interface, summary and shared preview.",
+    ],
+    engineering: [
+      "A Vite, React and TypeScript app. Campaign time is stored as elapsed minutes from 1 Hammer 1 DR, with calendar rules kept independent of the browser.",
+      "Daylight, time markers and weather are derived from the saved clock, location and weather seed rather than stored as editable labels.",
+      "Share URLs carry time, location and seed for a read-only preview; adopting writes one snapshot before editing resumes.",
+      "Browser-local persistence for a single campaign, with localisation for display labels and Harptos date formatting.",
+    ],
+  },
   "no-place-to-rest": {
     why: "A game about environmental injustice in which the danger is organised rather than natural: the clean routes through a ruined city are gated and watched, and the contaminated ones are simply open. A child crosses it guided by a cat that glows brighter near contamination.",
     features: [

@@ -98,6 +98,16 @@ export const PROJECTS: ProjectData[] = [
     ],
   },
   {
+    id: "harptos-calendar-tracker",
+    name: "Harptos Calendar Tracker",
+    url: "https://harptos.starmist.studio/",
+    repo: "https://github.com/starbornone/harptos-calendar-tracker",
+    description:
+      "A Dungeon Master tool for Faerûn campaigns that models the Harptos calendar end to end—festivals, Shieldmeet, and year titles included. Set or advance campaign time across Neverwinter, Phandalin, Baldur’s Gate, and Waterdeep, with location-aware daylight phases and seeded hourly weather that stays consistent across skips and reloads. Shareable campaign links support read-only previews and optional adoption, with English and Simplified Chinese localisation and a one-line summary built for session notes.",
+    roles: ["UI Design", "Development"],
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+  },
+  {
     id: "vcfo-accountants",
     name: "VCFO Accountants",
     url: "https://vcfoaccountants.com.au/",
@@ -160,7 +170,7 @@ export const PROJECTS: ProjectData[] = [
   {
     id: "dnd-point-buy-calc",
     name: "D&D Point Buy Calculator",
-    url: "https://dnd-point-buy-calc.vercel.app/",
+    url: "https://dnd.starmist.studio/",
     description:
       "An intuitive D&D 5e character creation tool featuring a sophisticated point-buy system with real-time calculations and validation. Supports all official races and subraces, including custom content, with automatic modifier calculations and stat maximums. Includes detailed tooltips, mobile responsiveness, and shareable character builds via URL parameters.",
     roles: ["Full-Stack Developer", "UI/UX Designer"],
