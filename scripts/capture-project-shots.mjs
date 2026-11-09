@@ -17,7 +17,7 @@ const shots = [
   { id: "dr-olga-palma", url: "https://drolgap.com.au/" },
 ];
 
-const outDir = path.resolve("public/projects");
+const outDir = path.resolve("public/images/projects");
 await mkdir(outDir, { recursive: true });
 
 const browser = await chromium.launch();

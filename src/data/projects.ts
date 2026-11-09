@@ -19,7 +19,7 @@ export const PROJECTS: ProjectData[] = [
       "A compliance readiness platform for NDIS providers that maps practice standards to the controls and evidence that meet them, keeps registers for incidents, complaints and actions current, and works out a readiness score from all of it. Auditors get a time-limited, read-only viewer with full access history. Built as a multi-tenant app with role-based memberships, invitations, and a staff area that doubles as a CRM, with data kept on Australian infrastructure.",
     roles: ["UI Design", "Database Design", "Development"],
     tech: ["React", "TypeScript", "TanStack Router", "TailwindCSS", "Supabase"],
-    images: ["/projects/ovi-01.jpg"],
+    images: ["/images/projects/ovi-01.jpg"],
   },
   {
     id: "ready-check",
@@ -29,7 +29,7 @@ export const PROJECTS: ProjectData[] = [
       "A calm to-do app designed for people with ADHD and AuDHD, free of shame language and judgement. Combines Todoist-level task management with natural-language quick add, a calendar showing when tasks were due alongside when they were actually completed, focus tools, and a sales pipeline tracked against monthly targets. An installable, offline-capable PWA that keeps data on the device with optional account sync.",
     roles: ["UI Design", "Database Design", "Development"],
     tech: ["React", "TypeScript", "Zustand", "Dexie", "TailwindCSS", "Supabase"],
-    images: ["/projects/ready-check-01.jpg"],
+    images: ["/images/projects/ready-check-01.jpg"],
   },
   {
     id: "kritik-systems",
@@ -39,7 +39,7 @@ export const PROJECTS: ProjectData[] = [
       "A browser-based toolkit for quantitative Marxian political economy, covering surplus value, the rate of profit, organic composition of capital, the tendency of the rate of profit to fall, and reproduction schemas. Every calculator shows its step-by-step derivation with cited notes. Local-first with no account required, with saved scenarios, comparison charts, and data exports unlocked through a one-time purchase.",
     roles: ["UI Design", "Database Design", "Development"],
     tech: ["Next.js", "TypeScript", "TailwindCSS", "Dexie", "Supabase", "Stripe"],
-    images: ["/projects/kritik-systems-01.jpg"],
+    images: ["/images/projects/kritik-systems-01.jpg"],
   },
   {
     id: "midnight-archive",
@@ -49,7 +49,7 @@ export const PROJECTS: ProjectData[] = [
       "The web home of Obscurity Shroud, a trilogy of urban fantasy novels set in the hidden corners of Sydney. Pairs a chapter reader built around careful typography with a shared lore browser, illustrations, and optional atmosphere, alongside reader accounts, chapter discussion and reactions. Includes an author dashboard for editing, publishing, and moderation.",
     roles: ["UI Design", "Database Design", "Development"],
     tech: ["Next.js", "TypeScript", "TailwindCSS", "Prisma", "Supabase"],
-    images: ["/projects/midnight-archive-01.jpg"],
+    images: ["/images/projects/midnight-archive-01.jpg"],
   },
   {
     id: "arcana-tools",
@@ -59,7 +59,7 @@ export const PROJECTS: ProjectData[] = [
       "A personal organisation dashboard for people with AuDHD that brings tasks, projects, calendars, shopping lists, mood logging and budgeting into one place. Includes quick capture with inbox triage, recurring life-admin obligations that turn into tasks before they're due, and a calendar with reminders, sunrise and moon data, and read-only Google Calendar sync. Mood check-ins come with insights and exports, and budgeting in AUD covers accounts, bills and alerts.",
     roles: ["UI Design", "Database Design", "Development"],
     tech: ["Next.js", "TypeScript", "TailwindCSS", "shadcn/ui", "Supabase"],
-    images: ["/projects/arcana-tools-01.jpg"],
+    images: ["/images/projects/arcana-tools-01.jpg"],
   },
   {
     id: "talesmith",
@@ -69,7 +69,7 @@ export const PROJECTS: ProjectData[] = [
       "A platform for educators, trainers and facilitators to create and share interactive, branching-path stories and lessons without any technical skills. Features a visual branching path builder, ready-made story templates, and images, audio and video embedded directly in story nodes. Suited to classrooms, university courses, workplace training and language learning, with lessons published and shared through a link.",
     roles: ["UI Design", "Database Design", "Development"],
     tech: ["React", "TypeScript", "React Router", "TailwindCSS", "Supabase"],
-    images: ["/projects/talesmith-01.jpg"],
+    images: ["/images/projects/talesmith-01.jpg"],
   },
   {
     id: "break-the-loop",
@@ -79,7 +79,7 @@ export const PROJECTS: ProjectData[] = [
       "A materialist idle strategy game about the end of infinite growth, free to play in the browser. Players guide a society through its own contradictions, from primitive extraction through imperialism and crisis to a world without scarcity, with each mode of production rewriting which meters and actions matter. NPC nations react to every move, and conflict emerges from economic and diplomatic pressure rather than a menu click.",
     roles: ["Game Design", "Development"],
     tech: ["React", "TypeScript", "Node.js", "Socket.IO", "Prisma"],
-    images: ["/projects/break-the-loop-01.jpg"],
+    images: ["/images/projects/break-the-loop-01.jpg"],
   },
   {
     id: "praxis-primer",
@@ -89,7 +89,7 @@ export const PROJECTS: ProjectData[] = [
       "A reading and study companion for socialist and communist theory, with structured reading plans, original section summaries, and discussion prompts for study circles. Readers keep private notes in the browser and review key terms with spaced repetition, while the source texts stay on their original sites. A sibling project to Kritik Systems, with content validated at build time.",
     roles: ["UI Design", "Development"],
     tech: ["Next.js", "TypeScript", "TailwindCSS", "Dexie", "Zod"],
-    images: ["/projects/praxis-primer-01.jpg"],
+    images: ["/images/projects/praxis-primer-01.jpg"],
   },
   {
     id: "marketopia",
@@ -100,9 +100,9 @@ export const PROJECTS: ProjectData[] = [
     roles: ["UI Design", "Development"],
     tech: ["React", "Next.js", "SASS", "Framer Motion"],
     images: [
-      "/projects/marketopia-01.jpg",
-      "/projects/marketopia-02.jpg",
-      "/projects/marketopia-03.jpg",
+      "/images/projects/marketopia-01.jpg",
+      "/images/projects/marketopia-02.jpg",
+      "/images/projects/marketopia-03.jpg",
     ],
   },
   {
@@ -114,7 +114,7 @@ export const PROJECTS: ProjectData[] = [
       "A Dungeon Master tool for Faerûn campaigns that models the Harptos calendar end to end—festivals, Shieldmeet, and year titles included. Set or advance campaign time across Neverwinter, Phandalin, Baldur’s Gate, and Waterdeep, with location-aware daylight phases and seeded hourly weather that stays consistent across skips and reloads. Shareable campaign links support read-only previews and optional adoption, with English and Simplified Chinese localisation and a one-line summary built for session notes.",
     roles: ["UI Design", "Development"],
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
-    images: ["/projects/harptos-calendar-tracker-01.jpg"],
+    images: ["/images/projects/harptos-calendar-tracker-01.jpg"],
   },
   {
     id: "vcfo-accountants",
@@ -125,9 +125,9 @@ export const PROJECTS: ProjectData[] = [
     roles: ["UI Design", "Development"],
     tech: ["React", "Next.js", "GraphQL", "Hygraph"],
     images: [
-      "/projects/vcfo-accountants-01.jpg",
-      "/projects/vcfo-accountants-02.jpg",
-      "/projects/vcfo-accountants-03.jpg",
+      "/images/projects/vcfo-accountants-01.jpg",
+      "/images/projects/vcfo-accountants-02.jpg",
+      "/images/projects/vcfo-accountants-03.jpg",
     ],
   },
   {
@@ -139,9 +139,9 @@ export const PROJECTS: ProjectData[] = [
     roles: ["UI Design", "Database Design", "Development"],
     tech: ["React", "MongoDB", "TailwindCSS", "Framer Motion"],
     images: [
-      "/projects/outrun-games-01.jpg",
-      "/projects/outrun-games-02.jpg",
-      "/projects/outrun-games-03.jpg",
+      "/images/projects/outrun-games-01.jpg",
+      "/images/projects/outrun-games-02.jpg",
+      "/images/projects/outrun-games-03.jpg",
     ],
   },
   {
@@ -152,7 +152,7 @@ export const PROJECTS: ProjectData[] = [
       "A hand-drawn point-and-click game in which a child crosses a ruined city guided by a cat that glows brighter near contamination. Clean routes are gated by hostile architecture while contaminated ones lie open, so every choice trades exposure, energy, and the cat's trust as the evening closes in. Spans 47 illustrated scenes and 127 routes across three acts, with multiple endings and replays that open new paths.",
     roles: ["Game Design", "Development"],
     tech: ["React", "TypeScript", "Vite"],
-    images: ["/projects/no-place-to-rest-01.jpg"],
+    images: ["/images/projects/no-place-to-rest-01.jpg"],
   },
   {
     id: "ai-dreams",
@@ -163,9 +163,9 @@ export const PROJECTS: ProjectData[] = [
     roles: ["UI Design", "Development"],
     tech: ["React", "Next.js", "GraphQL", "TailwindCSS", "Hygraph"],
     images: [
-      "/projects/ai-dreams-01.jpg",
-      "/projects/ai-dreams-02.jpg",
-      "/projects/ai-dreams-03.jpg",
+      "/images/projects/ai-dreams-01.jpg",
+      "/images/projects/ai-dreams-02.jpg",
+      "/images/projects/ai-dreams-03.jpg",
     ],
   },
   {
@@ -176,7 +176,7 @@ export const PROJECTS: ProjectData[] = [
       "A modern dental practice website featuring an intuitive appointment booking system, service information, and patient resources. Implements responsive design principles for optimal viewing across devices, includes interactive service galleries, and features automated contact forms with validation. Optimised for local SEO with structured data markup.",
     roles: ["UI Design", "Development"],
     tech: ["React", "TailwindCSS", "React Router"],
-    images: ["/projects/dr-olga-palma-01.jpg"],
+    images: ["/images/projects/dr-olga-palma-01.jpg"],
   },
   {
     id: "dnd-point-buy-calc",
@@ -187,8 +187,8 @@ export const PROJECTS: ProjectData[] = [
     roles: ["Full-Stack Developer", "UI/UX Designer"],
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
     images: [
-      "/projects/dnd-point-buy-calc-01.jpg",
-      "/projects/dnd-point-buy-calc-02.jpg",
+      "/images/projects/dnd-point-buy-calc-01.jpg",
+      "/images/projects/dnd-point-buy-calc-02.jpg",
     ],
   },
   {
@@ -205,7 +205,7 @@ export const PROJECTS: ProjectData[] = [
       "MongoDB",
       "Native Base",
     ],
-    images: ["/projects/my-money-01.jpg"],
+    images: ["/images/projects/my-money-01.jpg"],
   },
   {
     id: "genshin-recipes",
@@ -216,9 +216,9 @@ export const PROJECTS: ProjectData[] = [
     roles: ["UI Design", "Database Design", "Development"],
     tech: ["React", "MongoDB", "Chakra UI", "Framer Motion"],
     images: [
-      "/projects/genshin-recipes-01.jpg",
-      "/projects/genshin-recipes-02.jpg",
-      "/projects/genshin-recipes-03.jpg",
+      "/images/projects/genshin-recipes-01.jpg",
+      "/images/projects/genshin-recipes-02.jpg",
+      "/images/projects/genshin-recipes-03.jpg",
     ],
   },
 ];

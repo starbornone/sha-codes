@@ -1,7 +1,7 @@
 import ContactForm from "@/forms/ContactForm";
 import React from "react";
 
-const backgroundImage = "url(/about-bg.jpg)";
+const backgroundImage = "url(/images/about-bg.jpg)";
 
 function Contact() {
   return (

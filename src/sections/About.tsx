@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeInVariants } from "@/animations";
 
-const backgroundImage = "url(/about-bg.jpg)";
+const backgroundImage = "url(/images/about-bg.jpg)";
 
 export default function About(): JSX.Element {
   return (
