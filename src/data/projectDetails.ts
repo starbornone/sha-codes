@@ -160,20 +160,18 @@ export const PROJECT_DETAILS: Record<string, ProjectDetails> = {
     ],
   },
   "harptos-calendar-tracker": {
-    why: "Running a Forgotten Realms session means tracking Harptos dates, festival days, local light and weather by hand. The tracker keeps one campaign clock on a single screen so a DM can advance time, switch Sword Coast locations and copy a ready line into their notes.",
+    why: "A Dungeon Master can advance a campaign through travel, downtime or a change of setting from one screen. The tracker keeps the date, local light and weather in step and produces a line ready to copy into session notes.",
     features: [
-      "Set or advance the Harptos clock by hour, day or tenday, including festival days, Shieldmeet and year titles.",
-      "Switch among Neverwinter, Phandalin, Baldur’s Gate and Waterdeep while keeping the campaign date and time.",
-      "Location-aware daylight phases and Faerûnian clock markers derived from the current date.",
-      "Seeded hourly weather that stays the same when you skip ahead, revisit an hour or reload.",
+      "Set the local date and time or advance by hours, a day or a tenday. In Faerûn, the Harptos month view highlights the campaign day and shows tendays and festivals, including Shieldmeet in leap years.",
+      "Switch among eleven locations, including Halruaa, Sharn, Greyhawk and Sigil. The same campaign moment is displayed in the selected location’s calendar, with a campaign day count in Sigil and the Radiant Citadel.",
+      "See local light phases, clock markers and hourly weather. Weather follows local fronts with fog near dawn, precipitation transitions and short thunderstorms where conditions allow.",
       "A one-line campaign summary with copy-to-clipboard, plus share links that open as a read-only preview and can be adopted into the browser’s saved campaign.",
       "English by default, with an existing Simplified Chinese preference applied to the interface, summary and shared preview.",
     ],
     engineering: [
-      "A Vite, React and TypeScript app. Campaign time is stored as elapsed minutes from 1 Hammer 1 DR, with calendar rules kept independent of the browser.",
-      "Daylight, time markers and weather are derived from the saved clock, location and weather seed rather than stored as editable labels.",
-      "Share URLs carry time, location and seed for a read-only preview; adopting writes one snapshot before editing resumes.",
-      "Browser-local persistence for a single campaign, with localisation for display labels and Harptos date formatting.",
+      "React and TypeScript on Vite, with calendar rules independent of the browser. Local date conversion and editing use a shared timeline measured in elapsed minutes from 1 Hammer 1 DR.",
+      "Location profiles and the campaign clock determine daylight. Seeded weather yields the same condition for a given location and hour after a time jump, reload or adoption of a share link.",
+      "The browser stores the clock, location and seed as a single snapshot. Edits stay in the current tab if a save fails and are included in the next successful save.",
     ],
   },
   "no-place-to-rest": {
@@ -207,16 +205,17 @@ export const PROJECT_DETAILS: Record<string, ProjectDetails> = {
     ],
   },
   "dnd-point-buy-calc": {
-    why: "Point-buy character creation in D&D 5e means juggling point costs, racial bonuses and modifiers by hand. This calculator does the bookkeeping live, so players can focus on the character.",
+    why: "Players building a character before session zero can try different ability score arrays and see how their origin choices affect the result. The calculator defaults to the 2024 rules and lets players switch to the 2014 rules in Character Setup.",
     features: [
-      "Adjust all six ability scores and see each point cost against the 27-point budget as you go.",
-      "Racial bonuses for the standard races and their variants, such as Hill and Mountain Dwarf or High, Wood and Drow Elf.",
-      "Free-choice bonuses for races such as Half-Elf, Variant Human and Changeling.",
-      "Modifiers and final totals that update in real time.",
+      "Adjust all six base scores or fill the standard array. Point costs, remaining budget, final scores and modifiers update as you edit.",
+      "Under the 2024 rules, choose a Player’s Handbook species and background, assign the background’s ability increases, and see its skills and Origin feat.",
+      "Under the 2014 rules, apply race and variant bonuses and make choices such as a High Elf’s wizard cantrip or a Variant Human’s feat.",
+      "Copy a share link, import or export a JSON build, or print a build summary. Share links preserve the rules edition and language.",
     ],
     engineering: [
-      "A Next.js and TypeScript app styled with Tailwind CSS, using React Context for the selected race, scores and bonuses.",
-      "Race data drives the rules, so adding a race or variant is a data change rather than new logic.",
+      "A client-side React and TypeScript app built with Vite and styled with Tailwind CSS. React Context keeps edition-specific choices separate while both editions use the same base scores and budget.",
+      "TypeScript data modules define origins and racial bonuses. Pure functions calculate point costs, bonuses and ability modifiers.",
+      "Build links without an edition marker and version 1 JSON exports still open in 2014 mode. A failed import leaves the current build intact.",
     ],
   },
 };

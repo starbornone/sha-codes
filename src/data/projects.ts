@@ -111,10 +111,13 @@ export const PROJECTS: ProjectData[] = [
     url: "https://harptos.starmist.studio/",
     repo: "https://github.com/starbornone/harptos-calendar-tracker",
     description:
-      "A Dungeon Master tool for Faerûn campaigns that models the Harptos calendar end to end—festivals, Shieldmeet, and year titles included. Set or advance campaign time across Neverwinter, Phandalin, Baldur’s Gate, and Waterdeep, with location-aware daylight phases and seeded hourly weather that stays consistent across skips and reloads. Shareable campaign links support read-only previews and optional adoption, with English and Simplified Chinese localisation and a one-line summary built for session notes.",
+      "A Dungeon Master tool for tracking one campaign across eleven locations in Faerûn and other D&D settings. Advance the clock, browse Harptos tendays and festivals, or enter a date in the selected location’s calendar. Local daylight and seeded hourly weather follow the campaign clock. Copy a one-line summary into session notes or share a read-only preview that another DM can adopt.",
     roles: ["UI Design", "Development"],
-    tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
-    images: ["/images/projects/harptos-calendar-tracker-01.jpg"],
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
+    images: [
+      "/images/projects/harptos-calendar-tracker-01.jpg",
+      "/images/projects/harptos-calendar-tracker-02.jpg",
+    ],
   },
   {
     id: "vcfo-accountants",
@@ -180,12 +183,12 @@ export const PROJECTS: ProjectData[] = [
   },
   {
     id: "dnd-point-buy-calc",
-    name: "D&D Point Buy Calculator",
+    name: "D&D 5e Point-Buy Calculator",
     url: "https://dnd.starmist.studio/",
     description:
-      "An intuitive D&D 5e character creation tool featuring a sophisticated point-buy system with real-time calculations and validation. Supports all official races and subraces, including custom content, with automatic modifier calculations and stat maximums. Includes detailed tooltips, mobile responsiveness, and shareable character builds via URL parameters.",
+      "Build starting ability scores for Dungeons & Dragons using the 2024 or 2014 rules. The calculator tallies point costs, applies background or racial bonuses, and updates ability modifiers as you edit. Share a build by link, save and restore it as JSON, or print a summary. The interface is available in English and Simplified Chinese.",
     roles: ["Full-Stack Developer", "UI/UX Designer"],
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "React"],
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
     images: [
       "/images/projects/dnd-point-buy-calc-01.jpg",
       "/images/projects/dnd-point-buy-calc-02.jpg",
