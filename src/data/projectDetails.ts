@@ -174,6 +174,19 @@ export const PROJECT_DETAILS: Record<string, ProjectDetails> = {
       "The browser stores the clock, location and seed as a single snapshot. Edits stay in the current tab if a save fails and are included in the next successful save.",
     ],
   },
+  chronicler: {
+    why: "A GM can keep session prep, reference notes and player-facing lore in one campaign. Cross-linked entries show where someone appears, which places matter to a chapter and what treasure has turned up there.",
+    features: [
+      "Search people, enemies, organisations, treasure, chapters and locations by name, alias, tag or notes. Appearance links work in both directions, so a chapter shows its cast and loot and a location shows its occupants.",
+      "The Session Desk brings the active chapter’s adventure notes and linked entries into view, with shortcuts for private notes and loot rolls during play.",
+      "Draft player journal updates with recaps, discoveries and loot. Review changes and preview the player view before publishing.",
+      "Generate shops and stock for settlements, link merchants to campaign entries and track sales from inventory.",
+    ],
+    engineering: [
+      "A Next.js App Router application with Tailwind CSS and shadcn/ui. Campaign notes render as Markdown, with internal links opening previews in the GM workspace.",
+      "The editable local demo starts with a seeded campaign and saves to a JSON file. The optional hosted mode uses Supabase Auth and Postgres row-level security for signed-in campaigns.",
+    ],
+  },
   "no-place-to-rest": {
     why: "A game about environmental injustice in which the danger is organised rather than natural: the clean routes through a ruined city are gated and watched, and the contaminated ones are simply open. A child crosses it guided by a cat that glows brighter near contamination.",
     features: [

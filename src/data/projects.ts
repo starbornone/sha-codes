@@ -120,6 +120,16 @@ export const PROJECTS: ProjectData[] = [
     ],
   },
   {
+    id: "chronicler",
+    name: "Chronicler",
+    url: "https://chronicler.starmist.studio/",
+    description:
+      "A campaign planner and player wiki for Dungeons & Dragons and Pathfinder. Link characters, enemies, organisations and treasure to the chapters and locations where they appear. The GM can prepare scenes, capture notes during play and publish chosen entries and journal updates to the players.",
+    roles: ["UI Design", "Database Design", "Development"],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Supabase"],
+    images: ["/images/projects/chronicler-01.jpg"],
+  },
+  {
     id: "vcfo-accountants",
     name: "VCFO Accountants",
     url: "https://vcfoaccountants.com.au/",
