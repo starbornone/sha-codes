@@ -205,6 +205,27 @@ export const PROJECTS: ProjectData[] = [
     ],
   },
   {
+    id: "pf2e-point-buy-calc",
+    name: "Pathfinder 2e Attribute Calculator",
+    url: "https://pf.starmist.studio/",
+    repo: "https://github.com/starbornone/pf2e-point-buy-calc",
+    description:
+      "Plan Pathfinder 2e Remaster attribute boosts and feats from level 1 to 20. A live ledger shows how ancestry, background, class and advancement contribute to each modifier, including partial boosts. Share the build by link, save a JSON backup or print a one-page ledger.",
+    roles: ["UI Design", "Development"],
+    tech: ["TypeScript", "Vite", "CSS"],
+    images: ["/images/projects/pf2e-point-buy-calc-01.jpg"],
+  },
+  {
+    id: "masque-of-shattered-mirrors",
+    name: "Masque Character Creator",
+    url: "https://masque.starmist.studio/",
+    description:
+      "A Pathfinder 2e Remaster character creator for The Masque of Shattered Mirrors, a campaign for one player and one GM. The guide pairs questions about the character’s motives and ties with a build planner and campaign-fit review. Players can print a table reference or export a character for GM review or Foundry VTT.",
+    roles: ["UI Design", "Development"],
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
+    images: ["/images/projects/masque-of-shattered-mirrors-01.jpg"],
+  },
+  {
     id: "my-money",
     name: "my.money",
     description:

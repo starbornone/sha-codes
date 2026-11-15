@@ -231,4 +231,29 @@ export const PROJECT_DETAILS: Record<string, ProjectDetails> = {
       "Build links without an edition marker and version 1 JSON exports still open in 2014 mode. A failed import leaves the current build intact.",
     ],
   },
+  "pf2e-point-buy-calc": {
+    why: "Pathfinder 2e Remaster characters gain boosts at creation and as they level. The ledger shows where every modifier comes from and tracks partial boosts as players plan their advancement.",
+    features: [
+      "Apply ancestry, background, class and free boosts, with alternate ancestry boosts and voluntary flaws. Use presets from Player Core and Player Core 2, selected ancestries from Howl of the Wild, or custom entries.",
+      "Plan ancestry, class, skill and general feats through level 20. Browse feat choices for any level while keeping the modifier ledger at the character’s current level.",
+      "Keep feat choices and modifiers together in share links and JSON backups. Print the attribute ledger or undo a reset or import before making another edit.",
+    ],
+    engineering: [
+      "A static Vite site with a TypeScript rules engine that validates build choices, calculates modifier contributions and handles partial boosts.",
+      "Versioned share links and JSON backups use the same build model. The feat catalog uses Foundry’s PF2e compendium data for levels, traits, prerequisites and background grants.",
+    ],
+  },
+  "masque-of-shattered-mirrors": {
+    why: "The Masque of Shattered Mirrors is a social-horror masquerade written for one player and one GM. The creator helps the player establish why their character accepted the invitation and what they care about, so the GM can tailor the session around those choices.",
+    features: [
+      "A session-zero guide leads from the invitation to the character’s concept, relationships, craft and the impression their mask is meant to give.",
+      "Plan attributes, heritage, skills, feats, spells and starting gear. The campaign-fit review shows how the build supports checks such as Will, Perception, social skills and investigation.",
+      "Keep named drafts in the browser, export or restore a character file, and open a read-only table reference with a printable card. A Foundry VTT export includes a PF2e character actor and a checklist for finishing setup.",
+      "The protected GM workspace reviews player exports and saves character files with the GM’s own notes for later sessions.",
+    ],
+    engineering: [
+      "The player app is built with React, TypeScript and Vite. It reuses the attribute boost logic from the Pathfinder 2e Attribute Calculator and saves named drafts in the browser.",
+      "Player files carry the concept and build between browsers. The separate GM build opens character exports and packages private notes with the reviewed character.",
+    ],
+  },
 };
