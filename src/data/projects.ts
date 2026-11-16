@@ -110,7 +110,7 @@ export const PROJECTS: ProjectData[] = [
     name: "Astral Archives",
     url: "https://www.astralarchives.games/",
     description:
-      "A directory of six tabletop roleplaying tools for character creation and campaign planning. It brings together D&D and Pathfinder calculators, a Pathfinder campaign character guide, a Vampire V5 creator, a campaign wiki and the Harptos calendar.",
+      "A directory of six tabletop roleplaying tools for building characters, planning sessions and running campaigns. It brings together D&D and Pathfinder calculators, a Vampire V5 creator, Chronicler’s campaign wiki, the Harptos calendar and World Binder’s premade adventures.",
     roles: ["UI Design", "Development"],
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
     images: ["/images/projects/astral-archives-01.jpg"],
@@ -148,6 +148,16 @@ export const PROJECTS: ProjectData[] = [
     roles: ["UI Design", "Database Design", "Development"],
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Supabase"],
     images: ["/images/projects/chronicler-01.jpg"],
+  },
+  {
+    id: "world-binder",
+    name: "World Binder",
+    url: "https://worldbinder.astralarchives.games/",
+    description:
+      "A tabletop RPG campaign library and GM run console in pre-alpha. The public site previews The Masque of Shattered Mirrors and two upcoming campaigns. The local Masque pilot puts scenes, NPCs, clues and handouts within reach and remembers where the table left off.",
+    roles: ["UI Design", "Development"],
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Zod"],
+    images: ["/images/projects/world-binder-01.jpg"],
   },
   {
     id: "vcfo-accountants",

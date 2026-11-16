@@ -162,7 +162,7 @@ export const PROJECT_DETAILS: Record<string, ProjectDetails> = {
   "astral-archives": {
     why: "Players and game masters can find the right character or campaign tool from one page, whether they’re building a character for session zero or checking the date in Faerûn.",
     features: [
-      "Six destinations cover D&D point-buy, Pathfinder Remaster attributes, Masque character creation, Vampire V5 character creation, Chronicler’s campaign wiki and the Harptos calendar.",
+      "Six destinations cover D&D point-buy, Pathfinder Remaster attributes, Vampire V5 character creation, Chronicler’s campaign wiki, the Harptos calendar and World Binder’s campaign previews.",
       "Each card describes what the tool does and opens it directly. The D&D entry opens the calculator in 2024 rules mode.",
     ],
     engineering: [
@@ -210,6 +210,18 @@ export const PROJECT_DETAILS: Record<string, ProjectDetails> = {
     engineering: [
       "A Next.js App Router application with Tailwind CSS and shadcn/ui. Campaign notes render as Markdown, with internal links opening previews in the GM workspace.",
       "The editable local demo starts with a seeded campaign and saves to a JSON file. The optional hosted mode uses Supabase Auth and Postgres row-level security for signed-in campaigns.",
+    ],
+  },
+  "world-binder": {
+    why: "During play, a GM needs the current scene and its clues, characters and handouts close at hand. World Binder breaks a premade adventure into linked references and gives players public previews they can read before the session.",
+    features: [
+      "Preview the illustrated invitation and opening scene for The Masque of Shattered Mirrors. The public site also introduces Bloodlines and Tearing Between the Seams.",
+      "In the local Masque pilot, follow branching scenes, open NPC and clue references, and reveal handouts as the table discovers them.",
+      "A browser journal preserves the current scene, outcomes, clues and table notes across reloads. The pilot can open a configured chapter in Chronicler for campaign notes.",
+    ],
+    engineering: [
+      "A Next.js App Router workspace with a shared Zod schema for scenes and their linked entities.",
+      "Public previews use curated player-facing content. The local pilot loads its GM material on the server and keeps run state in the browser.",
     ],
   },
   "no-place-to-rest": {
