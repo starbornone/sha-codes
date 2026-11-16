@@ -170,6 +170,20 @@ export const PROJECT_DETAILS: Record<string, ProjectDetails> = {
       "A typed list supplies card content and directory structured data. The same route definition supplies the canonical URL, page metadata and sitemap.",
     ],
   },
+  "vtm-character-creator": {
+    why: "V5 character creation ties the character’s motives and relationships to choices that affect the sheet. The guide keeps those choices together and surfaces open rulings before a player hands the build to their Storyteller.",
+    features: [
+      "Create fledglings, neonates or ancillae, with support for the seven named Core clans, Caitiff and Thin-blood characters. The guide applies the starting budgets and restrictions for the selected profile.",
+      "Choose traits, Disciplines, powers, an eligible Predator Type, Advantages and Flaws. An optional Player’s Guide source pack adds choices alongside the Core catalog.",
+      "Use the advancement journal to track earned XP, purchases and remaining XP after character creation. Starting XP has its own budget.",
+      "Resume named drafts at their last step or restore a JSON backup. Print the evaluated sheet or export a Markdown brief with open rulings and selected narrative sections.",
+      "Share a read-only mechanical build while keeping character names and narrative notes in the local draft.",
+    ],
+    engineering: [
+      "A React and TypeScript app built with Vite. The rules evaluator uses source-tagged options to calculate ratings, show where grants came from and flag choices that need review.",
+      "The same evaluated sheet drives review and print. Versioned browser saves and backups validate draft inputs, and share links carry a defined set of mechanical fields.",
+    ],
+  },
   "harptos-calendar-tracker": {
     why: "A Dungeon Master can advance a campaign through travel, downtime or a change of setting from one screen. The tracker keeps the date, local light and weather in step and produces a line ready to copy into session notes.",
     features: [

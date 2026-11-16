@@ -116,6 +116,16 @@ export const PROJECTS: ProjectData[] = [
     images: ["/images/projects/astral-archives-01.jpg"],
   },
   {
+    id: "vtm-character-creator",
+    name: "Vampire: The Masquerade Character Creator",
+    url: "https://vtm.astralarchives.games/",
+    description:
+      "A browser guide for creating and advancing Vampire: The Masquerade Fifth Edition characters. Develop a concept, assign traits and Disciplines, and review choices in a live rules ledger. Save drafts in the browser, share a mechanical build, or print a character sheet for the table.",
+    roles: ["UI Design", "Development"],
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
+    images: ["/images/projects/vtm-character-creator-01.jpg"],
+  },
+  {
     id: "harptos-calendar-tracker",
     name: "Harptos Calendar Tracker",
     url: "https://harptos.starmist.studio/",
