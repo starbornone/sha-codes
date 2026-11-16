@@ -112,20 +112,6 @@ export const PROJECTS: ProjectData[] = [
     images: ["/images/projects/talesmith-01.jpg"],
   },
   {
-    id: "outrun-games",
-    name: "Outrun Games",
-    url: "https://outrun.games/",
-    description:
-      "A feature-rich gaming analytics platform offering detailed game statistics, user reviews, and performance metrics. Implements complex data visualisation for gaming trends, includes a recommendation engine, and features smooth animations for an engaging user experience. MongoDB integration enables efficient handling of large datasets and real-time updates.",
-    roles: ["UI Design", "Database Design", "Development"],
-    tech: ["React", "MongoDB", "TailwindCSS", "Framer Motion"],
-    images: [
-      "/images/projects/outrun-games-01.jpg",
-      "/images/projects/outrun-games-02.jpg",
-      "/images/projects/outrun-games-03.jpg",
-    ],
-  },
-  {
     id: "no-place-to-rest",
     name: "No Place to Rest",
     url: "https://www.noplaceto.rest/",
@@ -157,20 +143,6 @@ export const PROJECTS: ProjectData[] = [
     images: [
       "/images/projects/harptos-calendar-tracker-01.jpg",
       "/images/projects/harptos-calendar-tracker-02.jpg",
-    ],
-  },
-  {
-    id: "marketopia",
-    name: "Marketopia Adventures",
-    url: "https://marketopia.sha.codes/",
-    description:
-      "An interactive visual-novel style web app designed to introduce and explore fundamental concepts in game theory. Developed to accompany an introductory talk, it allows viewers to experience game theory principles firsthand through a series of dynamic scenarios and decision-making pathways. The app combines narrative elements with educational gameplay, providing an engaging learning environment that demystifies complex topics.",
-    roles: ["UI Design", "Development"],
-    tech: ["React", "Next.js", "SASS", "Framer Motion"],
-    images: [
-      "/images/projects/marketopia-01.jpg",
-      "/images/projects/marketopia-02.jpg",
-      "/images/projects/marketopia-03.jpg",
     ],
   },
   {
@@ -208,6 +180,44 @@ export const PROJECTS: ProjectData[] = [
     ],
   },
   {
+    id: "astral-archives",
+    name: "Astral Archives",
+    url: "https://www.astralarchives.games/",
+    description:
+      "A directory of six tabletop roleplaying tools for building characters, planning sessions and running campaigns. It brings together D&D and Pathfinder calculators, a Vampire V5 creator, Chronicler’s campaign wiki, the Harptos calendar and World Binder’s premade adventures.",
+    roles: ["UI Design", "Development"],
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
+    images: ["/images/projects/astral-archives-01.jpg"],
+  },
+  {
+    id: "outrun-games",
+    name: "Outrun Games",
+    url: "https://outrun.games/",
+    description:
+      "A feature-rich gaming analytics platform offering detailed game statistics, user reviews, and performance metrics. Implements complex data visualisation for gaming trends, includes a recommendation engine, and features smooth animations for an engaging user experience. MongoDB integration enables efficient handling of large datasets and real-time updates.",
+    roles: ["UI Design", "Database Design", "Development"],
+    tech: ["React", "MongoDB", "TailwindCSS", "Framer Motion"],
+    images: [
+      "/images/projects/outrun-games-01.jpg",
+      "/images/projects/outrun-games-02.jpg",
+      "/images/projects/outrun-games-03.jpg",
+    ],
+  },
+  {
+    id: "marketopia",
+    name: "Marketopia Adventures",
+    url: "https://marketopia.sha.codes/",
+    description:
+      "An interactive visual-novel style web app designed to introduce and explore fundamental concepts in game theory. Developed to accompany an introductory talk, it allows viewers to experience game theory principles firsthand through a series of dynamic scenarios and decision-making pathways. The app combines narrative elements with educational gameplay, providing an engaging learning environment that demystifies complex topics.",
+    roles: ["UI Design", "Development"],
+    tech: ["React", "Next.js", "SASS", "Framer Motion"],
+    images: [
+      "/images/projects/marketopia-01.jpg",
+      "/images/projects/marketopia-02.jpg",
+      "/images/projects/marketopia-03.jpg",
+    ],
+  },
+  {
     id: "ai-dreams",
     name: "AI Dreams",
     url: "https://aidreams.world/",
@@ -238,6 +248,20 @@ export const PROJECTS: ProjectData[] = [
     images: ["/images/projects/my-money-01.jpg"],
   },
   {
+    id: "genshin-recipes",
+    name: "Genshin Recipes",
+    url: "https://genshin.recipes/",
+    description:
+      "An interactive recipe database for Genshin Impact. Implements smooth animations and transitions for an engaging user experience, with full mobile responsiveness.",
+    roles: ["UI Design", "Database Design", "Development"],
+    tech: ["React", "MongoDB", "Chakra UI", "Framer Motion"],
+    images: [
+      "/images/projects/genshin-recipes-01.jpg",
+      "/images/projects/genshin-recipes-02.jpg",
+      "/images/projects/genshin-recipes-03.jpg",
+    ],
+  },
+  {
     id: "vcfo-accountants",
     name: "VCFO Accountants",
     url: "https://vcfoaccountants.com.au/",
@@ -260,29 +284,5 @@ export const PROJECTS: ProjectData[] = [
     roles: ["UI Design", "Development"],
     tech: ["React", "TailwindCSS", "React Router"],
     images: ["/images/projects/dr-olga-palma-01.jpg"],
-  },
-  {
-    id: "genshin-recipes",
-    name: "Genshin Recipes",
-    url: "https://genshin.recipes/",
-    description:
-      "An interactive recipe database for Genshin Impact. Implements smooth animations and transitions for an engaging user experience, with full mobile responsiveness.",
-    roles: ["UI Design", "Database Design", "Development"],
-    tech: ["React", "MongoDB", "Chakra UI", "Framer Motion"],
-    images: [
-      "/images/projects/genshin-recipes-01.jpg",
-      "/images/projects/genshin-recipes-02.jpg",
-      "/images/projects/genshin-recipes-03.jpg",
-    ],
-  },
-  {
-    id: "astral-archives",
-    name: "Astral Archives",
-    url: "https://www.astralarchives.games/",
-    description:
-      "A directory of six tabletop roleplaying tools for building characters, planning sessions and running campaigns. It brings together D&D and Pathfinder calculators, a Vampire V5 creator, Chronicler’s campaign wiki, the Harptos calendar and World Binder’s premade adventures.",
-    roles: ["UI Design", "Development"],
-    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
-    images: ["/images/projects/astral-archives-01.jpg"],
   },
 ];
