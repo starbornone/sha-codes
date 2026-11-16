@@ -32,6 +32,36 @@ export const PROJECTS: ProjectData[] = [
     images: ["/images/projects/ready-check-01.jpg"],
   },
   {
+    id: "break-the-loop",
+    name: "Break the Loop",
+    url: "https://www.breaktheloop.games/",
+    description:
+      "A materialist idle strategy game about the end of infinite growth, free to play in the browser. Players guide a society through its own contradictions, from primitive extraction through imperialism and crisis to a world without scarcity, with each mode of production rewriting which meters and actions matter. NPC nations react to every move, and conflict emerges from economic and diplomatic pressure rather than a menu click.",
+    roles: ["Game Design", "Development"],
+    tech: ["React", "TypeScript", "Node.js", "Socket.IO", "Prisma"],
+    images: ["/images/projects/break-the-loop-01.jpg"],
+  },
+  {
+    id: "chronicler",
+    name: "Chronicler",
+    url: "https://chronicler.astralarchives.games/",
+    description:
+      "A campaign planner and player wiki for Dungeons & Dragons and Pathfinder. Link characters, enemies, organisations and treasure to the chapters and locations where they appear. The GM can prepare scenes, capture notes during play and publish chosen entries and journal updates to the players.",
+    roles: ["UI Design", "Database Design", "Development"],
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Supabase"],
+    images: ["/images/projects/chronicler-01.jpg"],
+  },
+  {
+    id: "arcana-tools",
+    name: "Arcana Tools",
+    url: "https://www.arcana.tools/",
+    description:
+      "A personal organisation dashboard for people with AuDHD that brings tasks, projects, calendars, shopping lists, mood logging and budgeting into one place. Includes quick capture with inbox triage, recurring life-admin obligations that turn into tasks before they're due, and a calendar with reminders, sunrise and moon data, and read-only Google Calendar sync. Mood check-ins come with insights and exports, and budgeting in AUD covers accounts, bills and alerts.",
+    roles: ["UI Design", "Database Design", "Development"],
+    tech: ["Next.js", "TypeScript", "TailwindCSS", "shadcn/ui", "Supabase"],
+    images: ["/images/projects/arcana-tools-01.jpg"],
+  },
+  {
     id: "kritik-systems",
     name: "Kritik Systems",
     url: "https://www.kritik.systems/",
@@ -52,70 +82,6 @@ export const PROJECTS: ProjectData[] = [
     images: ["/images/projects/midnight-archive-01.jpg"],
   },
   {
-    id: "arcana-tools",
-    name: "Arcana Tools",
-    url: "https://www.arcana.tools/",
-    description:
-      "A personal organisation dashboard for people with AuDHD that brings tasks, projects, calendars, shopping lists, mood logging and budgeting into one place. Includes quick capture with inbox triage, recurring life-admin obligations that turn into tasks before they're due, and a calendar with reminders, sunrise and moon data, and read-only Google Calendar sync. Mood check-ins come with insights and exports, and budgeting in AUD covers accounts, bills and alerts.",
-    roles: ["UI Design", "Database Design", "Development"],
-    tech: ["Next.js", "TypeScript", "TailwindCSS", "shadcn/ui", "Supabase"],
-    images: ["/images/projects/arcana-tools-01.jpg"],
-  },
-  {
-    id: "talesmith",
-    name: "Talesmith",
-    url: "https://www.talesmith.com.au/",
-    description:
-      "A platform for educators, trainers and facilitators to create and share interactive, branching-path stories and lessons without any technical skills. Features a visual branching path builder, ready-made story templates, and images, audio and video embedded directly in story nodes. Suited to classrooms, university courses, workplace training and language learning, with lessons published and shared through a link.",
-    roles: ["UI Design", "Database Design", "Development"],
-    tech: ["React", "TypeScript", "React Router", "TailwindCSS", "Supabase"],
-    images: ["/images/projects/talesmith-01.jpg"],
-  },
-  {
-    id: "break-the-loop",
-    name: "Break the Loop",
-    url: "https://www.breaktheloop.games/",
-    description:
-      "A materialist idle strategy game about the end of infinite growth, free to play in the browser. Players guide a society through its own contradictions, from primitive extraction through imperialism and crisis to a world without scarcity, with each mode of production rewriting which meters and actions matter. NPC nations react to every move, and conflict emerges from economic and diplomatic pressure rather than a menu click.",
-    roles: ["Game Design", "Development"],
-    tech: ["React", "TypeScript", "Node.js", "Socket.IO", "Prisma"],
-    images: ["/images/projects/break-the-loop-01.jpg"],
-  },
-  {
-    id: "praxis-primer",
-    name: "Praxis Primer",
-    url: "https://www.praxisprimer.info/",
-    description:
-      "A reading and study companion for socialist and communist theory, with structured reading plans, original section summaries, and discussion prompts for study circles. Readers keep private notes in the browser and review key terms with spaced repetition, while the source texts stay on their original sites. A sibling project to Kritik Systems, with content validated at build time.",
-    roles: ["UI Design", "Development"],
-    tech: ["Next.js", "TypeScript", "TailwindCSS", "Dexie", "Zod"],
-    images: ["/images/projects/praxis-primer-01.jpg"],
-  },
-  {
-    id: "marketopia",
-    name: "Marketopia Adventures",
-    url: "https://marketopia.sha.codes/",
-    description:
-      "An interactive visual-novel style web app designed to introduce and explore fundamental concepts in game theory. Developed to accompany an introductory talk, it allows viewers to experience game theory principles firsthand through a series of dynamic scenarios and decision-making pathways. The app combines narrative elements with educational gameplay, providing an engaging learning environment that demystifies complex topics.",
-    roles: ["UI Design", "Development"],
-    tech: ["React", "Next.js", "SASS", "Framer Motion"],
-    images: [
-      "/images/projects/marketopia-01.jpg",
-      "/images/projects/marketopia-02.jpg",
-      "/images/projects/marketopia-03.jpg",
-    ],
-  },
-  {
-    id: "astral-archives",
-    name: "Astral Archives",
-    url: "https://www.astralarchives.games/",
-    description:
-      "A directory of six tabletop roleplaying tools for building characters, planning sessions and running campaigns. It brings together D&D and Pathfinder calculators, a Vampire V5 creator, Chronicler’s campaign wiki, the Harptos calendar and World Binder’s premade adventures.",
-    roles: ["UI Design", "Development"],
-    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
-    images: ["/images/projects/astral-archives-01.jpg"],
-  },
-  {
     id: "vtm-character-creator",
     name: "Vampire: The Masquerade Character Creator",
     url: "https://vtm.astralarchives.games/",
@@ -126,52 +92,24 @@ export const PROJECTS: ProjectData[] = [
     images: ["/images/projects/vtm-character-creator-01.jpg"],
   },
   {
-    id: "harptos-calendar-tracker",
-    name: "Harptos Calendar Tracker",
-    url: "https://harptos.astralarchives.games/",
-    repo: "https://github.com/starbornone/harptos-calendar-tracker",
+    id: "masque-of-shattered-mirrors",
+    name: "Masque Character Creator",
+    url: "https://masque.astralarchives.games/",
     description:
-      "A Dungeon Master tool for tracking one campaign across eleven locations in Faerûn and other D&D settings. Advance the clock, browse Harptos tendays and festivals, or enter a date in the selected location’s calendar. Local daylight and seeded hourly weather follow the campaign clock. Copy a one-line summary into session notes or share a read-only preview that another DM can adopt.",
+      "A Pathfinder 2e Remaster character creator for The Masque of Shattered Mirrors, a campaign for one player and one GM. The guide pairs questions about the character’s motives and ties with a build planner and campaign-fit review. Players can print a table reference or export a character for GM review or Foundry VTT.",
     roles: ["UI Design", "Development"],
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
-    images: [
-      "/images/projects/harptos-calendar-tracker-01.jpg",
-      "/images/projects/harptos-calendar-tracker-02.jpg",
-    ],
+    images: ["/images/projects/masque-of-shattered-mirrors-01.jpg"],
   },
   {
-    id: "chronicler",
-    name: "Chronicler",
-    url: "https://chronicler.astralarchives.games/",
+    id: "talesmith",
+    name: "Talesmith",
+    url: "https://www.talesmith.com.au/",
     description:
-      "A campaign planner and player wiki for Dungeons & Dragons and Pathfinder. Link characters, enemies, organisations and treasure to the chapters and locations where they appear. The GM can prepare scenes, capture notes during play and publish chosen entries and journal updates to the players.",
+      "A platform for educators, trainers and facilitators to create and share interactive, branching-path stories and lessons without any technical skills. Features a visual branching path builder, ready-made story templates, and images, audio and video embedded directly in story nodes. Suited to classrooms, university courses, workplace training and language learning, with lessons published and shared through a link.",
     roles: ["UI Design", "Database Design", "Development"],
-    tech: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Supabase"],
-    images: ["/images/projects/chronicler-01.jpg"],
-  },
-  {
-    id: "world-binder",
-    name: "World Binder",
-    url: "https://worldbinder.astralarchives.games/",
-    description:
-      "A tabletop RPG campaign library and GM run console in pre-alpha. The public site previews The Masque of Shattered Mirrors and two upcoming campaigns. The local Masque pilot puts scenes, NPCs, clues and handouts within reach and remembers where the table left off.",
-    roles: ["UI Design", "Development"],
-    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Zod"],
-    images: ["/images/projects/world-binder-01.jpg"],
-  },
-  {
-    id: "vcfo-accountants",
-    name: "VCFO Accountants",
-    url: "https://vcfoaccountants.com.au/",
-    description:
-      "A modern accounting firm website featuring a clean, professional design with optimised performance metrics. Implements dynamic blog content management through Hygraph, includes interactive service calculators, and features automated appointment scheduling. Optimised for local SEO with structured data markup.",
-    roles: ["UI Design", "Development"],
-    tech: ["React", "Next.js", "GraphQL", "Hygraph"],
-    images: [
-      "/images/projects/vcfo-accountants-01.jpg",
-      "/images/projects/vcfo-accountants-02.jpg",
-      "/images/projects/vcfo-accountants-03.jpg",
-    ],
+    tech: ["React", "TypeScript", "React Router", "TailwindCSS", "Supabase"],
+    images: ["/images/projects/talesmith-01.jpg"],
   },
   {
     id: "outrun-games",
@@ -198,28 +136,63 @@ export const PROJECTS: ProjectData[] = [
     images: ["/images/projects/no-place-to-rest-01.jpg"],
   },
   {
-    id: "ai-dreams",
-    name: "AI Dreams",
-    url: "https://aidreams.world/",
+    id: "world-binder",
+    name: "World Binder",
+    url: "https://worldbinder.astralarchives.games/",
     description:
-      "A blog platform built with React and Next.js, featuring dynamic content loading and a clean, minimalist design. Leverages Hygraph's CMS capabilities for efficient content management, with responsive layouts and optimised performance. Implements modern SEO practices and server-side rendering for optimal search engine visibility.",
+      "A tabletop RPG campaign library and GM run console in pre-alpha. The public site previews The Masque of Shattered Mirrors and two upcoming campaigns. The local Masque pilot puts scenes, NPCs, clues and handouts within reach and remembers where the table left off.",
     roles: ["UI Design", "Development"],
-    tech: ["React", "Next.js", "GraphQL", "TailwindCSS", "Hygraph"],
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Zod"],
+    images: ["/images/projects/world-binder-01.jpg"],
+  },
+  {
+    id: "harptos-calendar-tracker",
+    name: "Harptos Calendar Tracker",
+    url: "https://harptos.astralarchives.games/",
+    repo: "https://github.com/starbornone/harptos-calendar-tracker",
+    description:
+      "A Dungeon Master tool for tracking one campaign across eleven locations in Faerûn and other D&D settings. Advance the clock, browse Harptos tendays and festivals, or enter a date in the selected location’s calendar. Local daylight and seeded hourly weather follow the campaign clock. Copy a one-line summary into session notes or share a read-only preview that another DM can adopt.",
+    roles: ["UI Design", "Development"],
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
     images: [
-      "/images/projects/ai-dreams-01.jpg",
-      "/images/projects/ai-dreams-02.jpg",
-      "/images/projects/ai-dreams-03.jpg",
+      "/images/projects/harptos-calendar-tracker-01.jpg",
+      "/images/projects/harptos-calendar-tracker-02.jpg",
     ],
   },
   {
-    id: "dr-olga-palma",
-    name: "Dr Olga Palma",
-    url: "https://drolgap.com.au/",
+    id: "marketopia",
+    name: "Marketopia Adventures",
+    url: "https://marketopia.sha.codes/",
     description:
-      "A modern dental practice website featuring an intuitive appointment booking system, service information, and patient resources. Implements responsive design principles for optimal viewing across devices, includes interactive service galleries, and features automated contact forms with validation. Optimised for local SEO with structured data markup.",
+      "An interactive visual-novel style web app designed to introduce and explore fundamental concepts in game theory. Developed to accompany an introductory talk, it allows viewers to experience game theory principles firsthand through a series of dynamic scenarios and decision-making pathways. The app combines narrative elements with educational gameplay, providing an engaging learning environment that demystifies complex topics.",
     roles: ["UI Design", "Development"],
-    tech: ["React", "TailwindCSS", "React Router"],
-    images: ["/images/projects/dr-olga-palma-01.jpg"],
+    tech: ["React", "Next.js", "SASS", "Framer Motion"],
+    images: [
+      "/images/projects/marketopia-01.jpg",
+      "/images/projects/marketopia-02.jpg",
+      "/images/projects/marketopia-03.jpg",
+    ],
+  },
+  {
+    id: "praxis-primer",
+    name: "Praxis Primer",
+    url: "https://www.praxisprimer.info/",
+    description:
+      "A reading and study companion for socialist and communist theory, with structured reading plans, original section summaries, and discussion prompts for study circles. Readers keep private notes in the browser and review key terms with spaced repetition, while the source texts stay on their original sites. A sibling project to Kritik Systems, with content validated at build time.",
+    roles: ["UI Design", "Development"],
+    tech: ["Next.js", "TypeScript", "TailwindCSS", "Dexie", "Zod"],
+    images: ["/images/projects/praxis-primer-01.jpg"],
+  },
+  {
+    id: "pf2e-point-buy-calc",
+    name: "Pathfinder 2e Attribute Calculator",
+    url: "https://pf.astralarchives.games/",
+    repo: "https://github.com/starbornone/pf2e-point-buy-calc",
+    description:
+      "Plan Pathfinder 2e Remaster attribute boosts and feats from level 1 to 20. A live ledger shows how ancestry, background, class and advancement contribute to each modifier, including partial boosts. Share the build by link, save a JSON backup or print a one-page ledger.",
+    roles: ["UI Design", "Development"],
+    tech: ["TypeScript", "Vite", "CSS"],
+    images: ["/images/projects/pf2e-point-buy-calc-01.jpg"],
   },
   {
     id: "dnd-point-buy-calc",
@@ -235,25 +208,18 @@ export const PROJECTS: ProjectData[] = [
     ],
   },
   {
-    id: "pf2e-point-buy-calc",
-    name: "Pathfinder 2e Attribute Calculator",
-    url: "https://pf.astralarchives.games/",
-    repo: "https://github.com/starbornone/pf2e-point-buy-calc",
+    id: "ai-dreams",
+    name: "AI Dreams",
+    url: "https://aidreams.world/",
     description:
-      "Plan Pathfinder 2e Remaster attribute boosts and feats from level 1 to 20. A live ledger shows how ancestry, background, class and advancement contribute to each modifier, including partial boosts. Share the build by link, save a JSON backup or print a one-page ledger.",
+      "A blog platform built with React and Next.js, featuring dynamic content loading and a clean, minimalist design. Leverages Hygraph's CMS capabilities for efficient content management, with responsive layouts and optimised performance. Implements modern SEO practices and server-side rendering for optimal search engine visibility.",
     roles: ["UI Design", "Development"],
-    tech: ["TypeScript", "Vite", "CSS"],
-    images: ["/images/projects/pf2e-point-buy-calc-01.jpg"],
-  },
-  {
-    id: "masque-of-shattered-mirrors",
-    name: "Masque Character Creator",
-    url: "https://masque.astralarchives.games/",
-    description:
-      "A Pathfinder 2e Remaster character creator for The Masque of Shattered Mirrors, a campaign for one player and one GM. The guide pairs questions about the character’s motives and ties with a build planner and campaign-fit review. Players can print a table reference or export a character for GM review or Foundry VTT.",
-    roles: ["UI Design", "Development"],
-    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
-    images: ["/images/projects/masque-of-shattered-mirrors-01.jpg"],
+    tech: ["React", "Next.js", "GraphQL", "TailwindCSS", "Hygraph"],
+    images: [
+      "/images/projects/ai-dreams-01.jpg",
+      "/images/projects/ai-dreams-02.jpg",
+      "/images/projects/ai-dreams-03.jpg",
+    ],
   },
   {
     id: "my-money",
@@ -272,6 +238,30 @@ export const PROJECTS: ProjectData[] = [
     images: ["/images/projects/my-money-01.jpg"],
   },
   {
+    id: "vcfo-accountants",
+    name: "VCFO Accountants",
+    url: "https://vcfoaccountants.com.au/",
+    description:
+      "A modern accounting firm website featuring a clean, professional design with optimised performance metrics. Implements dynamic blog content management through Hygraph, includes interactive service calculators, and features automated appointment scheduling. Optimised for local SEO with structured data markup.",
+    roles: ["UI Design", "Development"],
+    tech: ["React", "Next.js", "GraphQL", "Hygraph"],
+    images: [
+      "/images/projects/vcfo-accountants-01.jpg",
+      "/images/projects/vcfo-accountants-02.jpg",
+      "/images/projects/vcfo-accountants-03.jpg",
+    ],
+  },
+  {
+    id: "dr-olga-palma",
+    name: "Dr Olga Palma",
+    url: "https://drolgap.com.au/",
+    description:
+      "A modern dental practice website featuring an intuitive appointment booking system, service information, and patient resources. Implements responsive design principles for optimal viewing across devices, includes interactive service galleries, and features automated contact forms with validation. Optimised for local SEO with structured data markup.",
+    roles: ["UI Design", "Development"],
+    tech: ["React", "TailwindCSS", "React Router"],
+    images: ["/images/projects/dr-olga-palma-01.jpg"],
+  },
+  {
     id: "genshin-recipes",
     name: "Genshin Recipes",
     url: "https://genshin.recipes/",
@@ -284,5 +274,15 @@ export const PROJECTS: ProjectData[] = [
       "/images/projects/genshin-recipes-02.jpg",
       "/images/projects/genshin-recipes-03.jpg",
     ],
+  },
+  {
+    id: "astral-archives",
+    name: "Astral Archives",
+    url: "https://www.astralarchives.games/",
+    description:
+      "A directory of six tabletop roleplaying tools for building characters, planning sessions and running campaigns. It brings together D&D and Pathfinder calculators, a Vampire V5 creator, Chronicler’s campaign wiki, the Harptos calendar and World Binder’s premade adventures.",
+    roles: ["UI Design", "Development"],
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
+    images: ["/images/projects/astral-archives-01.jpg"],
   },
 ];

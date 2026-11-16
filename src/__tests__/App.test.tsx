@@ -50,12 +50,12 @@ describe('App', () => {
   });
 
   it('renders a project page with links back and to its neighbours', () => {
-    renderAt('/projects/ready-check');
+    renderAt('/projects/chronicler');
 
-    expect(screen.getByRole('heading', { level: 1, name: 'Ready Check' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { level: 1, name: 'Chronicler' })).toBeInTheDocument();
     expect(screen.getByRole('link', { name: /All projects/ })).toHaveAttribute('href', '/#projects');
-    expect(screen.getByRole('link', { name: /Previous/ })).toHaveAttribute('href', '/projects/ovi');
-    expect(screen.getByRole('link', { name: /Next/ })).toHaveAttribute('href', '/projects/kritik-systems');
+    expect(screen.getByRole('link', { name: /Previous/ })).toHaveAttribute('href', '/projects/break-the-loop');
+    expect(screen.getByRole('link', { name: /Next/ })).toHaveAttribute('href', '/projects/arcana-tools');
   });
 
   it('keeps the full write-up for the project page', () => {
