@@ -128,7 +128,7 @@ export const PROJECTS: ProjectData[] = [
   {
     id: "harptos-calendar-tracker",
     name: "Harptos Calendar Tracker",
-    url: "https://harptos.starmist.studio/",
+    url: "https://harptos.astralarchives.games/",
     repo: "https://github.com/starbornone/harptos-calendar-tracker",
     description:
       "A Dungeon Master tool for tracking one campaign across eleven locations in Faerûn and other D&D settings. Advance the clock, browse Harptos tendays and festivals, or enter a date in the selected location’s calendar. Local daylight and seeded hourly weather follow the campaign clock. Copy a one-line summary into session notes or share a read-only preview that another DM can adopt.",
@@ -142,7 +142,7 @@ export const PROJECTS: ProjectData[] = [
   {
     id: "chronicler",
     name: "Chronicler",
-    url: "https://chronicler.starmist.studio/",
+    url: "https://chronicler.astralarchives.games/",
     description:
       "A campaign planner and player wiki for Dungeons & Dragons and Pathfinder. Link characters, enemies, organisations and treasure to the chapters and locations where they appear. The GM can prepare scenes, capture notes during play and publish chosen entries and journal updates to the players.",
     roles: ["UI Design", "Database Design", "Development"],
@@ -214,7 +214,7 @@ export const PROJECTS: ProjectData[] = [
   {
     id: "dnd-point-buy-calc",
     name: "D&D 5e Point-Buy Calculator",
-    url: "https://dnd.starmist.studio/",
+    url: "https://dnd.astralarchives.games/?rules=2024",
     description:
       "Build starting ability scores for Dungeons & Dragons using the 2024 or 2014 rules. The calculator tallies point costs, applies background or racial bonuses, and updates ability modifiers as you edit. Share a build by link, save and restore it as JSON, or print a summary. The interface is available in English and Simplified Chinese.",
     roles: ["Full-Stack Developer", "UI/UX Designer"],
@@ -227,7 +227,7 @@ export const PROJECTS: ProjectData[] = [
   {
     id: "pf2e-point-buy-calc",
     name: "Pathfinder 2e Attribute Calculator",
-    url: "https://pf.starmist.studio/",
+    url: "https://pf.astralarchives.games/",
     repo: "https://github.com/starbornone/pf2e-point-buy-calc",
     description:
       "Plan Pathfinder 2e Remaster attribute boosts and feats from level 1 to 20. A live ledger shows how ancestry, background, class and advancement contribute to each modifier, including partial boosts. Share the build by link, save a JSON backup or print a one-page ledger.",
@@ -238,7 +238,7 @@ export const PROJECTS: ProjectData[] = [
   {
     id: "masque-of-shattered-mirrors",
     name: "Masque Character Creator",
-    url: "https://masque.starmist.studio/",
+    url: "https://masque.astralarchives.games/",
     description:
       "A Pathfinder 2e Remaster character creator for The Masque of Shattered Mirrors, a campaign for one player and one GM. The guide pairs questions about the character’s motives and ties with a build planner and campaign-fit review. Players can print a table reference or export a character for GM review or Foundry VTT.",
     roles: ["UI Design", "Development"],

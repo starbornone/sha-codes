@@ -30,7 +30,7 @@ const shots = [
   { id: "talesmith", url: "https://www.talesmith.com.au/" },
   { id: "break-the-loop", url: "https://www.breaktheloop.games/" },
   { id: "praxis-primer", url: "https://www.praxisprimer.info/" },
-  { id: "harptos-calendar-tracker", url: "https://harptos.starmist.studio/" },
+  { id: "harptos-calendar-tracker", url: "https://harptos.astralarchives.games/" },
   { id: "no-place-to-rest", url: "https://www.noplaceto.rest/" },
   { id: "dr-olga-palma", url: "https://drolgap.com.au/" },
 ];
