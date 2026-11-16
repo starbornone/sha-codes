@@ -159,6 +159,17 @@ export const PROJECT_DETAILS: Record<string, ProjectDetails> = {
       "Reusable components for payoff matrices, charts, tooltips and navigation, and a shared context that switches between shorter and more detailed explanations.",
     ],
   },
+  "astral-archives": {
+    why: "Players and game masters can find the right character or campaign tool from one page, whether they’re building a character for session zero or checking the date in Faerûn.",
+    features: [
+      "Six destinations cover D&D point-buy, Pathfinder Remaster attributes, Masque character creation, Vampire V5 character creation, Chronicler’s campaign wiki and the Harptos calendar.",
+      "Each card describes what the tool does and opens it directly. The D&D entry opens the calculator in 2024 rules mode.",
+    ],
+    engineering: [
+      "Vite builds the assets and React renders the complete directory to static HTML, so the links work with JavaScript disabled.",
+      "A typed list supplies card content and directory structured data. The same route definition supplies the canonical URL, page metadata and sitemap.",
+    ],
+  },
   "harptos-calendar-tracker": {
     why: "A Dungeon Master can advance a campaign through travel, downtime or a change of setting from one screen. The tracker keeps the date, local light and weather in step and produces a line ready to copy into session notes.",
     features: [

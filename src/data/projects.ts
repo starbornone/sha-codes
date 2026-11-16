@@ -106,6 +106,16 @@ export const PROJECTS: ProjectData[] = [
     ],
   },
   {
+    id: "astral-archives",
+    name: "Astral Archives",
+    url: "https://www.astralarchives.games/",
+    description:
+      "A directory of six tabletop roleplaying tools for character creation and campaign planning. It brings together D&D and Pathfinder calculators, a Pathfinder campaign character guide, a Vampire V5 creator, a campaign wiki and the Harptos calendar.",
+    roles: ["UI Design", "Development"],
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
+    images: ["/images/projects/astral-archives-01.jpg"],
+  },
+  {
     id: "harptos-calendar-tracker",
     name: "Harptos Calendar Tracker",
     url: "https://harptos.starmist.studio/",
