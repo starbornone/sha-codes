@@ -7,9 +7,9 @@ export default function Experience() {
     <section className="section bg-grey-900" id="experience">
       <div className="max-w-2xl px-4 mx-auto">
         <header>
-          <h2>
+          <h1>
             <span className="highlight">my</span>.experience
-          </h2>
+          </h1>
           <p>
             I hold a Diploma in System Analysis and Design, along with a
             Bachelor&apos;s degree in International Studies, specialising in

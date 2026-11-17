@@ -10,9 +10,9 @@ function Projects() {
       <div>
         <div className="container">
           <div>
-            <h2>
+            <h1>
               <span className="highlight">my</span>.projects
-            </h2>
+            </h1>
             <p>
               These are my own projects, built outside work. I build each one
               solo, from the idea and UI design through the database, code and

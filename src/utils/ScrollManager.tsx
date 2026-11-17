@@ -6,7 +6,7 @@ const NAV_OFFSET = 80;
 
 // Moving between pages in the browser keeps the old scroll position unless
 // something resets it. Go to the linked section if there is one, such as
-// /#projects from a project page, and to the top of the page otherwise.
+// /#about from another page, and to the top of the page otherwise.
 export default function ScrollManager(): null {
   const { pathname, hash } = useLocation();
   const firstRender = useRef(true);

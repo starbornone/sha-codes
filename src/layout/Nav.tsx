@@ -8,11 +8,15 @@ import {
 import { Link as RouterLink, useLocation } from "react-router";
 import { Link as ScrollLink } from "react-scroll";
 
-const NAVIGATION_ITEMS = [
-  { name: "About", href: "about" },
-  { name: "Experience", href: "experience" },
-  { name: "Projects", href: "projects" },
-  { name: "Talks", href: "talks" },
+type NavItem =
+  | { name: string; hash: string }
+  | { name: string; path: string };
+
+const NAVIGATION_ITEMS: NavItem[] = [
+  { name: "About", hash: "about" },
+  { name: "Experience", path: "/experience" },
+  { name: "Projects", path: "/projects" },
+  { name: "Talks", path: "/talks" },
 ];
 
 const CONTACT_EMAIL = "hello@sha.codes";
@@ -55,7 +59,7 @@ const NavigationLink = ({
   index,
   onClick,
 }: {
-  item: (typeof NAVIGATION_ITEMS)[number];
+  item: NavItem;
   index: number;
   onClick?: () => void;
 }) => {
@@ -69,11 +73,25 @@ const NavigationLink = ({
     </>
   );
 
-  // The sections only exist on the home page. Elsewhere, link back to it and
-  // let ScrollManager find the section once it renders.
+  if ("path" in item) {
+    const active =
+      pathname === item.path || pathname.startsWith(`${item.path}/`);
+    return (
+      <RouterLink
+        to={item.path}
+        onClick={onClick}
+        className={active ? "active" : undefined}
+      >
+        {label}
+      </RouterLink>
+    );
+  }
+
+  // About only lives on the home page. Elsewhere, link back and let
+  // ScrollManager land on the section once home renders.
   if (pathname !== "/") {
     return (
-      <RouterLink to={`/#${item.href}`} onClick={onClick}>
+      <RouterLink to={`/#${item.hash}`} onClick={onClick}>
         {label}
       </RouterLink>
     );
@@ -83,8 +101,8 @@ const NavigationLink = ({
   // can't focus. It prevents the default jump, so the href only adds focus.
   return (
     <ScrollLink
-      to={item.href}
-      href={`#${item.href}`}
+      to={item.hash}
+      href={`#${item.hash}`}
       onClick={onClick}
       smooth
       spy

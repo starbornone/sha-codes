@@ -6,7 +6,7 @@ import { fadeInVariants } from "@/animations";
 type PagerLink = { to: string; label: string };
 
 interface DetailLayoutProps {
-  // Where "back" goes on the home page, such as /#projects.
+  // Where "back" goes, such as /projects for a project detail page.
   back: PagerLink;
   eyebrow: ReactNode;
   title: string;
@@ -15,8 +15,8 @@ interface DetailLayoutProps {
   next?: PagerLink;
 }
 
-// The shared frame for project and talk pages: a way back to the home page
-// section, the page heading, its content, and links to its neighbours.
+// The shared frame for project and talk pages: a way back to the listing
+// page, the page heading, its content, and links to its neighbours.
 export default function DetailLayout({
   back,
   eyebrow,

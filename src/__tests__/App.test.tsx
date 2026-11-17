@@ -13,6 +13,7 @@ const renderAt = (path: string) =>
     </MemoryRouter>,
   );
 
+
 describe('App', () => {
   it('renders one h1 inside a main landmark', () => {
     renderAt('/');
@@ -36,13 +37,32 @@ describe('App', () => {
     }
   });
 
-  it('links each project card and talk to its own page', () => {
-    renderAt('/');
+  it('keeps about on home and lists the other sections on their own pages', () => {
+    const { unmount: unmountHome } = renderAt('/');
+    expect(screen.getByRole('heading', { level: 2, name: /about/i })).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { level: 1, name: /experience/i })).not.toBeInTheDocument();
+    unmountHome();
 
+    const { unmount: unmountExperience } = renderAt('/experience');
+    expect(screen.getByRole('heading', { level: 1, name: /experience/i })).toBeInTheDocument();
+    unmountExperience();
+
+    const { unmount: unmountProjects } = renderAt('/projects');
+    expect(screen.getByRole('heading', { level: 1, name: /projects/i })).toBeInTheDocument();
+    unmountProjects();
+
+    renderAt('/talks');
+    expect(screen.getByRole('heading', { level: 1, name: /talks/i })).toBeInTheDocument();
+  });
+
+  it('links each project card and talk to its own page', () => {
+    renderAt('/projects');
     expect(screen.getByRole('link', { name: 'Read more about Talesmith' })).toHaveAttribute(
       'href',
       '/projects/talesmith',
     );
+
+    renderAt('/talks');
     expect(screen.getByRole('link', { name: 'Does AI Dream of Original Ideas' })).toHaveAttribute(
       'href',
       '/talks/does-ai-dream-of-original-ideas',
@@ -53,13 +73,13 @@ describe('App', () => {
     renderAt('/projects/chronicler');
 
     expect(screen.getByRole('heading', { level: 1, name: 'Chronicler' })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /All projects/ })).toHaveAttribute('href', '/#projects');
-    expect(screen.getByRole('link', { name: /Previous/ })).toHaveAttribute('href', '/projects/break-the-loop');
-    expect(screen.getByRole('link', { name: /Next/ })).toHaveAttribute('href', '/projects/arcana-tools');
+    expect(screen.getByRole('link', { name: /All projects/ })).toHaveAttribute('href', '/projects');
+    expect(screen.getByRole('link', { name: /Previous/ })).toHaveAttribute('href', '/projects/ovi');
+    expect(screen.getByRole('link', { name: /Next/ })).toHaveAttribute('href', '/projects/world-binder');
   });
 
   it('keeps the full write-up for the project page', () => {
-    renderAt('/');
+    renderAt('/projects');
     expect(screen.queryByText(/Every calculator shows its step-by-step derivation/)).not.toBeInTheDocument();
 
     renderAt('/projects/kritik-systems');
@@ -79,6 +99,7 @@ describe('App', () => {
       'https://www.aidreams.world/posts/modern-development-burnout-machine',
     );
   });
+
 
   it.each(['/projects/not-a-project', '/talks/not-a-talk', '/nowhere'])(
     'shows the not-found page at %s',

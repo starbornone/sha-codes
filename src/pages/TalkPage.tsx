@@ -15,7 +15,7 @@ function TalkDetail({ index }: { index: number }) {
 
   return (
     <DetailLayout
-      back={{ to: "/#talks", label: "All talks" }}
+      back={{ to: "/talks", label: "All talks" }}
       eyebrow={`${talk.venue} • ${talk.year}`}
       title={talk.title}
       previous={link(TALKS[index - 1])}

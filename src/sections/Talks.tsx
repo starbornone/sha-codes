@@ -10,9 +10,9 @@ function Talks() {
     <div className="section bg-grey-900" id="talks">
       <div className="container">
         <div>
-          <h2>
+          <h1>
             <span className="highlight">my</span>.talks
-          </h2>
+          </h1>
           <p>
             Talks I&apos;ve given, with links to the transcripts so you can
             read them at your own pace.

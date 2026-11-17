@@ -18,7 +18,7 @@ function ProjectDetail({ index }: { index: number }) {
 
   return (
     <DetailLayout
-      back={{ to: "/#projects", label: "All projects" }}
+      back={{ to: "/projects", label: "All projects" }}
       eyebrow={project.roles.join(" • ")}
       title={project.name}
       previous={link(PROJECTS[index - 1])}

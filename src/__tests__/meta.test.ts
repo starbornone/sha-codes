@@ -15,9 +15,12 @@ describe('meta', () => {
     expect(summary).toMatch(/word…$/);
   });
 
-  it('lists one page per project and talk, each with a unique path', () => {
+  it('lists home, section pages, and one page per project and talk', () => {
     const paths = allPages().map((page) => page.path);
-    expect(paths).toHaveLength(1 + PROJECTS.length + TALKS.length);
+    expect(paths).toEqual(
+      expect.arrayContaining(['/', '/experience', '/projects', '/talks']),
+    );
+    expect(paths).toHaveLength(4 + PROJECTS.length + TALKS.length);
     expect(new Set(paths).size).toBe(paths.length);
   });
 

@@ -41,6 +41,33 @@ export const homeMeta = (): PageMeta => ({
   imageAlt: 'sha.codes: full-stack web developer',
 });
 
+export const experienceMeta = (): PageMeta => ({
+  path: '/experience',
+  title: 'Experience | sha.codes',
+  description:
+    "Sha Kong-Brooks' experience as a senior software engineer in Sydney — education, roles, and the work behind AI enablement, full-stack products and design systems.",
+  image: '/og-image.png',
+  imageAlt: 'sha.codes: full-stack web developer',
+});
+
+export const projectsMeta = (): PageMeta => ({
+  path: '/projects',
+  title: 'Projects | sha.codes',
+  description:
+    'Personal projects by Sha Kong-Brooks, built solo from idea and UI through database, code and deployment — from compliance tools to games.',
+  image: '/og-image.png',
+  imageAlt: 'sha.codes: full-stack web developer',
+});
+
+export const talksMeta = (): PageMeta => ({
+  path: '/talks',
+  title: 'Talks | sha.codes',
+  description:
+    "Talks by Sha Kong-Brooks on AI, developer practice and modern software teams, with links to full transcripts.",
+  image: '/og-image.png',
+  imageAlt: 'sha.codes: full-stack web developer',
+});
+
 export const projectMeta = (project: ProjectData): PageMeta => ({
   path: projectPath(project),
   title: `${project.name} | sha.codes`,
@@ -69,7 +96,14 @@ export const notFoundMeta = (path: string): PageMeta => ({
 
 // Every page the prerender writes out, which is also the sitemap.
 export function allPages(): PageMeta[] {
-  return [homeMeta(), ...PROJECTS.map(projectMeta), ...TALKS.map(talkMeta)];
+  return [
+    homeMeta(),
+    experienceMeta(),
+    projectsMeta(),
+    talksMeta(),
+    ...PROJECTS.map(projectMeta),
+    ...TALKS.map(talkMeta),
+  ];
 }
 
 export const absoluteUrl = (path: string) => `${SITE_URL}${path}`;

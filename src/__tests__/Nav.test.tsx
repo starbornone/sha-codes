@@ -5,21 +5,17 @@ import { describe, expect, it } from 'vitest';
 import Nav from '@/layout/Nav';
 
 describe('Nav', () => {
-  it('gives each section link an href so keyboard users can reach it', () => {
+  it('links About as an in-page anchor and the rest as their own pages', () => {
     render(
       <MemoryRouter>
         <Nav />
       </MemoryRouter>,
     );
 
-    for (const [name, href] of [
-      ['About', '#about'],
-      ['Experience', '#experience'],
-      ['Projects', '#projects'],
-      ['Talks', '#talks'],
-    ]) {
-      expect(screen.getByRole('link', { name: new RegExp(name) })).toHaveAttribute('href', href);
-    }
+    expect(screen.getByRole('link', { name: /About/ })).toHaveAttribute('href', '#about');
+    expect(screen.getByRole('link', { name: /Experience/ })).toHaveAttribute('href', '/experience');
+    expect(screen.getByRole('link', { name: /Projects/ })).toHaveAttribute('href', '/projects');
+    expect(screen.getByRole('link', { name: /Talks/ })).toHaveAttribute('href', '/talks');
   });
 
   it('closes the mobile menu after a link is chosen', async () => {
@@ -40,14 +36,15 @@ describe('Nav', () => {
     await waitFor(() => expect(screen.queryByRole('button', { name: 'Close menu' })).not.toBeInTheDocument());
   });
 
-  it('links back to the home page sections from other pages', () => {
+  it('links About back to the home page from other pages', () => {
     render(
       <MemoryRouter initialEntries={['/projects/talesmith']}>
         <Nav />
       </MemoryRouter>,
     );
 
-    expect(screen.getAllByRole('link', { name: /Projects/ })[0]).toHaveAttribute('href', '/#projects');
+    expect(screen.getAllByRole('link', { name: /About/ })[0]).toHaveAttribute('href', '/#about');
+    expect(screen.getAllByRole('link', { name: /Projects/ })[0]).toHaveAttribute('href', '/projects');
     expect(screen.getByRole('link', { name: 'sha.codes home' })).toHaveAttribute('href', '/');
   });
 });
