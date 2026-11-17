@@ -22,16 +22,6 @@ export const PROJECTS: ProjectData[] = [
     images: ["/images/projects/ovi-01.jpg"],
   },
   {
-    id: "ready-check",
-    name: "Ready Check",
-    url: "https://readycheck.work/",
-    description:
-      "A calm to-do app designed for people with ADHD and AuDHD, free of shame language and judgement. Combines Todoist-level task management with natural-language quick add, a calendar showing when tasks were due alongside when they were actually completed, focus tools, and a sales pipeline tracked against monthly targets. An installable, offline-capable PWA that keeps data on the device with optional account sync.",
-    roles: ["UI Design", "Database Design", "Development"],
-    tech: ["React", "TypeScript", "Zustand", "Dexie", "TailwindCSS", "Supabase"],
-    images: ["/images/projects/ready-check-01.jpg"],
-  },
-  {
     id: "break-the-loop",
     name: "Break the Loop",
     url: "https://www.breaktheloop.games/",
@@ -52,36 +42,6 @@ export const PROJECTS: ProjectData[] = [
     images: ["/images/projects/chronicler-01.jpg"],
   },
   {
-    id: "arcana-tools",
-    name: "Arcana Tools",
-    url: "https://www.arcana.tools/",
-    description:
-      "A personal organisation dashboard for people with AuDHD that brings tasks, projects, calendars, shopping lists, mood logging and budgeting into one place. Includes quick capture with inbox triage, recurring life-admin obligations that turn into tasks before they're due, and a calendar with reminders, sunrise and moon data, and read-only Google Calendar sync. Mood check-ins come with insights and exports, and budgeting in AUD covers accounts, bills and alerts.",
-    roles: ["UI Design", "Database Design", "Development"],
-    tech: ["Next.js", "TypeScript", "TailwindCSS", "shadcn/ui", "Supabase"],
-    images: ["/images/projects/arcana-tools-01.jpg"],
-  },
-  {
-    id: "kritik-systems",
-    name: "Kritik Systems",
-    url: "https://www.kritik.systems/",
-    description:
-      "A browser-based toolkit for quantitative Marxian political economy, covering surplus value, the rate of profit, organic composition of capital, the tendency of the rate of profit to fall, and reproduction schemas. Every calculator shows its step-by-step derivation with cited notes. Local-first with no account required, with saved scenarios, comparison charts, and data exports unlocked through a one-time purchase.",
-    roles: ["UI Design", "Database Design", "Development"],
-    tech: ["Next.js", "TypeScript", "TailwindCSS", "Dexie", "Supabase", "Stripe"],
-    images: ["/images/projects/kritik-systems-01.jpg"],
-  },
-  {
-    id: "midnight-archive",
-    name: "Midnight Archive",
-    url: "https://www.midnightarchive.online/",
-    description:
-      "The web home of Obscurity Shroud, a trilogy of urban fantasy novels set in the hidden corners of Sydney. Pairs a chapter reader built around careful typography with a shared lore browser, illustrations, and optional atmosphere, alongside reader accounts, chapter discussion and reactions. Includes an author dashboard for editing, publishing, and moderation.",
-    roles: ["UI Design", "Database Design", "Development"],
-    tech: ["Next.js", "TypeScript", "TailwindCSS", "Prisma", "Supabase"],
-    images: ["/images/projects/midnight-archive-01.jpg"],
-  },
-  {
     id: "vtm-character-creator",
     name: "Vampire: The Masquerade Character Creator",
     url: "https://vtm.astralarchives.games/",
@@ -100,16 +60,6 @@ export const PROJECTS: ProjectData[] = [
     roles: ["UI Design", "Development"],
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
     images: ["/images/projects/masque-of-shattered-mirrors-01.jpg"],
-  },
-  {
-    id: "talesmith",
-    name: "Talesmith",
-    url: "https://www.talesmith.com.au/",
-    description:
-      "A platform for educators, trainers and facilitators to create and share interactive, branching-path stories and lessons without any technical skills. Features a visual branching path builder, ready-made story templates, and images, audio and video embedded directly in story nodes. Suited to classrooms, university courses, workplace training and language learning, with lessons published and shared through a link.",
-    roles: ["UI Design", "Database Design", "Development"],
-    tech: ["React", "TypeScript", "React Router", "TailwindCSS", "Supabase"],
-    images: ["/images/projects/talesmith-01.jpg"],
   },
   {
     id: "no-place-to-rest",
@@ -146,14 +96,14 @@ export const PROJECTS: ProjectData[] = [
     ],
   },
   {
-    id: "praxis-primer",
-    name: "Praxis Primer",
-    url: "https://www.praxisprimer.info/",
+    id: "arcana-tools",
+    name: "Arcana Tools",
+    url: "https://www.arcana.tools/",
     description:
-      "A reading and study companion for socialist and communist theory, with structured reading plans, original section summaries, and discussion prompts for study circles. Readers keep private notes in the browser and review key terms with spaced repetition, while the source texts stay on their original sites. A sibling project to Kritik Systems, with content validated at build time.",
-    roles: ["UI Design", "Development"],
-    tech: ["Next.js", "TypeScript", "TailwindCSS", "Dexie", "Zod"],
-    images: ["/images/projects/praxis-primer-01.jpg"],
+      "A personal organisation dashboard for people with AuDHD that brings tasks, projects, calendars, shopping lists, mood logging and budgeting into one place. Includes quick capture with inbox triage, recurring life-admin obligations that turn into tasks before they're due, and a calendar with reminders, sunrise and moon data, and read-only Google Calendar sync. Mood check-ins come with insights and exports, and budgeting in AUD covers accounts, bills and alerts.",
+    roles: ["UI Design", "Database Design", "Development"],
+    tech: ["Next.js", "TypeScript", "TailwindCSS", "shadcn/ui", "Supabase"],
+    images: ["/images/projects/arcana-tools-01.jpg"],
   },
   {
     id: "pf2e-point-buy-calc",
@@ -188,6 +138,56 @@ export const PROJECTS: ProjectData[] = [
     roles: ["UI Design", "Development"],
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
     images: ["/images/projects/astral-archives-01.jpg"],
+  },
+  {
+    id: "kritik-systems",
+    name: "Kritik Systems",
+    url: "https://www.kritik.systems/",
+    description:
+      "A browser-based toolkit for quantitative Marxian political economy, covering surplus value, the rate of profit, organic composition of capital, the tendency of the rate of profit to fall, and reproduction schemas. Every calculator shows its step-by-step derivation with cited notes. Local-first with no account required, with saved scenarios, comparison charts, and data exports unlocked through a one-time purchase.",
+    roles: ["UI Design", "Database Design", "Development"],
+    tech: ["Next.js", "TypeScript", "TailwindCSS", "Dexie", "Supabase", "Stripe"],
+    images: ["/images/projects/kritik-systems-01.jpg"],
+  },
+  {
+    id: "midnight-archive",
+    name: "Midnight Archive",
+    url: "https://www.midnightarchive.online/",
+    description:
+      "The web home of Obscurity Shroud, a trilogy of urban fantasy novels set in the hidden corners of Sydney. Pairs a chapter reader built around careful typography with a shared lore browser, illustrations, and optional atmosphere, alongside reader accounts, chapter discussion and reactions. Includes an author dashboard for editing, publishing, and moderation.",
+    roles: ["UI Design", "Database Design", "Development"],
+    tech: ["Next.js", "TypeScript", "TailwindCSS", "Prisma", "Supabase"],
+    images: ["/images/projects/midnight-archive-01.jpg"],
+  },
+  {
+    id: "praxis-primer",
+    name: "Praxis Primer",
+    url: "https://www.praxisprimer.info/",
+    description:
+      "A reading and study companion for socialist and communist theory, with structured reading plans, original section summaries, and discussion prompts for study circles. Readers keep private notes in the browser and review key terms with spaced repetition, while the source texts stay on their original sites. A sibling project to Kritik Systems, with content validated at build time.",
+    roles: ["UI Design", "Development"],
+    tech: ["Next.js", "TypeScript", "TailwindCSS", "Dexie", "Zod"],
+    images: ["/images/projects/praxis-primer-01.jpg"],
+  },
+  {
+    id: "ready-check",
+    name: "Ready Check",
+    url: "https://readycheck.work/",
+    description:
+      "A calm to-do app designed for people with ADHD and AuDHD, free of shame language and judgement. Combines Todoist-level task management with natural-language quick add, a calendar showing when tasks were due alongside when they were actually completed, focus tools, and a sales pipeline tracked against monthly targets. An installable, offline-capable PWA that keeps data on the device with optional account sync.",
+    roles: ["UI Design", "Database Design", "Development"],
+    tech: ["React", "TypeScript", "Zustand", "Dexie", "TailwindCSS", "Supabase"],
+    images: ["/images/projects/ready-check-01.jpg"],
+  },
+  {
+    id: "talesmith",
+    name: "Talesmith",
+    url: "https://www.talesmith.com.au/",
+    description:
+      "A platform for educators, trainers and facilitators to create and share interactive, branching-path stories and lessons without any technical skills. Features a visual branching path builder, ready-made story templates, and images, audio and video embedded directly in story nodes. Suited to classrooms, university courses, workplace training and language learning, with lessons published and shared through a link.",
+    roles: ["UI Design", "Database Design", "Development"],
+    tech: ["React", "TypeScript", "React Router", "TailwindCSS", "Supabase"],
+    images: ["/images/projects/talesmith-01.jpg"],
   },
   {
     id: "outrun-games",
