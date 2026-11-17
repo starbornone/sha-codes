@@ -22,16 +22,6 @@ export const PROJECTS: ProjectData[] = [
     images: ["/images/projects/ovi-01.jpg"],
   },
   {
-    id: "break-the-loop",
-    name: "Break the Loop",
-    url: "https://www.breaktheloop.games/",
-    description:
-      "A materialist idle strategy game about the end of infinite growth, free to play in the browser. Players guide a society through its own contradictions, from primitive extraction through imperialism and crisis to a world without scarcity, with each mode of production rewriting which meters and actions matter. NPC nations react to every move, and conflict emerges from economic and diplomatic pressure rather than a menu click.",
-    roles: ["Game Design", "Development"],
-    tech: ["React", "TypeScript", "Node.js", "Socket.IO", "Prisma"],
-    images: ["/images/projects/break-the-loop-01.jpg"],
-  },
-  {
     id: "chronicler",
     name: "Chronicler",
     url: "https://chronicler.astralarchives.games/",
@@ -40,36 +30,6 @@ export const PROJECTS: ProjectData[] = [
     roles: ["UI Design", "Database Design", "Development"],
     tech: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Supabase"],
     images: ["/images/projects/chronicler-01.jpg"],
-  },
-  {
-    id: "vtm-character-creator",
-    name: "Vampire: The Masquerade Character Creator",
-    url: "https://vtm.astralarchives.games/",
-    description:
-      "A browser guide for creating and advancing Vampire: The Masquerade Fifth Edition characters. Develop a concept, assign traits and Disciplines, and review choices in a live rules ledger. Save drafts in the browser, share a mechanical build, or print a character sheet for the table.",
-    roles: ["UI Design", "Development"],
-    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
-    images: ["/images/projects/vtm-character-creator-01.jpg"],
-  },
-  {
-    id: "masque-of-shattered-mirrors",
-    name: "Masque Character Creator",
-    url: "https://masque.astralarchives.games/",
-    description:
-      "A Pathfinder 2e Remaster character creator for The Masque of Shattered Mirrors, a campaign for one player and one GM. The guide pairs questions about the character’s motives and ties with a build planner and campaign-fit review. Players can print a table reference or export a character for GM review or Foundry VTT.",
-    roles: ["UI Design", "Development"],
-    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
-    images: ["/images/projects/masque-of-shattered-mirrors-01.jpg"],
-  },
-  {
-    id: "no-place-to-rest",
-    name: "No Place to Rest",
-    url: "https://www.noplaceto.rest/",
-    description:
-      "A hand-drawn point-and-click game in which a child crosses a ruined city guided by a cat that glows brighter near contamination. Clean routes are gated by hostile architecture while contaminated ones lie open, so every choice trades exposure, energy, and the cat's trust as the evening closes in. Spans 47 illustrated scenes and 127 routes across three acts, with multiple endings and replays that open new paths.",
-    roles: ["Game Design", "Development"],
-    tech: ["React", "TypeScript", "Vite"],
-    images: ["/images/projects/no-place-to-rest-01.jpg"],
   },
   {
     id: "world-binder",
@@ -82,18 +42,44 @@ export const PROJECTS: ProjectData[] = [
     images: ["/images/projects/world-binder-01.jpg"],
   },
   {
-    id: "harptos-calendar-tracker",
-    name: "Harptos Calendar Tracker",
-    url: "https://harptos.astralarchives.games/",
-    repo: "https://github.com/starbornone/harptos-calendar-tracker",
+    id: "no-place-to-rest",
+    name: "No Place to Rest",
+    url: "https://www.noplaceto.rest/",
     description:
-      "A Dungeon Master tool for tracking one campaign across eleven locations in Faerûn and other D&D settings. Advance the clock, browse Harptos tendays and festivals, or enter a date in the selected location’s calendar. Local daylight and seeded hourly weather follow the campaign clock. Copy a one-line summary into session notes or share a read-only preview that another DM can adopt.",
+      "A hand-drawn point-and-click game in which a child crosses a ruined city guided by a cat that glows brighter near contamination. Clean routes are gated by hostile architecture while contaminated ones lie open, so every choice trades exposure, energy, and the cat's trust as the evening closes in. Spans 47 illustrated scenes and 127 routes across three acts, with multiple endings and replays that open new paths.",
+    roles: ["Game Design", "Development"],
+    tech: ["React", "TypeScript", "Vite"],
+    images: ["/images/projects/no-place-to-rest-01.jpg"],
+  },
+  {
+    id: "break-the-loop",
+    name: "Break the Loop",
+    url: "https://www.breaktheloop.games/",
+    description:
+      "A materialist idle strategy game about the end of infinite growth, free to play in the browser. Players guide a society through its own contradictions, from primitive extraction through imperialism and crisis to a world without scarcity, with each mode of production rewriting which meters and actions matter. NPC nations react to every move, and conflict emerges from economic and diplomatic pressure rather than a menu click.",
+    roles: ["Game Design", "Development"],
+    tech: ["React", "TypeScript", "Node.js", "Socket.IO", "Prisma"],
+    images: ["/images/projects/break-the-loop-01.jpg"],
+  },
+  {
+    id: "masque-of-shattered-mirrors",
+    name: "Masque Character Creator",
+    url: "https://masque.astralarchives.games/",
+    description:
+      "A Pathfinder 2e Remaster character creator for The Masque of Shattered Mirrors, a campaign for one player and one GM. The guide pairs questions about the character’s motives and ties with a build planner and campaign-fit review. Players can print a table reference or export a character for GM review or Foundry VTT.",
     roles: ["UI Design", "Development"],
     tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
-    images: [
-      "/images/projects/harptos-calendar-tracker-01.jpg",
-      "/images/projects/harptos-calendar-tracker-02.jpg",
-    ],
+    images: ["/images/projects/masque-of-shattered-mirrors-01.jpg"],
+  },
+  {
+    id: "vtm-character-creator",
+    name: "Vampire: The Masquerade Character Creator",
+    url: "https://vtm.astralarchives.games/",
+    description:
+      "A browser guide for creating and advancing Vampire: The Masquerade Fifth Edition characters. Develop a concept, assign traits and Disciplines, and review choices in a live rules ledger. Save drafts in the browser, share a mechanical build, or print a character sheet for the table.",
+    roles: ["UI Design", "Development"],
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
+    images: ["/images/projects/vtm-character-creator-01.jpg"],
   },
   {
     id: "arcana-tools",
@@ -117,19 +103,6 @@ export const PROJECTS: ProjectData[] = [
     images: ["/images/projects/pf2e-point-buy-calc-01.jpg"],
   },
   {
-    id: "dnd-point-buy-calc",
-    name: "D&D 5e Point-Buy Calculator",
-    url: "https://dnd.astralarchives.games/?rules=2024",
-    description:
-      "Build starting ability scores for Dungeons & Dragons using the 2024 or 2014 rules. The calculator tallies point costs, applies background or racial bonuses, and updates ability modifiers as you edit. Share a build by link, save and restore it as JSON, or print a summary. The interface is available in English and Simplified Chinese.",
-    roles: ["Full-Stack Developer", "UI/UX Designer"],
-    tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
-    images: [
-      "/images/projects/dnd-point-buy-calc-01.jpg",
-      "/images/projects/dnd-point-buy-calc-02.jpg",
-    ],
-  },
-  {
     id: "astral-archives",
     name: "Astral Archives",
     url: "https://www.astralarchives.games/",
@@ -150,6 +123,16 @@ export const PROJECTS: ProjectData[] = [
     images: ["/images/projects/kritik-systems-01.jpg"],
   },
   {
+    id: "praxis-primer",
+    name: "Praxis Primer",
+    url: "https://www.praxisprimer.info/",
+    description:
+      "A reading and study companion for socialist and communist theory, with structured reading plans, original section summaries, and discussion prompts for study circles. Readers keep private notes in the browser and review key terms with spaced repetition, while the source texts stay on their original sites. A sibling project to Kritik Systems, with content validated at build time.",
+    roles: ["UI Design", "Development"],
+    tech: ["Next.js", "TypeScript", "TailwindCSS", "Dexie", "Zod"],
+    images: ["/images/projects/praxis-primer-01.jpg"],
+  },
+  {
     id: "midnight-archive",
     name: "Midnight Archive",
     url: "https://www.midnightarchive.online/",
@@ -160,14 +143,31 @@ export const PROJECTS: ProjectData[] = [
     images: ["/images/projects/midnight-archive-01.jpg"],
   },
   {
-    id: "praxis-primer",
-    name: "Praxis Primer",
-    url: "https://www.praxisprimer.info/",
+    id: "dnd-point-buy-calc",
+    name: "D&D 5e Point-Buy Calculator",
+    url: "https://dnd.astralarchives.games/?rules=2024",
     description:
-      "A reading and study companion for socialist and communist theory, with structured reading plans, original section summaries, and discussion prompts for study circles. Readers keep private notes in the browser and review key terms with spaced repetition, while the source texts stay on their original sites. A sibling project to Kritik Systems, with content validated at build time.",
+      "Build starting ability scores for Dungeons & Dragons using the 2024 or 2014 rules. The calculator tallies point costs, applies background or racial bonuses, and updates ability modifiers as you edit. Share a build by link, save and restore it as JSON, or print a summary. The interface is available in English and Simplified Chinese.",
+    roles: ["Full-Stack Developer", "UI/UX Designer"],
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS"],
+    images: [
+      "/images/projects/dnd-point-buy-calc-01.jpg",
+      "/images/projects/dnd-point-buy-calc-02.jpg",
+    ],
+  },
+  {
+    id: "harptos-calendar-tracker",
+    name: "Harptos Calendar Tracker",
+    url: "https://harptos.astralarchives.games/",
+    repo: "https://github.com/starbornone/harptos-calendar-tracker",
+    description:
+      "A Dungeon Master tool for tracking one campaign across eleven locations in Faerûn and other D&D settings. Advance the clock, browse Harptos tendays and festivals, or enter a date in the selected location’s calendar. Local daylight and seeded hourly weather follow the campaign clock. Copy a one-line summary into session notes or share a read-only preview that another DM can adopt.",
     roles: ["UI Design", "Development"],
-    tech: ["Next.js", "TypeScript", "TailwindCSS", "Dexie", "Zod"],
-    images: ["/images/projects/praxis-primer-01.jpg"],
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
+    images: [
+      "/images/projects/harptos-calendar-tracker-01.jpg",
+      "/images/projects/harptos-calendar-tracker-02.jpg",
+    ],
   },
   {
     id: "ready-check",
