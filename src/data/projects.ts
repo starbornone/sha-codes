@@ -24,7 +24,7 @@ export const PROJECTS: ProjectData[] = [
   {
     id: "chronicler",
     name: "Chronicler",
-    url: "https://chronicler.astralarchives.games/",
+    url: "https://chronicler.studio/",
     description:
       "A campaign planner and player wiki for Dungeons & Dragons and Pathfinder. Link characters, enemies, organisations and treasure to the chapters and locations where they appear. The GM can prepare scenes, capture notes during play and publish chosen entries and journal updates to the players.",
     roles: ["UI Design", "Database Design", "Development"],
@@ -34,7 +34,7 @@ export const PROJECTS: ProjectData[] = [
   {
     id: "world-binder",
     name: "World Binder",
-    url: "https://worldbinder.astralarchives.games/",
+    url: "https://worldbinder.app/",
     description:
       "A tabletop RPG campaign library and GM run console in pre-alpha. The public site previews The Masque of Shattered Mirrors and two upcoming campaigns. The local Masque pilot puts scenes, NPCs, clues and handouts within reach and remembers where the table left off.",
     roles: ["UI Design", "Development"],
