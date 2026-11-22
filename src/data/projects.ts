@@ -75,26 +75,6 @@ export const PROJECTS: ProjectData[] = [
     images: ["/images/projects/break-the-loop-01.jpg"],
   },
   {
-    id: "masque-of-shattered-mirrors",
-    name: "Masque Character Creator",
-    url: "https://masque.astralarchives.games/",
-    description:
-      "A Pathfinder 2e Remaster character creator for The Masque of Shattered Mirrors, a campaign for one player and one GM. The guide pairs questions about the character’s motives and ties with a build planner and campaign-fit review. Players can print a table reference or export a character for GM review or Foundry VTT.",
-    roles: ["UI Design", "Development"],
-    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
-    images: ["/images/projects/masque-of-shattered-mirrors-01.jpg"],
-  },
-  {
-    id: "vtm-character-creator",
-    name: "Vampire: The Masquerade Character Creator",
-    url: "https://vtm.astralarchives.games/",
-    description:
-      "A browser guide for creating and advancing Vampire: The Masquerade Fifth Edition characters. Develop a concept, assign traits and Disciplines, and review choices in a live rules ledger. Save drafts in the browser, share a mechanical build, or print a character sheet for the table.",
-    roles: ["UI Design", "Development"],
-    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
-    images: ["/images/projects/vtm-character-creator-01.jpg"],
-  },
-  {
     id: "arcana-tools",
     name: "Arcana Tools",
     url: "https://www.arcana.tools/",
@@ -191,6 +171,26 @@ export const PROJECTS: ProjectData[] = [
     roles: ["UI Design", "Database Design", "Development"],
     tech: ["React", "TypeScript", "Zustand", "Dexie", "TailwindCSS", "Supabase"],
     images: ["/images/projects/ready-check-01.jpg"],
+  },
+  {
+    id: "vtm-character-creator",
+    name: "Vampire: The Masquerade Character Creator",
+    url: "https://vtm.astralarchives.games/",
+    description:
+      "A browser guide for creating and advancing Vampire: The Masquerade Fifth Edition characters. Develop a concept, assign traits and Disciplines, and review choices in a live rules ledger. Save drafts in the browser, share a mechanical build, or print a character sheet for the table.",
+    roles: ["UI Design", "Development"],
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
+    images: ["/images/projects/vtm-character-creator-01.jpg"],
+  },
+  {
+    id: "masque-of-shattered-mirrors",
+    name: "Masque Character Creator",
+    url: "https://masque.astralarchives.games/",
+    description:
+      "A Pathfinder 2e Remaster character creator for The Masque of Shattered Mirrors, a campaign for one player and one GM. The guide pairs questions about the character’s motives and ties with a build planner and campaign-fit review. Players can print a table reference or export a character for GM review or Foundry VTT.",
+    roles: ["UI Design", "Development"],
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "shadcn/ui"],
+    images: ["/images/projects/masque-of-shattered-mirrors-01.jpg"],
   },
   {
     id: "talesmith",
