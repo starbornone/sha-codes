@@ -1,7 +1,7 @@
 // Renders every page to HTML at build time, so search engines and link
 // previews see the content without running JavaScript, and so a refresh or a
 // deep link on Netlify loads a real file instead of a 404. Each route gets
-// dist/<path>/index.html with its own head tags and a generated share image,
+// dist/<path>.html with its own head tags and a generated share image,
 // plus dist/404.html and dist/sitemap.xml.
 // Runs after `vite build` (client) and `vite build --ssr` (server bundle).
 import { mkdir, readFile, rm, writeFile } from 'node:fs/promises';
@@ -71,7 +71,10 @@ async function writePage(file, url, meta, options) {
 
 const pages = allPages();
 for (const meta of pages) {
-  const file = meta.path === '/' ? `${dist}/index.html` : `${dist}${meta.path}/index.html`;
+  // Flat HTML files resolve at extensionless URLs in both Vite preview and
+  // Netlify. Directory indexes fall back to the home page in Vite when the
+  // requested URL has no trailing slash, causing React hydration failures.
+  const file = meta.path === '/' ? `${dist}/index.html` : `${dist}${meta.path}.html`;
   await writePage(file, meta.path, meta);
   if (meta.card) {
     const imageFile = `${dist}${meta.image}`;

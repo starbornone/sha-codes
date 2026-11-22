@@ -224,6 +224,20 @@ export const PROJECT_DETAILS: Record<string, ProjectDetails> = {
       "Public previews use curated player-facing content. The local pilot loads its GM material on the server and keeps run state in the browser.",
     ],
   },
+  "open-tome": {
+    why: "Game masters need maps that make rooms, routes and elevation clear during play. Open Tome combines readable overhead artwork with an editor for connected floors, so a tavern and the vault beneath it stay part of the same map.",
+    features: [
+      "Start from a furnished map or build with illustrated floors, walls and props. Select, group, move and rotate objects, with grid or free placement for furnishings and Undo/Redo for edits.",
+      "Create aligned floors, connect stairs and hatches, and use an alignment ghost to see the level below. Named layers control visibility, locking and draw order.",
+      "Switch between Build and Play views, hide roofs or wall artwork, and keep GM-only layers out of player views. Manual reveal and observer previews help prepare what players can see.",
+      "Save drafts locally without an account and keep editable JSON backups. Export PNG artwork, print-ready PDFs or a ZIP with images, grid metadata and notes for a manual VTT handoff.",
+    ],
+    engineering: [
+      "A Next.js App Router application with TypeScript, Tailwind CSS and a PixiJS WebGL canvas. Zustand manages editor state and reversible document changes.",
+      "IndexedDB stores local drafts. Versioned JSON carries editable maps between browsers, including floors, layers, groups and object placement.",
+      "Player views and artwork exports exclude GM-only layers and editor diagnostics. Flat artwork exports stay unlit so the destination VTT can handle session lighting.",
+    ],
+  },
   "no-place-to-rest": {
     why: "A game about environmental injustice in which the danger is organised rather than natural: the clean routes through a ruined city are gated and watched, and the contaminated ones are simply open. A child crosses it guided by a cat that glows brighter near contamination.",
     features: [

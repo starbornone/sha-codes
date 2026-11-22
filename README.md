@@ -12,6 +12,7 @@ npm run dev        # dev server at http://localhost:5173
 npm run lint       # ESLint
 npm run typecheck  # TypeScript only
 npm test           # Vitest
+npm run test:prerender # build and check every public URL against the preview server
 npm run build      # type-check, build to dist/, then prerender every page
 npm run preview    # serve the production build locally
 ```
@@ -22,7 +23,7 @@ npm run preview    # serve the production build locally
 
 ## Pages
 
-The home page sits at `/`, each project at `/projects/<id>` and each talk at `/talks/<id>`, using the `id` in `src/data/projects.ts` and `src/data/talks.ts`. Routing is React Router (`src/App.tsx`). The prerender writes each route to `dist/<path>/index.html`, so refreshing or deep-linking any page on Netlify loads a real file rather than a 404, and adding a project or talk to the data adds its page with no other changes. It also writes:
+The home page sits at `/`, each project at `/projects/<id>` and each talk at `/talks/<id>`, using the `id` in `src/data/projects.ts` and `src/data/talks.ts`. Routing is React Router (`src/App.tsx`). The prerender writes each non-home route to `dist/<path>.html`. Netlify and Vite preview serve these at the extensionless URLs used by the app, so refreshing or deep-linking a project loads its own HTML before React hydrates it. Adding a project or talk to the data adds its page with no other changes. It also writes:
 
 - each page's title, description, canonical URL and share tags, from `src/meta.ts`
 - a share image per project and talk at `dist/og/...png` (`scripts/share-image.mjs`; the home page uses `public/og-image.png`)

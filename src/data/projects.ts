@@ -42,6 +42,19 @@ export const PROJECTS: ProjectData[] = [
     images: ["/images/projects/world-binder-01.jpg"],
   },
   {
+    id: "open-tome",
+    name: "Open Tome",
+    url: "https://www.opentome.world/",
+    description:
+      "A browser-based battle map maker for tabletop RPGs, with illustrated overhead artwork, aligned floors and named layers. Stamp rooms and furnishings, connect levels with stairs and hatches, and switch to Play view to reveal the map at the table. Work saves locally without an account, with editable JSON backups and PNG, print-ready PDF and VTT handoff exports.",
+    roles: ["UI Design", "Database Design", "Development"],
+    tech: ["Next.js", "TypeScript", "PixiJS", "Zustand", "Tailwind CSS"],
+    images: [
+      "/images/projects/open-tome-01.jpg",
+      "/images/projects/open-tome-02.jpg",
+    ],
+  },
+  {
     id: "no-place-to-rest",
     name: "No Place to Rest",
     url: "https://www.noplaceto.rest/",
