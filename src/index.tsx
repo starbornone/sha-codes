@@ -1,6 +1,7 @@
 import '@/styles/index.css';
 import '@fontsource/overpass-mono';
 import '@fontsource/rubik';
+import { Analytics } from '@vercel/analytics/react';
 import Root from './Root';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router';
@@ -9,6 +10,7 @@ const container = document.getElementById('root') as HTMLElement;
 const app = (
   <BrowserRouter>
     <Root />
+    {import.meta.env.VITE_VERCEL_ENV && <Analytics />}
   </BrowserRouter>
 );
 
