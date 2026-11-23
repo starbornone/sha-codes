@@ -65,7 +65,7 @@ module.exports = {
     },
     fontFamily: {
       mono: ['Overpass Mono', ...defaultTheme.fontFamily.mono],
-      sans: ['Rubik', ...defaultTheme.fontFamily.sans],
+      sans: ['Rubik Variable', ...defaultTheme.fontFamily.sans],
     },
     extend: {
       screens: {

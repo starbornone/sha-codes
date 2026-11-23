@@ -1,29 +1,9 @@
-import { motion } from "framer-motion";
 import React from "react";
-import { transition } from "@/animations";
-
-const animationVariants = {
-  exit: {
-    x: "50%",
-    opacity: 0,
-    transition,
-  },
-  enter: {
-    x: "0%",
-    opacity: 1,
-    transition,
-  },
-};
 
 export default function Intro(): JSX.Element {
   return (
     <div className="py-24 overflow-hidden bg-grey-900">
-      <motion.div
-        initial="exit"
-        animate="enter"
-        exit="exit"
-        variants={animationVariants}
-      >
+      <div>
         <div className="max-w-2xl px-4 py-12 mx-auto lg:py-24">
           <header className="mb-8">
             <h1 className="font-bold text-greyish-200">
@@ -54,7 +34,7 @@ export default function Intro(): JSX.Element {
             Get in touch
           </a>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

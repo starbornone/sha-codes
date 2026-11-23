@@ -1,10 +1,10 @@
 # sha.codes
 
-Personal portfolio site: a single-page React app built with Vite, TypeScript and Tailwind CSS.
+Personal portfolio site built as a prerendered React app with Vite, TypeScript and Tailwind CSS.
 
 ## Development
 
-Requires Node 18 or newer.
+Use Node 22, matching CI and the Netlify build.
 
 ```bash
 npm install
@@ -23,20 +23,24 @@ npm run preview    # serve the production build locally
 
 ## Pages
 
-The home page sits at `/`, each project at `/projects/<id>` and each talk at `/talks/<id>`, using the `id` in `src/data/projects.ts` and `src/data/talks.ts`. Routing is React Router (`src/App.tsx`). The prerender writes each non-home route to `dist/<path>.html`. Netlify and Vite preview serve these at the extensionless URLs used by the app, so refreshing or deep-linking a project loads its own HTML before React hydrates it. Adding a project or talk to the data adds its page with no other changes. It also writes:
+The home page sits at `/`, each project at `/projects/<id>` and each talk at `/talks/<id>`, using the `id` in `src/data/projects.ts` and `src/data/talks.ts`. Routing is React Router (`src/App.tsx`). The prerender writes each non-home route to `dist/<path>.html`. Vercel, Netlify and Vite preview serve these at the extensionless URLs used by the app, so refreshing or deep-linking a project loads its own HTML before React hydrates it. Adding a project or talk to the data adds its page with no other changes. It also writes:
 
-- each page's title, description, canonical URL and share tags, from `src/meta.ts`
+- each page's title, description, canonical URL, share tags and applicable JSON-LD, using `src/pageHead.ts`
 - a share image per project and talk at `dist/og/...png` (`scripts/share-image.mjs`; the home page uses `public/og-image.png`)
-- `dist/sitemap.xml`, listing every page
-- `dist/404.html`, which Netlify serves with a 404 status for any other path
+- `dist/sitemap.xml` and `dist/robots.txt`, using the canonical origin in `src/meta.ts`
+- `dist/404.html`, the custom error page for missing paths
+
+After adding or replacing project screenshots, run `node scripts/prepare-project-images.mjs` and include the updated WebP files and image manifest with the source JPEGs.
 
 ## Checks
 
-GitHub Actions (`.github/workflows/ci.yml`) runs lint, type-check and tests on pull requests and pushes to `main`, skipping docs-only changes. Netlify does the production build. Keep it lean: the account has 2,000 Actions minutes a month.
+GitHub Actions (`.github/workflows/ci.yml`) runs lint, type-check and tests on pull requests and pushes to `main`, skipping docs-only changes. The Production SEO workflow checks the live canonical URLs, crawler files, redirects and 404s after a successful GitHub production deployment status. It can also be run manually.
 
 ## Deployment
 
-Netlify builds every push and pull request using `netlify.toml` (`npm run build`, publishing `dist/`). That file overrides the build settings in the Netlify UI.
+Vercel builds with `npm run build`, serves `dist/`, and enables extensionless URLs in `vercel.json`. Keep `www.sha.codes` as the primary domain and the apex redirect in Vercel Domains. `netlify.toml` keeps the static build usable on Netlify.
+
+After a production rollout, run `node scripts/verify-production-seo.mjs` and submit the sitemap at `https://www.sha.codes/sitemap.xml` in Search Console. For slug changes, add a permanent redirect from the old path to its replacement in `vercel.json`.
 
 ## Docs
 

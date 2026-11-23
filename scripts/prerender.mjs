@@ -13,7 +13,7 @@ const root = fileURLToPath(new URL('..', import.meta.url));
 const dist = `${root}dist`;
 const serverDir = `${root}dist-ssr`;
 
-const { render, allPages, absoluteUrl, notFoundMeta } = await import(
+const { render, allPages, absoluteUrl, notFoundMeta, escapeMarkup, renderPageHead } = await import(
   pathToFileURL(`${serverDir}/entry-server.mjs`).href
 );
 const template = await readFile(`${dist}/index.html`, 'utf8');
@@ -24,47 +24,17 @@ if (!placeholder.test(template)) {
   throw new Error('prerender: could not find the <!--app--> markers in dist/index.html');
 }
 
-const escape = (value) =>
-  value.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-
-// Swaps one head tag's value, and fails the build if index.html stops
-// carrying it, rather than shipping pages that all share the home page's tags.
-function setTag(html, pattern, value) {
-  if (!pattern.test(html)) throw new Error(`prerender: no match for ${pattern} in index.html`);
-  return html.replace(pattern, (_, before, after) => `${before}${escape(value)}${after}`);
+const headPlaceholder = /<!--page-head-->[\s\S]*?<!--\/page-head-->/;
+if (!headPlaceholder.test(template)) {
+  throw new Error('prerender: missing page-head markers in dist/index.html');
 }
 
-function withHead(html, meta, { noindex = false } = {}) {
-  const url = absoluteUrl(meta.path);
-  const image = absoluteUrl(meta.image);
-  const tags = [
-    [/(<title>)[^<]*(<\/title>)/, meta.title],
-    [/(<meta\s+name="description"\s+content=")[^"]*(")/, meta.description],
-    [/(<link rel="canonical" href=")[^"]*(")/, url],
-    [/(<meta property="og:url" content=")[^"]*(")/, url],
-    [/(<meta property="og:title" content=")[^"]*(")/, meta.title],
-    [/(<meta property="og:description" content=")[^"]*(")/, meta.description],
-    [/(<meta property="og:image" content=")[^"]*(")/, image],
-    [/(<meta property="og:image:alt" content=")[^"]*(")/, meta.imageAlt],
-    [/(<meta name="twitter:title" content=")[^"]*(")/, meta.title],
-    [/(<meta name="twitter:description" content=")[^"]*(")/, meta.description],
-    [/(<meta name="twitter:image" content=")[^"]*(")/, image],
-  ];
-  let result = tags.reduce((page, [pattern, value]) => setTag(page, pattern, value), html);
-  if (noindex) {
-    result = result
-      .replace(/\s*<link rel="canonical"[^>]*>/, '')
-      .replace('</title>', '</title>\n    <meta name="robots" content="noindex" />');
-  }
-  return result;
-}
-
-async function writePage(file, url, meta, options) {
+async function writePage(file, url, meta) {
   const html = render(url);
-  const page = withHead(template, meta, options).replace(
-    placeholder,
-    () => `<div id="root" data-prerendered>${html}</div>`,
-  );
+  const marker = meta.noindex ? 'data-static-404' : 'data-prerendered';
+  const page = template
+    .replace(headPlaceholder, () => renderPageHead(meta))
+    .replace(placeholder, () => `<div id="root" ${marker}>${html}</div>`);
   await mkdir(dirname(file), { recursive: true });
   await writeFile(file, page);
 }
@@ -83,16 +53,25 @@ for (const meta of pages) {
   }
 }
 
-// Netlify serves this with a 404 status for any path without a file. The
-// client renders the not-found page for the same paths, so hydration matches.
-await writePage(`${dist}/404.html`, '/404', notFoundMeta('/404'), { noindex: true });
+// Hosts serve this document with a 404 status for missing paths. The
+// browser mounts it using the actual URL instead of hydrating the /404 tree.
+await writePage(`${dist}/404.html`, '/404', notFoundMeta('/404'));
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map((meta) => `  <url>\n    <loc>${absoluteUrl(meta.path)}</loc>\n  </url>`).join('\n')}
-</urlset>
-`;
-await writeFile(`${dist}/sitemap.xml`, sitemap);
+const locations = pages.map(({ path }) =>
+  `  <url><loc>${escapeMarkup(absoluteUrl(path))}</loc></url>`,
+);
+
+await writeFile(`${dist}/sitemap.xml`, [
+  '<?xml version="1.0" encoding="UTF-8"?>',
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+  ...locations,
+  '</urlset>',
+  '',
+].join('\n'));
+
+await writeFile(`${dist}/robots.txt`, [
+  'User-agent: *', 'Allow: /', '', `Sitemap: ${absoluteUrl('/sitemap.xml')}`, '',
+].join('\n'));
 
 await rm(serverDir, { recursive: true, force: true });
 console.log(`prerender: wrote ${pages.length} pages, 404.html and sitemap.xml`);

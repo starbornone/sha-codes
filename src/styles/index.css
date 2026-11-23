@@ -2,6 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Rubik Variable';
+  src: url('@fontsource-variable/rubik/files/rubik-latin-wght-normal.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: optional;
+}
+
+@font-face {
+  font-family: 'Overpass Mono';
+  src: url('@fontsource/overpass-mono/files/overpass-mono-latin-400-normal.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+  font-display: optional;
+}
+
 html {
   @apply bg-grey-600;
   @apply text-greyish-300;

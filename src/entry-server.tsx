@@ -3,6 +3,7 @@ import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router';
 
 export { allPages, absoluteUrl, notFoundMeta } from './meta';
+export { escapeMarkup, renderPageHead } from './pageHead';
 
 export function render(url: string): string {
   return renderToString(

@@ -5,7 +5,7 @@ import { TALKS, TalkData } from '@/data/talks';
 // HTML (scripts/prerender.mjs), and usePageMeta keeps them in step when the
 // browser navigates between pages without a reload.
 
-export const SITE_URL = 'https://sha.codes';
+export const SITE_URL = 'https://www.sha.codes';
 
 export type PageMeta = {
   path: string;
@@ -13,6 +13,7 @@ export type PageMeta = {
   description: string;
   image: string;
   imageAlt: string;
+  noindex?: true;
   // What the generated share image shows. Pages without one use the site's.
   card?: { eyebrow: string; title: string; tags: string[] };
 };
@@ -88,6 +89,7 @@ export const talkMeta = (talk: TalkData): PageMeta => ({
 
 export const notFoundMeta = (path: string): PageMeta => ({
   path,
+  noindex: true,
   title: 'Page not found | sha.codes',
   description: "This page doesn't exist. Head back to sha.codes for Sha Kong-Brooks' projects, talks and experience.",
   image: '/og-image.png',

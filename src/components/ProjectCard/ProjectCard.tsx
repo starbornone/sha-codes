@@ -1,27 +1,23 @@
-import { motion } from "framer-motion";
 import React from "react";
 import { Link } from "react-router";
-import { transition } from "@/animations";
+import ProjectScreenshot from "@/components/ProjectScreenshot";
 import TechList from "@/components/TechList";
 import { ProjectData } from "@/data/projects";
 import { firstSentence, projectPath } from "@/meta";
 
 interface ProjectCardProps {
   project: ProjectData;
-  // Alternates the layout: images on the left and the card sliding in from the right.
+  // Alternates the layout: images on the left.
   reversed: boolean;
 }
+
+const cardImageSizes = "(min-width: 1024px) 600px, (min-width: 528px) 448px, 85vw";
 
 function ProjectCard({ project, reversed }: ProjectCardProps) {
   const [mainImage, secondImage, thirdImage] = project.images ?? [];
 
   return (
-    <motion.div
-      initial={{ x: reversed ? "50%" : "-50%", opacity: 0 }}
-      whileInView={{ x: "0%", opacity: 1 }}
-      viewport={{ once: true }}
-      transition={transition}
-    >
+    <div>
       {/* Projects without screenshots get a single centred column. */}
       <div className={mainImage ? "card" : "card card-text-only"}>
         <div>
@@ -106,36 +102,33 @@ function ProjectCard({ project, reversed }: ProjectCardProps) {
                     the row overflows away from the content, so the main
                     screenshot goes first on that side to stay fully visible. */}
                 {thirdImage && (
-                  <img
+                  <ProjectScreenshot
                     className={reversed ? "lg:right-120" : "order-3 lg:left-120"}
                     src={thirdImage}
                     alt=""
-                    loading="lazy"
-                    decoding="async"
+                    sizes={cardImageSizes}
                   />
                 )}
                 {secondImage && (
-                  <img
+                  <ProjectScreenshot
                     className={reversed ? "lg:right-60" : "order-2 lg:left-60"}
                     src={secondImage}
                     alt=""
-                    loading="lazy"
-                    decoding="async"
+                    sizes={cardImageSizes}
                   />
                 )}
-                <img
+                <ProjectScreenshot
                   className={reversed ? "lg:right-0" : "order-1 lg:left-0"}
                   src={mainImage}
                   alt={`Screenshot of ${project.name}`}
-                  loading="lazy"
-                  decoding="async"
+                  sizes={cardImageSizes}
                 />
               </div>
             </div>
           )}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

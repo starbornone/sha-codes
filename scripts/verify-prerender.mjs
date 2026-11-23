@@ -12,15 +12,30 @@ test('each public URL serves its own prerendered HTML', async (t) => {
   try {
     const { port } = server.httpServer.address();
     const sitemap = await readFile(new URL('../dist/sitemap.xml', import.meta.url), 'utf8');
+    const robots = await readFile(new URL('../dist/robots.txt', import.meta.url), 'utf8');
+    assert.match(robots, /^Sitemap: https:\/\/www\.sha\.codes\/sitemap\.xml$/m);
+    const notFound = await readFile(new URL('../dist/404.html', import.meta.url), 'utf8');
+    assert.match(notFound, /<div id="root" data-static-404>/);
+    assert.match(notFound, /<meta name="robots" content="noindex"/);
+    assert.doesNotMatch(notFound, /rel="canonical"/);
     for (const [, canonical] of sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)) {
       const path = new URL(canonical).pathname;
       await t.test(path, async () => {
+        assert.equal(new URL(canonical).origin, 'https://www.sha.codes');
         const response = await fetch(`http://127.0.0.1:${port}${path}`);
         assert.equal(response.status, 200);
         const html = await response.text();
         assert.equal(html.match(/<link rel="canonical" href="([^"]+)"/)?.[1], canonical);
         assert.match(html, /<div id="root" data-prerendered>/);
         assert.match(html, /<h1[\s>]/);
+        assert.doesNotMatch(html, /<meta name="robots" content="noindex"/);
+        const image = html.match(/<meta property="og:image" content="([^"]+)"/)?.[1];
+        assert.ok(image);
+        assert.equal(new URL(image).origin, 'https://www.sha.codes');
+        const imageResponse = await fetch(`http://127.0.0.1:${port}${new URL(image).pathname}`);
+        assert.equal(imageResponse.status, 200);
+        assert.match(imageResponse.headers.get('content-type'), /^image\/png\b/);
+        await imageResponse.body.cancel();
       });
     }
   } finally {

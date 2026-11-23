@@ -1,7 +1,5 @@
-import { motion } from "framer-motion";
 import React, { ReactNode } from "react";
 import { Link } from "react-router";
-import { fadeInVariants } from "@/animations";
 
 type PagerLink = { to: string; label: string };
 
@@ -27,10 +25,7 @@ export default function DetailLayout({
 }: DetailLayoutProps) {
   return (
     <div className="min-h-screen py-16 bg-grey-900 lg:py-24">
-      <motion.article
-        animate="visible"
-        initial="hidden"
-        variants={fadeInVariants}
+      <article
         className="max-w-3xl px-4 mx-auto detail"
       >
         <Link className="font-mono text-sm" to={back.to}>
@@ -63,7 +58,7 @@ export default function DetailLayout({
             )}
           </nav>
         )}
-      </motion.article>
+      </article>
     </div>
   );
 }

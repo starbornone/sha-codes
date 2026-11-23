@@ -10,7 +10,7 @@ import TalksPage from './pages/TalksPage';
 
 // Every route here is prerendered to its own HTML file at build time
 // (scripts/prerender.mjs), so a refresh or a shared link loads the page
-// straight from Netlify. Anything else gets dist/404.html.
+// straight from the static host. Anything else gets dist/404.html.
 export default function App(): JSX.Element {
   return (
     <Routes>

@@ -1,7 +1,6 @@
 import App from './App';
 import ErrorBoundary from './components/ErrorBoundary';
 import Layout from './layout/Layout';
-import { MotionConfig } from 'framer-motion';
 import React from 'react';
 import ScrollManager from './utils/ScrollManager';
 
@@ -11,12 +10,10 @@ export default function Root(): JSX.Element {
   return (
     <React.StrictMode>
       <ErrorBoundary>
-        <MotionConfig reducedMotion="user">
-          <ScrollManager />
-          <Layout>
-            <App />
-          </Layout>
-        </MotionConfig>
+        <ScrollManager />
+        <Layout>
+          <App />
+        </Layout>
       </ErrorBoundary>
     </React.StrictMode>
   );

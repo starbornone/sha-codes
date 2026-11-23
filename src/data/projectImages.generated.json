@@ -1,0 +1,192 @@
+{
+  "/images/projects/ai-dreams-01.jpg": {
+    "width": 1440,
+    "height": 900,
+    "srcSet": "/images/projects/responsive/ai-dreams-01-480.webp 480w, /images/projects/responsive/ai-dreams-01-768.webp 768w, /images/projects/responsive/ai-dreams-01-1200.webp 1200w"
+  },
+  "/images/projects/ai-dreams-02.jpg": {
+    "width": 1600,
+    "height": 1173,
+    "srcSet": "/images/projects/responsive/ai-dreams-02-480.webp 480w, /images/projects/responsive/ai-dreams-02-768.webp 768w, /images/projects/responsive/ai-dreams-02-1200.webp 1200w"
+  },
+  "/images/projects/ai-dreams-03.jpg": {
+    "width": 1600,
+    "height": 1173,
+    "srcSet": "/images/projects/responsive/ai-dreams-03-480.webp 480w, /images/projects/responsive/ai-dreams-03-768.webp 768w, /images/projects/responsive/ai-dreams-03-1200.webp 1200w"
+  },
+  "/images/projects/arcana-tools-01.jpg": {
+    "width": 1440,
+    "height": 900,
+    "srcSet": "/images/projects/responsive/arcana-tools-01-480.webp 480w, /images/projects/responsive/arcana-tools-01-768.webp 768w, /images/projects/responsive/arcana-tools-01-1200.webp 1200w"
+  },
+  "/images/projects/astral-archives-01.jpg": {
+    "width": 1440,
+    "height": 900,
+    "srcSet": "/images/projects/responsive/astral-archives-01-480.webp 480w, /images/projects/responsive/astral-archives-01-768.webp 768w, /images/projects/responsive/astral-archives-01-1200.webp 1200w"
+  },
+  "/images/projects/break-the-loop-01.jpg": {
+    "width": 1440,
+    "height": 900,
+    "srcSet": "/images/projects/responsive/break-the-loop-01-480.webp 480w, /images/projects/responsive/break-the-loop-01-768.webp 768w, /images/projects/responsive/break-the-loop-01-1200.webp 1200w"
+  },
+  "/images/projects/chronicler-01.jpg": {
+    "width": 1440,
+    "height": 900,
+    "srcSet": "/images/projects/responsive/chronicler-01-480.webp 480w, /images/projects/responsive/chronicler-01-768.webp 768w, /images/projects/responsive/chronicler-01-1200.webp 1200w"
+  },
+  "/images/projects/dnd-point-buy-calc-01.jpg": {
+    "width": 1265,
+    "height": 712,
+    "srcSet": "/images/projects/responsive/dnd-point-buy-calc-01-480.webp 480w, /images/projects/responsive/dnd-point-buy-calc-01-768.webp 768w, /images/projects/responsive/dnd-point-buy-calc-01-1200.webp 1200w"
+  },
+  "/images/projects/dnd-point-buy-calc-02.jpg": {
+    "width": 1265,
+    "height": 712,
+    "srcSet": "/images/projects/responsive/dnd-point-buy-calc-02-480.webp 480w, /images/projects/responsive/dnd-point-buy-calc-02-768.webp 768w, /images/projects/responsive/dnd-point-buy-calc-02-1200.webp 1200w"
+  },
+  "/images/projects/dr-olga-palma-01.jpg": {
+    "width": 1440,
+    "height": 900,
+    "srcSet": "/images/projects/responsive/dr-olga-palma-01-480.webp 480w, /images/projects/responsive/dr-olga-palma-01-768.webp 768w, /images/projects/responsive/dr-olga-palma-01-1200.webp 1200w"
+  },
+  "/images/projects/genshin-recipes-01.jpg": {
+    "width": 1600,
+    "height": 1600,
+    "srcSet": "/images/projects/responsive/genshin-recipes-01-480.webp 480w, /images/projects/responsive/genshin-recipes-01-768.webp 768w, /images/projects/responsive/genshin-recipes-01-1200.webp 1200w"
+  },
+  "/images/projects/genshin-recipes-02.jpg": {
+    "width": 1600,
+    "height": 1600,
+    "srcSet": "/images/projects/responsive/genshin-recipes-02-480.webp 480w, /images/projects/responsive/genshin-recipes-02-768.webp 768w, /images/projects/responsive/genshin-recipes-02-1200.webp 1200w"
+  },
+  "/images/projects/genshin-recipes-03.jpg": {
+    "width": 1600,
+    "height": 1600,
+    "srcSet": "/images/projects/responsive/genshin-recipes-03-480.webp 480w, /images/projects/responsive/genshin-recipes-03-768.webp 768w, /images/projects/responsive/genshin-recipes-03-1200.webp 1200w"
+  },
+  "/images/projects/harptos-calendar-tracker-01.jpg": {
+    "width": 1265,
+    "height": 712,
+    "srcSet": "/images/projects/responsive/harptos-calendar-tracker-01-480.webp 480w, /images/projects/responsive/harptos-calendar-tracker-01-768.webp 768w, /images/projects/responsive/harptos-calendar-tracker-01-1200.webp 1200w"
+  },
+  "/images/projects/harptos-calendar-tracker-02.jpg": {
+    "width": 1265,
+    "height": 712,
+    "srcSet": "/images/projects/responsive/harptos-calendar-tracker-02-480.webp 480w, /images/projects/responsive/harptos-calendar-tracker-02-768.webp 768w, /images/projects/responsive/harptos-calendar-tracker-02-1200.webp 1200w"
+  },
+  "/images/projects/kritik-systems-01.jpg": {
+    "width": 1440,
+    "height": 900,
+    "srcSet": "/images/projects/responsive/kritik-systems-01-480.webp 480w, /images/projects/responsive/kritik-systems-01-768.webp 768w, /images/projects/responsive/kritik-systems-01-1200.webp 1200w"
+  },
+  "/images/projects/marketopia-01.jpg": {
+    "width": 1600,
+    "height": 1173,
+    "srcSet": "/images/projects/responsive/marketopia-01-480.webp 480w, /images/projects/responsive/marketopia-01-768.webp 768w, /images/projects/responsive/marketopia-01-1200.webp 1200w"
+  },
+  "/images/projects/marketopia-02.jpg": {
+    "width": 1600,
+    "height": 1173,
+    "srcSet": "/images/projects/responsive/marketopia-02-480.webp 480w, /images/projects/responsive/marketopia-02-768.webp 768w, /images/projects/responsive/marketopia-02-1200.webp 1200w"
+  },
+  "/images/projects/marketopia-03.jpg": {
+    "width": 1600,
+    "height": 1173,
+    "srcSet": "/images/projects/responsive/marketopia-03-480.webp 480w, /images/projects/responsive/marketopia-03-768.webp 768w, /images/projects/responsive/marketopia-03-1200.webp 1200w"
+  },
+  "/images/projects/masque-of-shattered-mirrors-01.jpg": {
+    "width": 1440,
+    "height": 900,
+    "srcSet": "/images/projects/responsive/masque-of-shattered-mirrors-01-480.webp 480w, /images/projects/responsive/masque-of-shattered-mirrors-01-768.webp 768w, /images/projects/responsive/masque-of-shattered-mirrors-01-1200.webp 1200w"
+  },
+  "/images/projects/midnight-archive-01.jpg": {
+    "width": 1265,
+    "height": 712,
+    "srcSet": "/images/projects/responsive/midnight-archive-01-480.webp 480w, /images/projects/responsive/midnight-archive-01-768.webp 768w, /images/projects/responsive/midnight-archive-01-1200.webp 1200w"
+  },
+  "/images/projects/my-money-01.jpg": {
+    "width": 1600,
+    "height": 900,
+    "srcSet": "/images/projects/responsive/my-money-01-480.webp 480w, /images/projects/responsive/my-money-01-768.webp 768w, /images/projects/responsive/my-money-01-1200.webp 1200w"
+  },
+  "/images/projects/no-place-to-rest-01.jpg": {
+    "width": 1440,
+    "height": 900,
+    "srcSet": "/images/projects/responsive/no-place-to-rest-01-480.webp 480w, /images/projects/responsive/no-place-to-rest-01-768.webp 768w, /images/projects/responsive/no-place-to-rest-01-1200.webp 1200w"
+  },
+  "/images/projects/open-tome-01.jpg": {
+    "width": 1280,
+    "height": 720,
+    "srcSet": "/images/projects/responsive/open-tome-01-480.webp 480w, /images/projects/responsive/open-tome-01-768.webp 768w, /images/projects/responsive/open-tome-01-1200.webp 1200w"
+  },
+  "/images/projects/open-tome-02.jpg": {
+    "width": 1265,
+    "height": 712,
+    "srcSet": "/images/projects/responsive/open-tome-02-480.webp 480w, /images/projects/responsive/open-tome-02-768.webp 768w, /images/projects/responsive/open-tome-02-1200.webp 1200w"
+  },
+  "/images/projects/outrun-games-01.jpg": {
+    "width": 1600,
+    "height": 1600,
+    "srcSet": "/images/projects/responsive/outrun-games-01-480.webp 480w, /images/projects/responsive/outrun-games-01-768.webp 768w, /images/projects/responsive/outrun-games-01-1200.webp 1200w"
+  },
+  "/images/projects/outrun-games-02.jpg": {
+    "width": 1600,
+    "height": 1600,
+    "srcSet": "/images/projects/responsive/outrun-games-02-480.webp 480w, /images/projects/responsive/outrun-games-02-768.webp 768w, /images/projects/responsive/outrun-games-02-1200.webp 1200w"
+  },
+  "/images/projects/outrun-games-03.jpg": {
+    "width": 1600,
+    "height": 1600,
+    "srcSet": "/images/projects/responsive/outrun-games-03-480.webp 480w, /images/projects/responsive/outrun-games-03-768.webp 768w, /images/projects/responsive/outrun-games-03-1200.webp 1200w"
+  },
+  "/images/projects/ovi-01.jpg": {
+    "width": 1440,
+    "height": 900,
+    "srcSet": "/images/projects/responsive/ovi-01-480.webp 480w, /images/projects/responsive/ovi-01-768.webp 768w, /images/projects/responsive/ovi-01-1200.webp 1200w"
+  },
+  "/images/projects/pf2e-point-buy-calc-01.jpg": {
+    "width": 1440,
+    "height": 900,
+    "srcSet": "/images/projects/responsive/pf2e-point-buy-calc-01-480.webp 480w, /images/projects/responsive/pf2e-point-buy-calc-01-768.webp 768w, /images/projects/responsive/pf2e-point-buy-calc-01-1200.webp 1200w"
+  },
+  "/images/projects/praxis-primer-01.jpg": {
+    "width": 1440,
+    "height": 900,
+    "srcSet": "/images/projects/responsive/praxis-primer-01-480.webp 480w, /images/projects/responsive/praxis-primer-01-768.webp 768w, /images/projects/responsive/praxis-primer-01-1200.webp 1200w"
+  },
+  "/images/projects/ready-check-01.jpg": {
+    "width": 1440,
+    "height": 900,
+    "srcSet": "/images/projects/responsive/ready-check-01-480.webp 480w, /images/projects/responsive/ready-check-01-768.webp 768w, /images/projects/responsive/ready-check-01-1200.webp 1200w"
+  },
+  "/images/projects/talesmith-01.jpg": {
+    "width": 1440,
+    "height": 900,
+    "srcSet": "/images/projects/responsive/talesmith-01-480.webp 480w, /images/projects/responsive/talesmith-01-768.webp 768w, /images/projects/responsive/talesmith-01-1200.webp 1200w"
+  },
+  "/images/projects/vcfo-accountants-01.jpg": {
+    "width": 1600,
+    "height": 1600,
+    "srcSet": "/images/projects/responsive/vcfo-accountants-01-480.webp 480w, /images/projects/responsive/vcfo-accountants-01-768.webp 768w, /images/projects/responsive/vcfo-accountants-01-1200.webp 1200w"
+  },
+  "/images/projects/vcfo-accountants-02.jpg": {
+    "width": 1600,
+    "height": 1600,
+    "srcSet": "/images/projects/responsive/vcfo-accountants-02-480.webp 480w, /images/projects/responsive/vcfo-accountants-02-768.webp 768w, /images/projects/responsive/vcfo-accountants-02-1200.webp 1200w"
+  },
+  "/images/projects/vcfo-accountants-03.jpg": {
+    "width": 1600,
+    "height": 1600,
+    "srcSet": "/images/projects/responsive/vcfo-accountants-03-480.webp 480w, /images/projects/responsive/vcfo-accountants-03-768.webp 768w, /images/projects/responsive/vcfo-accountants-03-1200.webp 1200w"
+  },
+  "/images/projects/vtm-character-creator-01.jpg": {
+    "width": 1440,
+    "height": 900,
+    "srcSet": "/images/projects/responsive/vtm-character-creator-01-480.webp 480w, /images/projects/responsive/vtm-character-creator-01-768.webp 768w, /images/projects/responsive/vtm-character-creator-01-1200.webp 1200w"
+  },
+  "/images/projects/world-binder-01.jpg": {
+    "width": 1440,
+    "height": 900,
+    "srcSet": "/images/projects/responsive/world-binder-01-480.webp 480w, /images/projects/responsive/world-binder-01-768.webp 768w, /images/projects/responsive/world-binder-01-1200.webp 1200w"
+  }
+}

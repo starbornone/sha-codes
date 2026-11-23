@@ -1,7 +1,6 @@
 name: CI
 
-# Kept lean: the account has 2,000 Actions minutes a month. Netlify already
-# builds every PR, so this job skips the production build.
+# Hosting runs the production build. Keep these per-commit checks lean.
 on:
   pull_request:
     paths-ignore: ['**.md', 'docs/**']

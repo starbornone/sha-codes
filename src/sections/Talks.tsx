@@ -1,7 +1,5 @@
-import { motion } from "framer-motion";
 import React from "react";
 import { Link } from "react-router";
-import { transition } from "@/animations";
 import { TALKS } from "@/data/talks";
 import { talkPath } from "@/meta";
 
@@ -20,21 +18,15 @@ function Talks() {
         </header>
         <ul className="mt-12 space-y-12">
           {TALKS.map((talk) => (
-            <motion.li
-              key={talk.id}
-              initial={{ y: "20%", opacity: 0 }}
-              whileInView={{ y: "0%", opacity: 1 }}
-              viewport={{ once: true }}
-              transition={transition}
-            >
+            <li key={talk.id}>
               <div className="font-mono text-sm text-greyish-300">
                 {talk.venue} • {talk.year}
               </div>
-              <h3 className="mt-2 text-3xl">
+              <h2 className="mt-2 text-3xl">
                 <Link className="text-oasis-500 hover:text-oasis-400" to={talkPath(talk)}>
                   {talk.title}
                 </Link>
-              </h3>
+              </h2>
               <p>{talk.summary}</p>
               <div className="flex flex-wrap gap-6 font-mono text-sm">
                 <Link to={talkPath(talk)}>
@@ -44,7 +36,7 @@ function Talks() {
                   Transcript<span className="sr-only"> of {talk.title}</span>
                 </a>
               </div>
-            </motion.li>
+            </li>
           ))}
         </ul>
       </div>

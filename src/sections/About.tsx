@@ -1,15 +1,10 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { fadeInVariants } from "@/animations";
 
 const backgroundImage = "url(/images/about-bg.jpg)";
 
 export default function About(): JSX.Element {
   return (
-    <motion.section
-      animate="visible"
-      initial="hidden"
-      variants={fadeInVariants}
+    <section
       className="bg-center bg-cover section bg-grey-600"
       id="about"
       style={{ backgroundImage }}
@@ -56,6 +51,6 @@ export default function About(): JSX.Element {
           </p>
         </article>
       </div>
-    </motion.section>
+    </section>
   );
 }

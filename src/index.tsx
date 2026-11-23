@@ -1,6 +1,4 @@
 import '@/styles/index.css';
-import '@fontsource/overpass-mono';
-import '@fontsource/rubik';
 import { Analytics } from '@vercel/analytics/react';
 import Root from './Root';
 import ReactDOM from 'react-dom/client';
@@ -15,7 +13,7 @@ const app = (
 );
 
 // Production builds ship prerendered HTML (scripts/prerender.mjs), so attach to
-// it. The dev server still serves the loading screen, so render from scratch.
+// it. The dev shell and the shared 404 document mount at the actual URL.
 if (container.hasAttribute('data-prerendered')) {
   ReactDOM.hydrateRoot(container, app);
 } else {

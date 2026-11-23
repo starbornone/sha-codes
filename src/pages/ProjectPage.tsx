@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router";
 import DetailLayout from "@/components/DetailLayout";
+import ProjectScreenshot from "@/components/ProjectScreenshot";
 import TechList from "@/components/TechList";
 import { PROJECT_DETAILS } from "@/data/projectDetails";
 import { PROJECTS, ProjectData } from "@/data/projects";
@@ -67,13 +68,12 @@ function ProjectDetail({ index }: { index: number }) {
       {project.images && project.images.length > 0 && (
         <div className="mt-12 space-y-8">
           {project.images.map((image, imageIndex) => (
-            <img
+            <ProjectScreenshot
               key={image}
               className="w-full h-auto rounded-xl ring-8 ring-grey-600"
               src={image}
               alt={`Screenshot ${imageIndex + 1} of ${project.name}`}
-              loading={imageIndex === 0 ? "eager" : "lazy"}
-              decoding="async"
+              sizes="(min-width: 768px) 736px, calc(100vw - 2rem)"
             />
           ))}
         </div>

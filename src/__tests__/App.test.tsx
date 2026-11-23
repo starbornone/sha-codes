@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router';
+import userEvent from '@testing-library/user-event';
+import { Link, MemoryRouter } from 'react-router';
 import { describe, expect, it } from 'vitest';
 import App from '@/App';
 import Layout from '@/layout/Layout';
@@ -110,9 +111,30 @@ describe('App', () => {
     },
   );
 
-  it('sets the page title and description for the page on screen', () => {
-    renderAt('/projects/talesmith');
+  it('updates the head when navigating between content and a missing page', async () => {
+    const user = userEvent.setup();
+    render(
+      <MemoryRouter initialEntries={['/projects/talesmith']}>
+        <Link to="/projects/not-a-project">Missing project</Link>
+        <App />
+      </MemoryRouter>,
+    );
 
     expect(document.title).toBe('Talesmith | sha.codes');
+    expect(document.head.querySelector('meta[name="description"]')).toHaveAttribute('content');
+    expect(document.head.querySelector('link[rel="canonical"]')).toHaveAttribute(
+      'href', 'https://www.sha.codes/projects/talesmith',
+    );
+
+    await user.click(screen.getByRole('link', { name: 'Missing project' }));
+    expect(document.head.querySelector('link[rel="canonical"]')).toBeNull();
+    expect(document.head.querySelector('script[type="application/ld+json"]')).toBeNull();
+    expect(document.head.querySelector('meta[name="robots"]')).toHaveAttribute('content', 'noindex');
+
+    await user.click(screen.getByRole('link', { name: 'Back to sha.codes' }));
+    expect(document.head.querySelector('meta[name="robots"]')).toBeNull();
+    expect(document.head.querySelectorAll('link[rel="canonical"]')).toHaveLength(1);
+    expect(document.head.querySelector('link[rel="canonical"]')).toHaveAttribute('href', 'https://www.sha.codes/');
+    expect(document.head.querySelector('script[type="application/ld+json"]')).toHaveTextContent('ProfilePage');
   });
 });
