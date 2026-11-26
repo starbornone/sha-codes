@@ -183,6 +183,19 @@ export const PROJECTS: ProjectData[] = [
     images: ["/images/projects/vtm-character-creator-01.jpg"],
   },
   {
+    id: "eclipse-phase-character-creator",
+    name: "Eclipse Phase Character & Morph Creator",
+    url: "https://eclipsephase.astralarchives.games/",
+    description:
+      "An Eclipse Phase Second Edition character and morph creator in early prototype. Build an ego from aptitude templates and starter packages, review skill allocations and Customization Point costs, and pair it with a morph. Compare replacement bodies and preserve sleeve history when resleeving. Drafts stay in the browser and can be backed up as JSON or printed as a character dossier.",
+    roles: ["UI Design", "Development"],
+    tech: ["React", "TypeScript", "Vite", "Tailwind CSS", "React Router"],
+    images: [
+      "/images/projects/eclipse-phase-character-creator-01.jpg",
+      "/images/projects/eclipse-phase-character-creator-02.jpg",
+    ],
+  },
+  {
     id: "masque-of-shattered-mirrors",
     name: "Masque Character Creator",
     url: "https://masque.astralarchives.games/",

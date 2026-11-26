@@ -294,6 +294,20 @@ export const PROJECT_DETAILS: Record<string, ProjectDetails> = {
       "Versioned share links and JSON backups use the same build model. The feat catalog uses Foundry’s PF2e compendium data for levels, traits, prerequisites and background grants.",
     ],
   },
+  "eclipse-phase-character-creator": {
+    why: "In Eclipse Phase, a character’s mind and identity persist when they move into a new body. The creator keeps the ego separate from its current morph, so players can inspect their character’s calculations and compare a new sleeve without losing the old one.",
+    features: [
+      "Start an ego with identity, motivations, a core aptitude template and selected background, career, interest and faction packages. Partial drafts can be saved before a morph is assigned.",
+      "Review a starting skill ledger with the source of each grant, linked aptitude and over-cap totals. Reallocate package points and track Customization Point costs for supported skills, traits, reputation and other choices.",
+      "Browse the supported Quick-Start morphs and compare their health values and the resulting sleeve. Resleeving records the change and keeps earlier sleeves in the character’s history.",
+      "Print a character dossier or export and restore a JSON backup. Drafts save locally in the browser without an account; full character creation and validation remain in development.",
+    ],
+    engineering: [
+      "A React and TypeScript application on Vite, with React Router for the ego workspace, morph library, resleeving and print views, and Tailwind CSS for the interface.",
+      "Rules datasets and source references stay separate from pure calculation functions. The dossier derives ego aptitude checks independently of morph health, while the skill ledger shows how package grants and allocations contribute to totals.",
+      "IndexedDB stores egos and sleeves together in a transaction. Revision checks prevent stale edits from overwriting newer drafts, and JSON imports validate saved data before restoring it.",
+    ],
+  },
   "masque-of-shattered-mirrors": {
     why: "The Masque of Shattered Mirrors is a social-horror masquerade written for one player and one GM. The creator helps the player establish why their character accepted the invitation and what they care about, so the GM can tailor the session around those choices.",
     features: [
